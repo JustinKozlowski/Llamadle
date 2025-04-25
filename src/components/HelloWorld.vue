@@ -109,7 +109,7 @@ export default {
         this.messages.push(userMessage);
 
         const local_messages = [
-          { role: "system", content: "Respond in 10 words" },
+          { role: "system", content: "Respond in 1 sentence" },
           ...toRaw(this.messages),
         ];
 
@@ -127,6 +127,10 @@ export default {
       } finally {
         this.loading = false;
         this.prompt = "";
+        this.$nextTick(() => {
+          const textarea = this.$el.querySelector('textarea');
+          if (textarea) textarea.focus();
+        });
       }
     },
     updateDifficulty() {

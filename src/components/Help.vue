@@ -6,25 +6,51 @@
       <div class="modal-content" @click.stop>
         <h2>How to Play</h2>
         <p>
-          Welcome to Llamadle! The goal of the game is to guess the secret phrase. You have a limited number of attempts, and after each guess, you'll receive feedback to help you get closer to the correct answer.
+          Welcome to Llamadle!
+          The goal of the game is to prompt the LLM to guess the secret phrase.
+          Try to reach the phrase in the fewest tokens possible!
         </p>
-        <button @click="closeModal">Close</button>
+        <div v-if="!engineLoaded">
+          <p>
+            LLM is downloading. This will be faster on subsequent visits.
+          </p>
+          Download Progress: {{ downloadProgress }}%
+        </div>
+        <button :disabled="!engineLoaded" @click="closeModal">Close</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { getDownloadProgress, isEngineLoaded } from '../engine';
+
 export default {
   name: "HelpModal",
   data() {
     return {
-      showModal: false,
+      showModal: true,
+      downloadProgress: 0,
+      engineLoaded: false,
     };
+  },
+  mounted() {
+    this.updateProgress();
   },
   methods: {
     closeModal() {
-      this.showModal = false;
+      if (this.engineLoaded) {
+        this.showModal = false;
+      }
+    },
+    updateProgress() {
+      const interval = setInterval(() => {
+        this.downloadProgress = getDownloadProgress();
+        this.engineLoaded = isEngineLoaded();
+        if (this.engineLoaded) {
+          clearInterval(interval);
+        }
+      }, 500);
     },
   },
 };

@@ -5,7 +5,7 @@
     <div v-if="showModal" class="modal-overlay" @click="closeModal">
       <div class="modal-content" @click.stop>
         <div v-if="!hasWebGPU" class="gpu-message">
-          This game requires WebGPU enabled. Please use a browser that supports WebGPU.
+          This game requires WebGPU enabled. Please use a browser that supports WebGPU. Avoid mobile browsers for perfomance reasons.
         </div>
         <div v-else-if="isMobile" class="mobile-message">
           You appear to be visiting on mobile. This game is best experienced on desktop.
@@ -23,7 +23,7 @@
           </p>
           Download Progress: {{ downloadProgress }}%
         </div>
-        <button :disabled="!engineLoaded" @click="closeModal">Close</button>
+        <button :disabled="!engineLoaded || !hasWebGPU" @click="closeModal">Close</button>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     closeModal() {
-      if (this.engineLoaded) {
+      if (this.engineLoaded  || this.hasWebGPU) {
         this.showModal = false;
       }
     },
@@ -119,5 +119,11 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
 }
 </style>

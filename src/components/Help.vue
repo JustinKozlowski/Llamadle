@@ -4,6 +4,13 @@
 
     <div v-if="showModal" class="modal-overlay" @click="closeModal">
       <div class="modal-content" @click.stop>
+        <div v-if="!hasWebGPU" class="gpu-message">
+          This game requires WebGPU enabled. Please use a browser that supports WebGPU.
+        </div>
+        <div v-else-if="isMobile" class="mobile-message">
+          You appear to be visiting on mobile. This game is best experienced on desktop.
+          Expect performance issues.
+        </div>
         <h2>How to Play</h2>
         <p>
           Welcome to Llamadle!
@@ -32,9 +39,13 @@ export default {
       showModal: true,
       downloadProgress: 0,
       engineLoaded: false,
+      isMobile: false,
+      hasWebGPU: false,
     };
   },
   mounted() {
+    this.isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    this.hasWebGPU = !!navigator.gpu;
     this.updateProgress();
   },
   methods: {
@@ -67,6 +78,24 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mobile-message {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.gpu-message {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .modal-content {

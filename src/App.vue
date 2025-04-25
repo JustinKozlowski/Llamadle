@@ -1,6 +1,8 @@
 <template>
-  <GameHelp />
-  <HelloWorld />
+  <div id="app">
+    <GameHelp />
+    <HelloWorld />
+  </div>
 </template>
 
 <script>

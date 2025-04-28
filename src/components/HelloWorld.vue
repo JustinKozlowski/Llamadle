@@ -7,11 +7,11 @@
     <div class="chat-window">
       <div class="chat-messages">
         <div
-          v-for="(message, index) in messages.slice(0)"
+          v-for="(message, index) in messages"
           :key="index"
           :class="['chat-message', message.role]"
         >
-          <p class="message-content">{{ message.content }}</p>
+          <p class="message-content">{{ message.parts[0].text }}</p>
         </div>
       </div>
       <div v-if="warningMessage" class="warning-banner">
@@ -50,9 +50,9 @@
 </template>
 
 <script>
-import { getEngine, isEngineLoaded } from "../engine";
-import { toRaw } from "vue";
 import { getPhrases } from "../phrases";
+import { toRaw } from "vue";
+import axios from 'axios';
 
 export default {
   name: "WebLLMComponent",
@@ -73,26 +73,17 @@ export default {
   },
   methods: {
     checkForWinner(response, phrase) {
-      console.log(phrase);
-      console.log(response);
       return response.toLowerCase().includes(phrase.toLowerCase());
     },
     makeWinner() {
       this.winner = true;
     },
     containsBannedWords(input) {
-      console.log(this.bannedWords);
-      console.log(this.phrase);
-      console.log(this.selecteddifficulty);
       return this.bannedWords.find((word) => input.toLowerCase().includes(word.toLowerCase()));
     },
     async askPrompt() {
       this.winner = false;
       this.warningMessage = "";
-      if (!isEngineLoaded()) {
-        this.warningMessage = "Model is not loaded yet. Please wait.";
-        return;
-      }
       if (!this.prompt.trim()) {
         this.warningMessage = "Please enter a prompt.";
         return;
@@ -105,25 +96,36 @@ export default {
 
       try {
         this.loading = true;
-        const userMessage = { role: "user", content: toRaw(this.prompt) };
+        const userMessage = { role: "user", parts: [ { text: toRaw(this.prompt) } ] };
         this.messages.push(userMessage);
 
-        const local_messages = [
-          { role: "system", content: "Respond in 1 sentence" },
-          ...toRaw(this.messages),
-        ];
+        const payload = {
+          "system_instruction": {
+            "parts": [
+              {
+                "text": "Respond in 1 sentence"
+              }
+            ]
+          },
+          "contents": this.messages,
+        }
 
-        const result = await getEngine().chat.completions.create({ messages: local_messages });
-        // reduce some base tokens. That way it punishes multiple messages
-        this.tokenCount += result.usage.prompt_tokens - 5;
-        const response = result.choices[0].message.content;
+        const response = await axios.post('https://www.justinkozlowski.me/gemini', payload);
+        console.log(response);
+        console.log(response.data.candidates[0].content.parts[0].text);
 
-        const aiMessage = { role: "assistant", content: response };
+        // Assuming the response structure matches the WebLLM engine
+        // this.tokenCount += response.data.usage.prompt_tokens - 5;
+        const aiMessage = { role: "model", parts: [ { text: response.data.candidates[0].content.parts[0].text } ] };
+        console.log(aiMessage)
         this.messages.push(aiMessage);
 
-        if (this.checkForWinner(response, this.phrase.phrase)) {
+        if (this.checkForWinner(aiMessage.parts[0].text, this.phrase.phrase)) {
           this.makeWinner();
         }
+      } catch (error) {
+        this.warningMessage = "An error occurred while processing your request. Please try again.";
+        console.error(error);
       } finally {
         this.loading = false;
         this.prompt = "";
@@ -225,7 +227,7 @@ export default {
   color: #0f5132;
 }
 
-.chat-message.assistant {
+.chat-message.model {
   align-self: flex-start;
   background-color: #e2e3e5;
   color: #41464b;

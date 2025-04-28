@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mlc-ai/web-llm": "^0.2.78",
+    "axios": "^1.9.0",
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
   },

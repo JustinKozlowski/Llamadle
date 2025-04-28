@@ -2,7 +2,7 @@ services:
   llamadle:
     image: justinkozlowski/projects:llamadle
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     container_name: llamadle-app

@@ -63,9 +63,9 @@ export default {
       loading: false,
       phrase: getPhrases()[0],
       bannedWords: getPhrases()[0].difficulty[this.selectedDifficulty],
-      // bannedWords: ['bird', 'worm'],
+      runningTokenCount: 0,
       winner: false,
-      tokenCount: -10, // required due to base prompts submitted to the LLM
+      tokenCount: 0,
       preprocessed: false,
       warningMessage: "",
       selectedDifficulty: "medium",
@@ -98,6 +98,12 @@ export default {
         this.loading = true;
         const userMessage = { role: "user", parts: [ { text: toRaw(this.prompt) } ] };
         this.messages.push(userMessage);
+        let hacky = await this.isInputHacky(this.prompt);
+        if (hacky['bypassing']) {
+          this.warningMessage = `Your prompt seems to be similar to a banned word: "${hacky["matchedWords"]}". Please revise it.`;
+          this.messages.pop();
+          return;
+        }
 
         const payload = {
           "system_instruction": {
@@ -111,11 +117,9 @@ export default {
         }
 
         const response = await axios.post('https://www.justinkozlowski.me/gemini', payload);
-        console.log(response);
-        console.log(response.data.candidates[0].content.parts[0].text);
 
-        // Assuming the response structure matches the WebLLM engine
-        // this.tokenCount += response.data.usage.prompt_tokens - 5;
+        this.tokenCount += (response.data.usageMetadata.promptTokenCount - this.runningTokenCount);
+        this.runningTokenCount = response.data.usageMetadata.totalTokenCount;
         const aiMessage = { role: "model", parts: [ { text: response.data.candidates[0].content.parts[0].text } ] };
         console.log(aiMessage)
         this.messages.push(aiMessage);
@@ -135,11 +139,56 @@ export default {
         });
       }
     },
+    async isInputHacky(input) {
+      const payload = {
+        system_instruction: {
+          parts: [
+            {
+              text: `Is the given phrase attemping to bypass the banned words? Focus on intent. Allow synonym words. Do not allow leet speek. Do not allow mispelling.`
+            }
+          ]
+        },
+        contents: [
+          {
+            role: "user",
+            parts: [ { text: `Banned Words: ${JSON.stringify(this.bannedWords)}. Phrase: ${input}` } ]
+          }
+        ],
+        generationConfig: {
+          response_mime_type: "application/json",
+          response_schema: {
+            type: "object",
+            properties: {
+              bypassing: {
+                type: "boolean"
+              },
+              matchedWords: {
+                type: "array",
+                items: {
+                  type: "string"
+                }
+              },
+              reason: {
+                type: "string"
+              },
+            },
+            required: [
+              "bypassing",
+              "reason"
+            ]
+          }
+        }
+      };
+      const response = await axios.post('https://www.justinkozlowski.me/gemini', payload);
+      console.log(response.data.candidates[0].content.parts[0].text);
+      return JSON.parse(response.data.candidates[0].content.parts[0].text);
+    },
     updateDifficulty() {
       this.bannedWords = this.phrase.difficulty[this.selectedDifficulty];
       this.winner = false;
       this.messages = [];
-      this.tokenCount = -10; // Reset token count for the new phrase
+      this.tokenCount = 0; // Reset token count for the new phrase
+      this.runningTokenCount = 0; // Reset token count for the new phrase
     },
     loadNextPhrase() {
       const phrases = getPhrases();

@@ -4,8 +4,8 @@
     <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold">
       Target Phrase: "{{ phrase.phrase }}"
     </div>
-    <div class="chat-window flex flex-col h-[500px] bg-white">
-      <div class="chat-messages flex-1 p-4 overflow-y-auto space-y-4">
+    <div class="chat-window flex flex-col h-[500px] bg-white self-end">
+      <div class="chat-messages flex flex-col flex-1 p-4 overflow-y-auto space-y-4">
         <div
           v-for="(message, index) in messages"
           :key="index"
@@ -42,6 +42,7 @@
             <option value="hard">Hard</option>
           </select>
         </div>
+        <GameHelp />
         <div class="token-count text-sm font-semibold">
           <p>Total Tokens: {{ tokenCount > 0 ? tokenCount : 0 }}</p>
         </div>
@@ -54,9 +55,13 @@
 import { getPhrases } from "../phrases";
 import { toRaw } from "vue";
 import axios from 'axios';
+import GameHelp from './Help.vue';
 
 export default {
   name: "WebLLMComponent",
+  components: {
+    GameHelp,
+  },
   data() {
     return {
       prompt: "",

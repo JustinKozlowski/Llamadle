@@ -100,7 +100,7 @@ export default {
         this.messages.push(userMessage);
         let hacky = await this.isInputHacky(this.prompt);
         if (hacky['bypassing']) {
-          this.warningMessage = `Your prompt seems to be similar to a banned word: "${hacky["matchedWords"]}". Please revise it.`;
+          this.warningMessage = `Your prompt seems to be similar to the banned word${hacky["matchedWords"].length > 1 ? "s" : "" }: ${hacky["matchedWords"].join(", ")}. Please revise it.`;
           this.messages.pop();
           return;
         }
@@ -114,14 +114,18 @@ export default {
             ]
           },
           "contents": this.messages,
+        };
+        const endpointMap = {
+          "easy": "gemini/gemini-2.5-flash",
+          "medium": "gemini/gemini-2.0-flash",
+          "hard": "gemini/gemini-1.5-flash"
         }
-
-        const response = await axios.post('https://www.justinkozlowski.me/gemini', payload);
+        const response = await axios.post(`https://www.justinkozlowski.me/${endpointMap[this.selectedDifficulty]}`, payload);
 
         this.tokenCount += (response.data.usageMetadata.promptTokenCount - this.runningTokenCount);
         this.runningTokenCount = response.data.usageMetadata.totalTokenCount;
         const aiMessage = { role: "model", parts: [ { text: response.data.candidates[0].content.parts[0].text } ] };
-        console.log(aiMessage)
+        console.log(aiMessage);
         this.messages.push(aiMessage);
 
         if (this.checkForWinner(aiMessage.parts[0].text, this.phrase.phrase)) {
@@ -179,7 +183,7 @@ export default {
           }
         }
       };
-      const response = await axios.post('https://www.justinkozlowski.me/gemini', payload);
+      const response = await axios.post('https://www.justinkozlowski.me/gemini/gemini-2.0-flash', payload);
       console.log(response.data.candidates[0].content.parts[0].text);
       return JSON.parse(response.data.candidates[0].content.parts[0].text);
     },

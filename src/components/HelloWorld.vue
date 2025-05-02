@@ -1,47 +1,48 @@
 <template>
-  <div class="chat-app">
-    <h1 class="chat-title">Llamadle</h1>
-    <div class="target-phrase-banner">
+  <div class="chat-app bg-gray-100 max-w-lg mx-auto my-4 p-4 rounded-lg shadow-md">
+    <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 rounded-t-lg">Llamadle</h1>
+    <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold">
       Target Phrase: "{{ phrase.phrase }}"
     </div>
-    <div class="chat-window">
-      <div class="chat-messages">
+    <div class="chat-window flex flex-col h-[500px] bg-white">
+      <div class="chat-messages flex-1 p-4 overflow-y-auto space-y-4">
         <div
           v-for="(message, index) in messages"
           :key="index"
-          :class="['chat-message', message.role]"
+          :class="['chat-message', message.role === 'user' ? 'self-end bg-green-100 text-green-800' : 'self-start bg-gray-200 text-gray-800', 'p-3 rounded-lg max-w-[70%]']"
         >
-          <p class="message-content">{{ message.parts[0].text }}</p>
+          <p class="message-content m-0">{{ message.parts[0].text }}</p>
         </div>
       </div>
-      <div v-if="warningMessage" class="warning-banner">
+      <div v-if="warningMessage" class="warning-banner bg-yellow-400 text-gray-800 text-center py-2 font-semibold">
         {{ warningMessage }}
       </div>
-      <div v-if="winner" class="winner-banner">
+      <div v-if="winner" class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold">
         🎉 Congratulations! You found the phrase: "{{ phrase.phrase }}" 🎉
-        <button @click="loadNextPhrase">Next</button>
+        <button @click="loadNextPhrase" class="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Next</button>
       </div>
-      <div v-else class="chat-input">
+      <div v-else class="chat-input flex gap-2 p-4 border-t">
         <textarea
           v-model="prompt"
           placeholder="Type your message..."
           rows="2"
           :disabled="loading"
           @keydown.enter.prevent="askPrompt"
+          class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100"
         ></textarea>
-        <button @click="askPrompt" :disabled="loading || !prompt.trim()">
+        <button @click="askPrompt" :disabled="loading || !prompt.trim()" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-300">
           {{ loading ? "Loading..." : "Send" }}
         </button>
       </div>
-      <div class="footer-section">
+      <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50">
         <div class="difficulty-dropdown">
-          <select id="difficulty" v-model="selectedDifficulty" @change="updateDifficulty">
+          <select id="difficulty" v-model="selectedDifficulty" @change="updateDifficulty" class="p-2 border rounded-lg">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
           </select>
         </div>
-        <div class="token-count">
+        <div class="token-count text-sm font-semibold">
           <p>Total Tokens: {{ tokenCount > 0 ? tokenCount : 0 }}</p>
         </div>
       </div>
@@ -242,137 +243,5 @@ export default {
 </script>
 
 <style scoped>
-.chat-app {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.target-phrase-banner {
-  background-color: #ff9800;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-}
-
-.chat-title {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  margin: 0;
-}
-
-.chat-window {
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  background-color: #f9f9f9;
-}
-
-.chat-messages {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.chat-message {
-  max-width: 70%;
-  padding: 10px;
-  border-radius: 8px;
-  word-wrap: break-word;
-}
-
-.chat-message.user {
-  align-self: flex-end;
-  background-color: #d1e7dd;
-  color: #0f5132;
-}
-
-.chat-message.model {
-  align-self: flex-start;
-  background-color: #e2e3e5;
-  color: #41464b;
-}
-
-.message-content {
-  margin: 0;
-}
-
-.chat-input {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-}
-
-textarea {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  resize: none;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.winner-banner {
-  text-align: center;
-  background-color: #ffeb3b;
-  color: #333;
-  padding: 10px;
-  font-weight: bold;
-  border-top: 1px solid #ddd;
-}
-
-.warning-banner {
-  background-color: #ffcc00;
-  color: #333;
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-}
-
-.footer-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-}
-
-.difficulty-dropdown select {
-  padding: 5px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-
-.token-count {
-  text-align: right;
-  font-weight: bold;
-}
+/* Removed existing styles as Tailwind CSS is now used */
 </style>

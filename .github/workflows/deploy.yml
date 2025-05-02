@@ -64,7 +64,8 @@ jobs:
         echo "Copied app"
         
         ssh -o StrictHostKeyChecking=no -i private_key.pem $REMOTE_USER@$REMOTE_HOST << 'EOF'
-          docker login --username ${{ vars.DOCKER_USERNAME }} --password '${{ vars.DOCKER_PASSWORD }}'
+          echo ${{ vars.DOCKER_USERNAME }}
+          docker login --username ${{ vars.DOCKER_USERNAME }} --password '${{ secrets.DOCKER_PASSWORD }}'
           docker info || { echo "Docker login failed"; exit 1; }
           docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml pull
           docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml up -d

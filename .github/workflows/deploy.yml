@@ -50,6 +50,8 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: ${{ vars.REMOTE_HOST }}
         REMOTE_USER: ${{ vars.REMOTE_USER }}
+        DOCKER_PASSWORD: ${{ vars.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
       run: |
         echo "$SSH_PRIVATE_KEY" > private_key.pem
         chmod 600 private_key.pem

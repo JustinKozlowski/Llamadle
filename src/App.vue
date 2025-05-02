@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white flex items-center justify-center">
     <HelloWorld />
   </div>
 </template>
@@ -16,11 +16,8 @@ export default {
 </script>
 
 <style>
+/* Optional: remove if not needed anymore */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 </style>

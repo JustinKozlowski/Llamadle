@@ -1,49 +1,75 @@
 <template>
-  <div class="chat-app bg-gray-100 max-w-lg mx-auto my-4 p-4 rounded-lg shadow-md">
-    <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 rounded-t-lg">Llamadle</h1>
+  <div class="chat-app bg-gray-100 dark:bg-gray-900 max-w-lg mx-auto p-4 rounded-lg shadow-md">
+    <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 rounded-t-lg">
+      Llamadle
+    </h1>
     <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold">
       Target Phrase: "{{ phrase.phrase }}"
     </div>
-    <div class="chat-window flex flex-col h-[500px] bg-white self-end">
+    <div class="chat-window flex flex-col h-[500px] bg-white dark:bg-gray-800 self-end">
       <div class="chat-messages flex flex-col flex-1 p-4 overflow-y-auto space-y-4">
         <div
           v-for="(message, index) in messages"
           :key="index"
-          :class="['chat-message', message.role === 'user' ? 'self-end bg-green-100 text-green-800' : 'self-start bg-gray-200 text-gray-800', 'p-3 rounded-lg max-w-[70%]']"
+          :class="[
+            'chat-message',
+            message.role === 'user'
+              ? 'self-end bg-green-100 text-green-800 dark:bg-green-200 dark:text-green-900'
+              : 'self-start bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100',
+            'p-3 rounded-lg max-w-[70%]'
+          ]"
         >
           <p class="message-content m-0">{{ message.parts[0].text }}</p>
         </div>
       </div>
-      <div v-if="warningMessage" class="warning-banner bg-yellow-400 text-gray-800 text-center py-2 font-semibold">
+
+      <div v-if="warningMessage" class="warning-banner bg-yellow-400 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-500 dark:text-black">
         {{ warningMessage }}
       </div>
-      <div v-if="winner" class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold">
+
+      <div v-if="winner" class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black">
         🎉 Congratulations! You found the phrase: "{{ phrase.phrase }}" 🎉
-        <button @click="loadNextPhrase" class="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Next</button>
+        <button
+          @click="loadNextPhrase"
+          class="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-400"
+        >
+          Next
+        </button>
       </div>
-      <div v-else class="chat-input flex gap-2 p-4 border-t">
+
+      <div v-else class="chat-input flex gap-2 p-4 border-t dark:border-gray-600">
         <textarea
           v-model="prompt"
           placeholder="Type your message..."
           rows="2"
           :disabled="loading"
           @keydown.enter.prevent="askPrompt"
-          class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100"
+          class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100 dark:bg-gray-700 dark:text-white dark:disabled:bg-gray-600 dark:border-gray-500"
         ></textarea>
-        <button @click="askPrompt" :disabled="loading || !prompt.trim()" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-300">
+        <button
+          @click="askPrompt"
+          :disabled="loading || !prompt.trim()"
+          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-300 dark:disabled:bg-gray-600"
+        >
           {{ loading ? "Loading..." : "Send" }}
         </button>
       </div>
-      <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50">
+
+      <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <div class="difficulty-dropdown">
-          <select id="difficulty" v-model="selectedDifficulty" @change="updateDifficulty" class="p-2 border rounded-lg">
+          <select
+            id="difficulty"
+            v-model="selectedDifficulty"
+            @change="updateDifficulty"
+            class="p-2 border rounded-lg dark:bg-gray-700 dark:text-white dark:border-gray-600"
+          >
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
           </select>
         </div>
         <GameHelp />
-        <div class="token-count text-sm font-semibold">
+        <div class="token-count text-sm font-semibold text-gray-900 dark:text-white">
           <p>Total Tokens: {{ tokenCount > 0 ? tokenCount : 0 }}</p>
         </div>
       </div>
@@ -110,8 +136,10 @@ export default {
 
         // Run Anti Cheat
         let hacky = await this.isInputHacky(this.prompt);
-        if (hacky['mispelled']) {
-          this.warningMessage = `Your prompt seems to be similar to the banned word${hacky["matchedWords"].length > 1 ? "s" : "" }: ${hacky["matchedWords"].join(", ")}. Please revise it.`;
+        const mispelledWords = hacky["mispelledWordsThatAreInBannedWordsList"];
+        if (mispelledWords.length > 0) {
+          // const mispelledWords = hacky["mispelledWordsThatAreInBannedWordsList"];
+          this.warningMessage = `Your prompt seems to be similar to the banned word${mispelledWords.length > 1 ? "s" : "" }: ${mispelledWords.join(", ")}. Please revise it.`;
           this.messages.pop();
           this.prompt = originalPrompt;
           console.log(this.prompt);
@@ -173,7 +201,12 @@ export default {
         system_instruction: {
           parts: [
             {
-              text: `Is the given phrase attemping to spell the banned words? Focus on intent. Do not allow leet speek. Do not allow mispelling.`
+              text: `We are playing charades so we can't say certain words. 
+We are allowed to describe words and use synonyms though. 
+Is the given phrase attemping to spell the banned words? 
+Do not allow leet speek of the banned words. 
+Do not allow mispelling of the banned words.`
+              // text: `Does the given phrase have any of the following words? Do not allow leet speek. Do not allow mispelling.`
             }
           ]
         },
@@ -188,10 +221,10 @@ export default {
           response_schema: {
             type: "object",
             properties: {
-              mispelled: {
-                type: "boolean"
-              },
-              matchedWords: {
+              // mispelled: {
+              //   type: "boolean"
+              // },
+              mispelledWordsThatAreInBannedWordsList: {
                 type: "array",
                 items: {
                   type: "string"
@@ -202,13 +235,15 @@ export default {
               },
             },
             required: [
-              "mispelled",
+              // "mispelled",
+              "mispelledWordsThatAreInBannedWordsList",
               "reason"
             ]
           }
         }
       };
       const response = await axios.post('https://www.justinkozlowski.me/gemini/gemini-2.0-flash', payload);
+      console.log(JSON.parse(response.data.candidates[0].content.parts[0].text));
       return JSON.parse(response.data.candidates[0].content.parts[0].text);
     },
     updateDifficulty() {

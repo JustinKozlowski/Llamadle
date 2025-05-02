@@ -1,16 +1,36 @@
 <template>
   <div>
-    <button @click="showModal = true">How to Play</button>
+    <!-- Question Mark Button -->
+    <button
+      @click="showModal = true"
+      class="bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-green-600"
+      aria-label="How to Play"
+    >
+      ?
+    </button>
 
-    <div v-if="showModal" class="modal-overlay" @click="closeModal">
-      <div class="modal-content" @click.stop>
-        <h2>How to Play</h2>
-        <p>
-          Welcome to Llamadle!
-          The goal of the game is to prompt the LLM to guess the secret phrase.
+    <!-- Modal -->
+    <div
+      v-if="showModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      @click="closeModal"
+    >
+      <div
+        class="modal-background bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-5 rounded shadow-lg max-w-md w-full"
+        @click.stop
+      >
+        <h2 class="text-xl font-bold mb-4">How to Play</h2>
+        <p class="mb-4">
+          Welcome to Llamadle!  
+          The goal of the game is to prompt the LLM to guess the secret phrase.  
           Try to reach the phrase in the fewest tokens possible!
         </p>
-        <button @click="closeModal">Close</button>
+        <button
+          @click="closeModal"
+          class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+        >
+          Close
+        </button>
       </div>
     </div>
   </div>
@@ -21,7 +41,7 @@ export default {
   name: "HelpModal",
   data() {
     return {
-      showModal: true,
+      showModal: false,
     };
   },
   methods: {
@@ -33,38 +53,7 @@ export default {
 </script>
 
 <style scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+.modal-background {
+  backdrop-filter: blur(6px);
 }
 </style>

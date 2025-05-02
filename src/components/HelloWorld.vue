@@ -83,14 +83,17 @@ export default {
     },
     async askPrompt() {
       this.winner = false;
+      const originalPrompt = this.prompt;
       this.warningMessage = "";
       if (!this.prompt.trim()) {
         this.warningMessage = "Please enter a prompt.";
         return;
       }
+      
       const bannedWord = this.containsBannedWords(this.prompt);
       if (bannedWord) {
         this.warningMessage = `Your prompt contains a banned word: "${bannedWord}". Please revise it.`;
+        this.prompt = originalPrompt;
         return;
       }
 
@@ -98,13 +101,18 @@ export default {
         this.loading = true;
         const userMessage = { role: "user", parts: [ { text: toRaw(this.prompt) } ] };
         this.messages.push(userMessage);
+
+        // Run Anti Cheat
         let hacky = await this.isInputHacky(this.prompt);
-        if (hacky['bypassing']) {
+        if (hacky['mispelled']) {
           this.warningMessage = `Your prompt seems to be similar to the banned word${hacky["matchedWords"].length > 1 ? "s" : "" }: ${hacky["matchedWords"].join(", ")}. Please revise it.`;
           this.messages.pop();
+          this.prompt = originalPrompt;
+          console.log(this.prompt);
           return;
         }
 
+        // Get AI Response
         const payload = {
           "system_instruction": {
             "parts": [
@@ -131,12 +139,23 @@ export default {
         if (this.checkForWinner(aiMessage.parts[0].text, this.phrase.phrase)) {
           this.makeWinner();
         }
+        else {
+          this.prompt = "";
+        }
       } catch (error) {
         this.warningMessage = "An error occurred while processing your request. Please try again.";
         console.error(error);
+        if (this.messages.at(-1).role !== "model"){
+          // did not receive a response from model. Should pop the user message to track tokens and ui correctly
+          this.messages.pop();
+          this.prompt = originalPrompt;
+        }
+        else {
+          this.prompt = '';
+        }
       } finally {
+        console.log('in finally');
         this.loading = false;
-        this.prompt = "";
         this.$nextTick(() => {
           const textarea = this.$el.querySelector('textarea');
           if (textarea) textarea.focus();
@@ -148,7 +167,7 @@ export default {
         system_instruction: {
           parts: [
             {
-              text: `Is the given phrase attemping to bypass the banned words? Focus on intent. Allow synonym words. Do not allow leet speek. Do not allow mispelling.`
+              text: `Is the given phrase attemping to spell the banned words? Focus on intent. Do not allow leet speek. Do not allow mispelling.`
             }
           ]
         },
@@ -163,7 +182,7 @@ export default {
           response_schema: {
             type: "object",
             properties: {
-              bypassing: {
+              mispelled: {
                 type: "boolean"
               },
               matchedWords: {
@@ -177,14 +196,13 @@ export default {
               },
             },
             required: [
-              "bypassing",
+              "mispelled",
               "reason"
             ]
           }
         }
       };
       const response = await axios.post('https://www.justinkozlowski.me/gemini/gemini-2.0-flash', payload);
-      console.log(response.data.candidates[0].content.parts[0].text);
       return JSON.parse(response.data.candidates[0].content.parts[0].text);
     },
     updateDifficulty() {

@@ -27,7 +27,7 @@ export default {
       if (this.isKeyboardOpen){
         setTimeout(() => {
           window.scrollTo(0, 0);
-        }, 100);
+        }, 25);
         // this.$nextTick(() => {
         //   window.scrollTo(0, 0);
         // });

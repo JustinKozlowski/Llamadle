@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-app flex flex-col w-full h-[100dvh] bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
+  <div class="chat-app flex flex-col w-full h-[var(--viewport-height)] bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
     <h1 
       v-if="!isKeyboardOpen"
       class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg"
@@ -8,7 +8,7 @@
     </h1>
 
     <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold px-2">
-      Target Phrase: "{{ phrase.phrase }}"
+      Target Phrase: "{{ phrase.phrase }}" {{ debug }}
     </div>
 
     <div class="chat-window flex flex-col flex-grow min-h-0 justify-end w-full sm:h-[500px] bg-white dark:bg-gray-800 sm:rounded-b-lg">
@@ -110,6 +110,7 @@ export default {
       originalHeight: window.visualViewport.height,
       prompt: "",
       messages: [],
+      debug: 0,
       loading: false,
       phrase: getPhrases()[0],
       bannedWords: getPhrases()[0].difficulty[this.selectedDifficulty],
@@ -292,15 +293,16 @@ Do not allow mispelling of the banned words.`
     handleResize() {
       const currentHeight = window.visualViewport.height;
       // Heuristic: keyboard likely open if height dropped >150px
-      this.prompt = currentHeight;
+      console.log(currentHeight);
+      this.debug = currentHeight;
       this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
     },
   },
   mounted() {
-    this.updateDifficulty();
     this.scrollToBottom();
     this.originalHeight = window.visualViewport.height;
     window.visualViewport.addEventListener('resize', this.handleResize);
+    this.updateDifficulty();
   },
   unmounted() {
     window.visualViewport.removeEventListener('resize', this.handleResize);

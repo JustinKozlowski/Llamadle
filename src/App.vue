@@ -27,8 +27,6 @@ export default {
     },
   },
   mounted() {
-    this.updateDifficulty();
-    this.scrollToBottom();
     this.originalHeight = window.visualViewport.height;
     window.visualViewport.addEventListener('resize', this.handleResize);
   },

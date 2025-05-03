@@ -54,8 +54,7 @@
         <textarea
           v-model="prompt"
           placeholder="Type your message..."
-          rows="2"
-          :disabled="loading"
+          rows="1"
           @keydown.enter.prevent="askPrompt"
           class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100 dark:bg-gray-700 dark:text-white dark:disabled:bg-gray-600 dark:border-gray-500"
         ></textarea>
@@ -133,6 +132,9 @@ export default {
       return this.bannedWords.find((word) => input.toLowerCase().includes(word.toLowerCase()));
     },
     async askPrompt() {
+      if (this.loading){
+        return;
+      }
       this.winner = false;
       const originalPrompt = this.prompt;
       this.warningMessage = "";

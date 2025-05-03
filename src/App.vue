@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white flex items-center justify-center">
+  <div id="app" class="h-[100dvh] bg-white text-gray-900 dark:bg-gray-900 dark:text-white flex items-center justify-center">
     <HelloWorld />
   </div>
 </template>

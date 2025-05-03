@@ -299,10 +299,10 @@ Do not allow mispelling of the banned words.`
     this.updateDifficulty();
     this.scrollToBottom();
     this.originalHeight = window.visualViewport.height;
-    window.addEventListener('resize', this.handleResize);
+    window.visualViewport.addEventListener('resize', this.handleResize);
   },
   unmounted() {
-    window.removeEventListener('resize', this.handleResize);
+    window.visualViewport.removeEventListener('resize', this.handleResize);
   },
   updated() {
     this.scrollToBottom();

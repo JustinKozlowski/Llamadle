@@ -24,6 +24,9 @@ export default {
       // Heuristic: keyboard likely open if height dropped >150px
       this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
       document.documentElement.style.setProperty('--viewport-height', `${currentHeight}px`);
+      if (this.isKeyboardOpen){
+        window.scrollTo(0, 0);       
+      }
     },
   },
   mounted() {

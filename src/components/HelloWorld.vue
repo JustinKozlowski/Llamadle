@@ -292,6 +292,7 @@ Do not allow mispelling of the banned words.`
     handleResize() {
       const currentHeight = window.visualViewport.height;
       // Heuristic: keyboard likely open if height dropped >150px
+      this.prompt = currentHeight;
       this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
     },
   },

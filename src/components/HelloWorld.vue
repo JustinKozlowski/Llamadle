@@ -8,7 +8,8 @@
     </h1>
 
     <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold px-2">
-      Target Phrase: "{{ phrase.phrase }}" {{ debug }}
+      <p>Target Phrase: "{{ phrase.phrase }}"</p>
+      <!-- {{ debug }} -->
     </div>
 
     <div class="chat-window flex flex-col flex-grow min-h-0 justify-end w-full sm:h-[500px] bg-white dark:bg-gray-800 sm:rounded-b-lg">
@@ -109,7 +110,7 @@ export default {
       originalHeight: window.visualViewport.height,
       prompt: "",
       messages: [],
-      debug: 0,
+      // debug: 0,
       loading: false,
       phrase: getPhrases()[0],
       bannedWords: getPhrases()[0].difficulty[this.selectedDifficulty],
@@ -297,7 +298,7 @@ Do not allow mispelling of the banned words.`
       const currentHeight = window.visualViewport.height;
       // Heuristic: keyboard likely open if height dropped >150px
       console.log(currentHeight);
-      this.debug = currentHeight;
+      // this.debug = currentHeight;
       this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
     },
   },

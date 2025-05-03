@@ -41,7 +41,7 @@ export default {
   name: "HelpModal",
   data() {
     return {
-      showModal: false,
+      showModal: true,
     };
   },
   methods: {

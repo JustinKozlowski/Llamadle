@@ -137,13 +137,14 @@ export default {
       }
       this.winner = false;
       const originalPrompt = this.prompt;
+      this.prompt = "";
       this.warningMessage = "";
-      if (!this.prompt.trim()) {
+      if (!originalPrompt.trim()) {
         this.warningMessage = "Please enter a prompt.";
         return;
       }
       
-      const bannedWord = this.containsBannedWords(this.prompt);
+      const bannedWord = this.containsBannedWords(originalPrompt);
       if (bannedWord) {
         this.warningMessage = `Your prompt contains a banned word: "${bannedWord}". Please revise it.`;
         this.prompt = originalPrompt;
@@ -152,11 +153,11 @@ export default {
 
       try {
         this.loading = true;
-        const userMessage = { role: "user", parts: [ { text: toRaw(this.prompt) } ] };
+        const userMessage = { role: "user", parts: [ { text: toRaw(originalPrompt) } ] };
         this.messages.push(userMessage);
 
         // Run Anti Cheat
-        let hacky = await this.isInputHacky(this.prompt);
+        let hacky = await this.isInputHacky(originalPrompt);
         const mispelledWords = hacky["mispelledWordsThatAreInBannedWordsList"];
         if (mispelledWords.length > 0) {
           // const mispelledWords = hacky["mispelledWordsThatAreInBannedWordsList"];
@@ -194,9 +195,6 @@ export default {
         if (this.checkForWinner(aiMessage.parts[0].text, this.phrase.phrase)) {
           this.makeWinner();
         }
-        else {
-          this.prompt = "";
-        }
       } catch (error) {
         this.warningMessage = "An error occurred while processing your request. Please try again.";
         console.error(error);
@@ -204,9 +202,6 @@ export default {
           // did not receive a response from model. Should pop the user message to track tokens and ui correctly
           this.messages.pop();
           this.prompt = originalPrompt;
-        }
-        else {
-          this.prompt = '';
         }
         // For ios, make faster reload of base page by forcing on submit here
         // In general, should mobile stay in small screen until keyboard is put away? probably

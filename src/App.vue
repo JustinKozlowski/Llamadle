@@ -27,7 +27,7 @@ export default {
       if (this.isKeyboardOpen){
         this.$nextTick(() => {
           window.scrollTo(0, 0);
-        }
+        })
       }
     },
   },

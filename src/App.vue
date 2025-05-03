@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-[100dvh] bg-white text-gray-900 dark:bg-gray-900 dark:text-white flex items-center justify-center">
+  <div id="app" class="h-[var(--viewport-height)] bg-white text-gray-900 dark:bg-gray-900 dark:text-white flex items-center justify-center">
     <HelloWorld />
   </div>
 </template>
@@ -12,11 +12,39 @@ export default {
   components: {
     HelloWorld,
   },
+  data() {
+    return {
+      isKeyboardOpen: false,
+      originalHeight: window.visualViewport.height,
+    }
+  },
+  methods: {
+    handleResize() {
+      const currentHeight = window.visualViewport.height;
+      // Heuristic: keyboard likely open if height dropped >150px
+      this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
+      document.documentElement.style.setProperty('--viewport-height', `${currentHeight}px`);
+    },
+  },
+  mounted() {
+    this.updateDifficulty();
+    this.scrollToBottom();
+    this.originalHeight = window.visualViewport.height;
+    window.visualViewport.addEventListener('resize', this.handleResize);
+  },
+  unmounted() {
+    window.visualViewport.removeEventListener('resize', this.handleResize);
+  },
 };
 </script>
 
 <style>
-/* Optional: remove if not needed anymore */
+:root {
+  --viewport-height: 100vh; /* Default to full viewport height */
+}
+.chat-app {
+  height: var(--viewport-height); /* Use dynamic height */
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }

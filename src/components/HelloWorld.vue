@@ -136,6 +136,13 @@ export default {
       if (this.loading){
         return;
       }
+      this.$nextTick(() => {
+        const textarea = this.$el.querySelector('textarea');
+        if (textarea) {
+          textarea.focus();
+          textarea.setSelectionRange(textarea.value.length, textarea.value.length); 
+        }
+      });
       this.winner = false;
       const originalPrompt = this.prompt;
       this.prompt = "";
@@ -204,8 +211,6 @@ export default {
           this.messages.pop();
           this.prompt = originalPrompt;
         }
-        // For ios, make faster reload of base page by forcing on submit here
-        // In general, should mobile stay in small screen until keyboard is put away? probably
       } finally {
         console.log('in finally');
         this.loading = false;
@@ -227,7 +232,9 @@ export default {
 We are allowed to describe words and use synonyms though. 
 Is the given phrase attemping to spell the banned words? 
 Do not allow leet speek of the banned words. 
-Do not allow mispelling of the banned words.`
+Do not allow mispelling of the banned words.
+Return individual mispelled words if there is a concatenation of the banned words.
+`
               // text: `Does the given phrase have any of the following words? Do not allow leet speek. Do not allow mispelling.`
             }
           ]

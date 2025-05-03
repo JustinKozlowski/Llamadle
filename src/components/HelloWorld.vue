@@ -107,7 +107,7 @@ export default {
   data() {
     return {
       isKeyboardOpen: false,
-      originalHeight: window.innerHeight,
+      originalHeight: window.visualViewport.height,
       prompt: "",
       messages: [],
       loading: false,
@@ -290,7 +290,7 @@ Do not allow mispelling of the banned words.`
       });
     },
     handleResize() {
-      const currentHeight = window.innerHeight;
+      const currentHeight = window.visualViewport.height;
       // Heuristic: keyboard likely open if height dropped >150px
       this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
     },
@@ -298,7 +298,7 @@ Do not allow mispelling of the banned words.`
   mounted() {
     this.updateDifficulty();
     this.scrollToBottom();
-    this.originalHeight = window.innerHeight;
+    this.originalHeight = window.visualViewport.height;
     window.addEventListener('resize', this.handleResize);
   },
   unmounted() {

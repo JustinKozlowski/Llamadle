@@ -25,11 +25,12 @@ export default {
       this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
       document.documentElement.style.setProperty('--viewport-height', `${currentHeight}px`);
       if (this.isKeyboardOpen){
-        setTimeout(() => {
+        // setTimeout(() => {
+        //   window.scrollTo(0, 0);
+        // }, 2);
+        this.$nextTick(() => {
           window.scrollTo(0, 0);
-        }, 2);
-        // this.$nextTick(() => {
-        // })
+        });
       }
     },
   },

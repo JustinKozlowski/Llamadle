@@ -1,33 +1,40 @@
 <template>
-  <div class="chat-app flex flex-col bg-gray-100 dark:bg-gray-900 w-full h-screen sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
+  <div class="chat-app flex flex-col w-full h-screen bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
     <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg">
       Llamadle
     </h1>
-    <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold">
-      <p class="px-2">Target Phrase: "{{ phrase.phrase }}"</p>
+
+    <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold px-2">
+      Target Phrase: "{{ phrase.phrase }}"
     </div>
-    <div class="chat-window flex-grow flex flex-col min-h-0 justify-end w-full sm:h-[500px] bg-white dark:bg-gray-800 self-end sm:rounded-b-lg">
-      <div class="chat-messages flex-1 min-h-0 overflow-y-auto flex flex-col p-4 space-y-4">
+
+    <div class="chat-window flex flex-col flex-grow min-h-0 justify-end w-full sm:h-[500px] bg-white dark:bg-gray-800 sm:rounded-b-lg">
+      <div class="chat-messages flex flex-col flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
         <div
           v-for="(message, index) in messages"
           :key="index"
           :class="[
-            'chat-message',
+            'chat-message p-3 rounded-lg max-w-[70%]',
             message.role === 'user'
               ? 'self-end bg-green-100 text-green-800 dark:bg-green-200 dark:text-green-900'
-              : 'self-start bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100',
-            'p-3 rounded-lg max-w-[70%]'
+              : 'self-start bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100'
           ]"
         >
           <p class="message-content m-0">{{ message.parts[0].text }}</p>
         </div>
       </div>
 
-      <div v-if="warningMessage" class="warning-banner bg-yellow-400 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-500 dark:text-black">
+      <div
+        v-if="warningMessage"
+        class="warning-banner bg-yellow-400 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-500 dark:text-black"
+      >
         {{ warningMessage }}
       </div>
 
-      <div v-if="winner" class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black">
+      <div
+        v-if="winner"
+        class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black"
+      >
         🎉 Congratulations! You found the phrase: "{{ phrase.phrase }}" 🎉
         <button
           @click="loadNextPhrase"
@@ -37,7 +44,10 @@
         </button>
       </div>
 
-      <div v-else class="chat-input flex gap-2 p-4 border-t dark:border-gray-600">
+      <div
+        v-else
+        class="chat-input flex gap-2 p-4 border-t dark:border-gray-600"
+      >
         <textarea
           v-model="prompt"
           placeholder="Type your message..."

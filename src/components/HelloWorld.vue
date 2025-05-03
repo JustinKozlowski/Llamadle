@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-app flex flex-col w-full h-screen bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
+  <div class="chat-app flex flex-col w-full h-[100dvh] bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
     <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg">
       Llamadle
     </h1>

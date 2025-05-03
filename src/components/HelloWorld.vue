@@ -213,7 +213,10 @@ export default {
         this.loading = false;
         this.$nextTick(() => {
           const textarea = this.$el.querySelector('textarea');
-          if (textarea) textarea.focus();
+          if (textarea) {
+            textarea.focus();
+            textarea.setSelectionRange(textarea.value.length, textarea.value.length); 
+          }
         });
       }
     },

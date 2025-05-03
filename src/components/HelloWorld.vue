@@ -56,6 +56,7 @@
           v-model="prompt"
           placeholder="Type your message..."
           rows="1"
+          id="prompt-area"
           @keydown.enter.prevent="askPrompt"
           class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100 dark:bg-gray-700 dark:text-white dark:disabled:bg-gray-600 dark:border-gray-500"
         ></textarea>
@@ -145,7 +146,7 @@ export default {
         return;
       }
       this.$nextTick(() => {
-        const textarea = this.$el.querySelector('textarea');
+        const textarea = document.getElementById('prompt-area');
         if (textarea) {
           textarea.focus();
           textarea.setSelectionRange(textarea.value.length, textarea.value.length); 
@@ -223,7 +224,7 @@ export default {
         console.log('in finally');
         this.loading = false;
         this.$nextTick(() => {
-          const textarea = this.$el.querySelector('textarea');
+          const textarea = document.getElementById('prompt-area');
           if (textarea) {
             textarea.focus();
             textarea.setSelectionRange(textarea.value.length, textarea.value.length); 

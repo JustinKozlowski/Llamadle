@@ -197,7 +197,7 @@ export default {
           "contents": this.messages,
         };
         const endpointMap = {
-          "easy": "gemini/gemini-2.5-flash",
+          "easy": "gemini/gemini-2.5-flash-preview-04-17",
           "medium": "gemini/gemini-2.0-flash",
           "hard": "gemini/gemini-1.5-flash"
         }

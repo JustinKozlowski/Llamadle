@@ -1,6 +1,9 @@
 <template>
   <div class="chat-app flex flex-col w-full h-[100dvh] bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
-    <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg">
+    <h1 
+      v-if="!isKeyboardOpen"
+      class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg"
+    >
       Llamadle
     </h1>
 
@@ -35,7 +38,7 @@
         v-if="winner"
         class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black"
       >
-        🎉 Congratulations! You found the phrase: "{{ phrase.phrase }}" 🎉
+        🎉 Congratulations! You found the phrase: "{{ phrase.phrase }}" in {{ tokenCount }} Tokens 🎉
         <button
           @click="loadNextPhrase"
           class="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-400"
@@ -65,7 +68,10 @@
         </button>
       </div>
 
-      <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700 sm:rounded-b-lg">
+      <div 
+        v-if="!isKeyboardOpen"
+        class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700 sm:rounded-b-lg"
+      >
         <div class="difficulty-dropdown">
           <select
             id="difficulty"
@@ -89,7 +95,7 @@
 
 <script>
 import { getPhrases } from "../phrases";
-import { toRaw } from "vue";
+import { toRaw, } from 'vue';
 import axios from 'axios';
 import GameHelp from './Help.vue';
 
@@ -100,6 +106,8 @@ export default {
   },
   data() {
     return {
+      isKeyboardOpen: false,
+      originalHeight: window.innerHeight,
       prompt: "",
       messages: [],
       loading: false,
@@ -281,10 +289,20 @@ Do not allow mispelling of the banned words.`
         }
       });
     },
+    handleResize() {
+      const currentHeight = window.innerHeight;
+      // Heuristic: keyboard likely open if height dropped >150px
+      this.isKeyboardOpen = currentHeight < this.originalHeight - 150;
+    },
   },
   mounted() {
     this.updateDifficulty();
     this.scrollToBottom();
+    this.originalHeight = window.innerHeight;
+    window.addEventListener('resize', this.handleResize);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize);
   },
   updated() {
     this.scrollToBottom();

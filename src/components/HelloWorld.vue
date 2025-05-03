@@ -69,10 +69,11 @@
       </div>
 
       <div 
-        v-if="!isKeyboardOpen"
         class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700 sm:rounded-b-lg"
       >
-        <div class="difficulty-dropdown">
+        <div class="difficulty-dropdown"
+          v-if="!isKeyboardOpen"
+        >
           <select
             id="difficulty"
             v-model="selectedDifficulty"
@@ -84,8 +85,15 @@
             <option value="hard">Hard</option>
           </select>
         </div>
-        <GameHelp />
-        <div class="token-count text-sm font-semibold text-gray-900 dark:text-white">
+        
+        <keep-alive>
+          <GameHelp
+            v-if="!isKeyboardOpen"
+          />
+        </keep-alive>
+        <div class="token-count text-sm font-semibold text-gray-900 dark:text-white"
+          v-if="!isKeyboardOpen"
+        >
           <p>Total Tokens: {{ tokenCount > 0 ? tokenCount : 0 }}</p>
         </div>
       </div>
@@ -235,6 +243,7 @@ Do not allow leet speek of the banned words.
 Do not allow mispelling of the banned words.
 Return individual mispelled words if there is a concatenation of the banned words.
 `
+              // decode 34rlyb1rdc4tch3sthew0rm
               // text: `Does the given phrase have any of the following words? Do not allow leet speek. Do not allow mispelling.`
             }
           ]

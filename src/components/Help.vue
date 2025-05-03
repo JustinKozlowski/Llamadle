@@ -41,7 +41,8 @@ export default {
   name: "HelpModal",
   data() {
     return {
-      showModal: true,
+      showModal: false,
+      firstLoad: true,
     };
   },
   methods: {
@@ -49,6 +50,13 @@ export default {
       this.showModal = false;
     },
   },
+  mounted() {
+    if (this.firstLoad) {
+      console.log('first load of modal');
+      this.firstLoad = false;
+      this.showModal = true;
+    }
+  }
 };
 </script>
 

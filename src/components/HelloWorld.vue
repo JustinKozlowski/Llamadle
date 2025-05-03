@@ -206,6 +206,8 @@ export default {
         else {
           this.prompt = '';
         }
+        // For ios, make faster reload of base page by forcing on submit here
+        // In general, should mobile stay in small screen until keyboard is put away? probably
       } finally {
         console.log('in finally');
         this.loading = false;
@@ -278,9 +280,10 @@ Do not allow mispelling of the banned words.`
       const nextIndex = (currentIndex + 1) % phrases.length;
       this.phrase = phrases[nextIndex];
       this.updateDifficulty();
+      this.prompt = "";
       this.winner = false;
       this.messages = [];
-      this.tokenCount = -10; // Reset token count for the new phrase
+      this.tokenCount = 0; // Reset token count for the new phrase
     },
     scrollToBottom() {
       this.$nextTick(() => {

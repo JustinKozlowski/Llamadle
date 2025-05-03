@@ -1,13 +1,13 @@
 <template>
-  <div class="chat-app bg-gray-100 dark:bg-gray-900 max-w-lg mx-auto p-4 rounded-lg shadow-md">
-    <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 rounded-t-lg">
+  <div class="chat-app flex flex-col bg-gray-100 dark:bg-gray-900 w-full h-screen sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
+    <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg">
       Llamadle
     </h1>
     <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold">
-      Target Phrase: "{{ phrase.phrase }}"
+      <p class="px-2">Target Phrase: "{{ phrase.phrase }}"</p>
     </div>
-    <div class="chat-window flex flex-col h-[500px] bg-white dark:bg-gray-800 self-end">
-      <div class="chat-messages flex flex-col flex-1 p-4 overflow-y-auto space-y-4">
+    <div class="chat-window flex-grow flex flex-col min-h-0 justify-end w-full sm:h-[500px] bg-white dark:bg-gray-800 self-end sm:rounded-b-lg">
+      <div class="chat-messages flex-1 min-h-0 overflow-y-auto flex flex-col p-4 space-y-4">
         <div
           v-for="(message, index) in messages"
           :key="index"
@@ -55,7 +55,7 @@
         </button>
       </div>
 
-      <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+      <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700 sm:rounded-b-lg">
         <div class="difficulty-dropdown">
           <select
             id="difficulty"

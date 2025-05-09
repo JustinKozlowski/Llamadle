@@ -15,6 +15,7 @@ const phrases = [
       "hard": ['apple', 'day', 'doctor']
     }
   },
+  {
     phrase: 'Second mouse gets the cheese',
     difficulty: {
       "easy": ['mouse'],
@@ -22,7 +23,8 @@ const phrases = [
       "hard": ['second', 'mouse', 'cheese']
     }
   },
-  phrase: 'Out of left field',
+  {
+    phrase: 'Out of left field',
     difficulty: {
       "easy": ['field'],
       "medium": ['out', 'field'],

@@ -197,9 +197,9 @@ export default {
           "contents": this.messages,
         };
         const endpointMap = {
-          "easy": "gemini/gemini-2.5-flash-preview-04-17",
-          "medium": "gemini/gemini-2.0-flash",
-          "hard": "gemini/gemini-1.5-flash"
+          "easy": "gemini/gemini-2.5-flash",
+          "medium": "gemini/gemini-2.5-flash",
+          "hard": "gemini/gemini-2.5-flash"
         }
         const response = await axios.post(`https://www.justinkozlowski.me/${endpointMap[this.selectedDifficulty]}`, payload);
 
@@ -281,7 +281,7 @@ Return individual mispelled words if there is a concatenation of the banned word
           }
         }
       };
-      const response = await axios.post('https://www.justinkozlowski.me/gemini/gemini-2.0-flash', payload);
+      const response = await axios.post('https://www.justinkozlowski.me/gemini/gemini-2.5-flash', payload);
       console.log(JSON.parse(response.data.candidates[0].content.parts[0].text));
       return JSON.parse(response.data.candidates[0].content.parts[0].text);
     },

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Llamadle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html, body { height: 100%; margin: 0; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+<div class="chat-app flex flex-col w-full h-screen bg-gray-100 dark:bg-gray-900 sm:max-w-lg sm:mx-auto sm:p-4 sm:rounded-lg shadow-md">
+  <h1 class="chat-title text-2xl font-bold text-center text-white bg-green-500 py-2 sm:rounded-t-lg">
+    🦙 Llamadle
+  </h1>
+
+  <div class="target-phrase-banner bg-orange-500 text-white text-center py-2 font-semibold px-2">
+    <p class="m-0">Target Phrase: "<span id="targetPhrase">…</span>" <span id="puzzleMeta" class="font-normal opacity-80 text-sm"></span></p>
+  </div>
+
+  <div class="chat-window flex flex-col flex-grow min-h-0 justify-end w-full sm:h-[500px] bg-white dark:bg-gray-800 sm:rounded-b-lg">
+    <div class="chat-messages flex flex-col flex-1 min-h-0 overflow-y-auto p-4 space-y-4" id="chat"></div>
+
+    <div id="warningBanner" hidden
+      class="warning-banner bg-yellow-400 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-500 dark:text-black">
+    </div>
+
+    <div id="winnerBanner" hidden
+      class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black">
+      <p id="winnerText" class="m-0"></p>
+      <button id="shareBtn" type="button"
+        class="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-400">
+        Copy share text
+      </button>
+    </div>
+
+    <div id="inputRow" class="chat-input flex gap-2 p-4 border-t dark:border-gray-600">
+      <textarea id="input" placeholder="Type your message..." rows="1"
+        class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100 dark:bg-gray-700 dark:text-white dark:disabled:bg-gray-600 dark:border-gray-500"></textarea>
+      <button id="sendBtn" type="button"
+        class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-300 dark:disabled:bg-gray-600">
+        Send
+      </button>
+    </div>
+
+    <div class="footer-section flex justify-between items-center p-4 border-t bg-gray-50 dark:bg-gray-800 dark:border-gray-700 sm:rounded-b-lg">
+      <div class="difficulty-dropdown">
+        <select id="difficultySelect"
+          class="p-2 border rounded-lg dark:bg-gray-700 dark:text-white dark:border-gray-600">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="statsBtn" type="button" title="Stats"
+          class="bg-gray-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm hover:bg-gray-600">
+          #
+        </button>
+        <button id="helpBtn" type="button" aria-label="How to Play"
+          class="bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-green-600">
+          ?
+        </button>
+      </div>
+
+      <div class="token-count text-sm font-semibold text-gray-900 dark:text-white text-right">
+        <p class="m-0">Total Tokens: <span id="tokenCount">0</span></p>
+        <p class="m-0 text-xs font-normal text-gray-500 dark:text-gray-400">Streak: <span id="streakCount">0</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Help modal, styled like the original Help.vue -->
+<div id="helpModal" hidden
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="modal-background bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-5 rounded shadow-lg max-w-md w-full" style="backdrop-filter: blur(6px);">
+    <h2 class="text-xl font-bold mb-4">How to Play</h2>
+    <p class="mb-4">
+      Welcome to Llamadle! The goal of the game is to prompt the AI to say the secret phrase
+      shown above. Some words are banned from your own messages — you'll find out which if you
+      use one. Try to reach the phrase in the fewest tokens possible! One puzzle per difficulty,
+      per day.
+    </p>
+    <button id="closeHelp" type="button"
+      class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+      Close
+    </button>
+  </div>
+</div>
+
+<!-- Stats modal -->
+<div id="statsModal" hidden
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="modal-background bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-5 rounded shadow-lg max-w-md w-full">
+    <h2 class="text-xl font-bold mb-4">Stats</h2>
+    <p id="statsSummary" class="mb-3 text-sm"></p>
+    <div id="statsHistory" class="font-mono text-xs text-gray-600 dark:text-gray-300 space-y-1 mb-4"></div>
+    <button id="closeStats" type="button"
+      class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var chatEl = $("chat"), inputEl = $("input"), sendBtn = $("sendBtn");
+  var difficultySelect = $("difficultySelect"), tokenCountEl = $("tokenCount"), streakCountEl = $("streakCount");
+  var targetPhrase = $("targetPhrase"), puzzleMeta = $("puzzleMeta");
+  var warningBanner = $("warningBanner"), winnerBanner = $("winnerBanner"), winnerText = $("winnerText");
+  var inputRow = $("inputRow");
+
+  var currentDifficulty = "medium";
+  var busy = false;
+
+  function escapeHtml(s) {
+    var d = document.createElement("div");
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function addMessage(role, text) {
+    var row = document.createElement("div");
+    var isUser = role === "user";
+    row.className = "chat-message p-3 rounded-lg max-w-[70%] " +
+      (isUser
+        ? "self-end bg-green-100 text-green-800 dark:bg-green-200 dark:text-green-900"
+        : "self-start bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100");
+    var p = document.createElement("p");
+    p.className = "message-content m-0";
+    p.textContent = text;
+    row.appendChild(p);
+    chatEl.appendChild(row);
+    chatEl.scrollTop = chatEl.scrollHeight;
+    return row;
+  }
+
+  function addTyping() {
+    var row = document.createElement("div");
+    row.className = "chat-message p-3 rounded-lg max-w-[70%] self-start bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 italic";
+    row.textContent = "...";
+    chatEl.appendChild(row);
+    chatEl.scrollTop = chatEl.scrollHeight;
+    return row;
+  }
+
+  function removeRow(row) {
+    if (row && row.parentNode) row.parentNode.removeChild(row);
+  }
+
+  function clearChat() { chatEl.innerHTML = ""; }
+
+  function showWarning(text) {
+    warningBanner.textContent = text;
+    warningBanner.hidden = false;
+    setTimeout(function () { warningBanner.hidden = true; }, 6000);
+  }
+
+  function setBusy(b) {
+    busy = b;
+    sendBtn.disabled = b;
+    inputEl.disabled = b;
+    sendBtn.textContent = b ? "Loading..." : "Send";
+  }
+
+  function showWinner(text, shareText) {
+    winnerText.textContent = text;
+    winnerBanner.hidden = false;
+    inputRow.hidden = true;
+    $("shareBtn").onclick = function () {
+      navigator.clipboard && navigator.clipboard.writeText(shareText).catch(function () {});
+      $("shareBtn").textContent = "Copied!";
+      setTimeout(function () { $("shareBtn").textContent = "Copy share text"; }, 1500);
+    };
+  }
+
+  function resetBanners() {
+    warningBanner.hidden = true;
+    winnerBanner.hidden = true;
+    inputRow.hidden = false;
+  }
+
+  async function refreshState() {
+    var res = await fetch("/state");
+    var state = await res.json();
+    streakCountEl.textContent = state.streak;
+    currentDifficulty = state.difficulty;
+    difficultySelect.value = state.difficulty;
+    return state;
+  }
+
+  async function loadGame() {
+    resetBanners();
+    clearChat();
+    tokenCountEl.textContent = "0";
+    var res = await fetch("/game?difficulty=" + encodeURIComponent(currentDifficulty));
+    var game = await res.json();
+    if (game.error) { addMessage("model", "Couldn't reach the puzzle server: " + game.error); inputRow.hidden = true; return; }
+
+    puzzleMeta.textContent = "(#" + game.puzzleNumber + " — " + game.difficulty + ")";
+
+    if (game.alreadyCompleted) {
+      targetPhrase.textContent = "?";
+      showWinner("Already solved today's " + game.difficulty + " puzzle.", game.share || "");
+      return;
+    }
+
+    targetPhrase.textContent = game.phrase;
+    tokenCountEl.textContent = game.tokenTotal || 0;
+    (game.transcript || []).forEach(function (t) {
+      addMessage(t.role === "guess" ? "user" : "model", t.text);
+    });
+  }
+
+  async function send(overrideText) {
+    if (busy) return;
+    var text = overrideText !== undefined ? overrideText : inputEl.value.trim();
+    if (!text) return;
+    if (overrideText === undefined) inputEl.value = "";
+    warningBanner.hidden = true;
+
+    // Post the guess immediately (optimistic) so the player sees it right away, then show a
+    // typing indicator while the judge and (if clean) opponent calls run — removed/replaced
+    // once the response comes back, never left waiting on a blank chat.
+    var userRow = addMessage("user", text);
+    setBusy(true);
+    var typingRow = addTyping();
+
+    var res, data;
+    try {
+      res = await fetch("/guess", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ text: text }),
+      });
+      data = await res.json();
+    } catch (e) {
+      removeRow(typingRow);
+      removeRow(userRow);
+      setBusy(false);
+      inputEl.value = text;
+      showWarning("Couldn't reach the local game server.");
+      return;
+    }
+    removeRow(typingRow);
+    setBusy(false);
+
+    if (!res.ok || !data) {
+      removeRow(userRow);
+      inputEl.value = text;
+      showWarning((data && data.error) || "Something went wrong.");
+      return;
+    }
+
+    if (data.flagged) {
+      // Flagged guesses don't count — pull the optimistic bubble back out and restore the
+      // text for editing, matching the original site's behavior.
+      removeRow(userRow);
+      inputEl.value = text;
+      var matched = data.matchedWords && data.matchedWords.length ? data.matchedWords.join(", ") : "that word";
+      showWarning('Your prompt seems too close to a banned word: "' + matched + '". Please revise it.');
+      return;
+    }
+
+    if (data.replyText) addMessage("model", data.replyText);
+    tokenCountEl.textContent = data.tokenTotal || 0;
+    if (data.scoringNote) showWarning(data.scoringNote);
+
+    // `data.share` is only present when the game just ended (win or give-up) — `data.won`
+    // is `false` on every ordinary non-winning reply too, so it can't be used as the
+    // end-of-game signal on its own.
+    if (data.share) {
+      streakCountEl.textContent = data.streak;
+      var headline = data.won
+        ? "🎉 Congratulations! You found the phrase in " + data.tokenTotal + " tokens, " + data.guessCount + " guesses! 🎉"
+        : "Attempt recorded — " + data.guessCount + " guesses, " + data.tokenTotal + " tokens.";
+      showWinner(headline, data.share);
+    }
+  }
+
+  async function renderStats() {
+    var res = await fetch("/state");
+    var state = await res.json();
+    $("statsSummary").textContent = "Streak: " + state.streak + " — Difficulty: " + state.difficulty;
+    var histEl = $("statsHistory");
+    histEl.innerHTML = "";
+    state.history.slice(-10).reverse().forEach(function (h) {
+      var row = document.createElement("div");
+      row.textContent = h.date + " — #" + h.puzzleNumber + " " + h.difficulty + ": " + (h.won ? "won" : "gave up") + " in " + h.guesses + " guesses, " + h.tokens + " tokens";
+      histEl.appendChild(row);
+    });
+    if (state.history.length === 0) histEl.textContent = "No games played yet.";
+  }
+
+  sendBtn.addEventListener("click", function () { send(); });
+  inputEl.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
+  });
+  difficultySelect.addEventListener("change", async function () {
+    await fetch("/difficulty", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ difficulty: difficultySelect.value }),
+    });
+    currentDifficulty = difficultySelect.value;
+    loadGame();
+  });
+  $("statsBtn").addEventListener("click", function () { renderStats(); $("statsModal").hidden = false; });
+  $("closeStats").addEventListener("click", function () { $("statsModal").hidden = true; });
+  $("helpBtn").addEventListener("click", function () { $("helpModal").hidden = false; });
+  $("closeHelp").addEventListener("click", function () { $("helpModal").hidden = true; });
+
+  // Tell the server this tab is still open. The server shuts itself down after 20s of no
+  // heartbeats — covers a closed tab, a crashed browser, and multiple tabs correctly, without
+  // needing an unreliable beforeunload/pagehide handler (which can't tell "closed" from
+  // "reloaded" anyway).
+  function heartbeat() {
+    fetch("/heartbeat", { method: "POST" }).catch(function () {});
+  }
+  heartbeat();
+  setInterval(heartbeat, 5000);
+
+  (async function boot() {
+    await refreshState();
+    await loadGame();
+  })();
+})();
+</script>
+</body>
+</html>

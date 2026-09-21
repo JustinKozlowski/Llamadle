@@ -9,44 +9,47 @@ A daily, Wordle-style game where the player chats with an AI opponent, trying to
 naturally say today's secret phrase without their own guesses using any of that puzzle's
 banned words.
 
-**All game logic lives in `scripts/engine.js`** — command routing, the guess loop, judge-retry
-handling, win/give-up handling, and every reply's exact text. This file is just the glue
-between that engine and the two things only you (Claude) can do: call the `Agent` tool and
-call the `Skill` tool. Never re-implement any game logic here in prose — if something needs to
-change, change the engine, not this description.
+**The game runs entirely in a local browser tab, backed by a self-contained local server** —
+not in this chat. Judge/scoring/opponent/win-detection/state are all handled by
+`scripts/bridge-server.js` itself (via fast headless `claude --safe-mode` calls, not the
+`Agent` tool — see that file's comments for why). Your only job on `/llamadle:daily` is to make
+sure that server is running and open the browser to it.
 
-Path note: `scripts/engine.js` is relative to this skill's own directory (the one this
-SKILL.md lives in), not wherever Bash's current working directory happens to be — resolve it
-against this skill's base directory as reported at invocation time.
+Path note: every path below is relative to this skill's own directory (the one this SKILL.md
+lives in), not wherever Bash's current working directory happens to be — resolve it against
+this skill's base directory as reported at invocation time.
 
-## The loop
+## What to do
 
-1. Run `node "<skill dir>/scripts/engine.js" message` with the player's raw message piped in
-   via a quoted heredoc (never inline free text into a shell argument — a message containing
-   `"`, `` ` ``, `$`, or `\` would get shell-interpreted otherwise):
+1. Check whether the bridge server is already running:
    ```
-   node "<skill dir>/scripts/engine.js" message <<'LLAMADLE_EOF'
-   <the player's exact message>
-   LLAMADLE_EOF
+   test -f ~/.claude/llamadle/bridge.pid && kill -0 "$(cat ~/.claude/llamadle/bridge.pid)" 2>/dev/null && echo RUNNING || echo NOT_RUNNING
    ```
-   For the bare `/llamadle:daily` invocation with no extra text, pipe in an empty string.
-2. It prints exactly one JSON object. Act on its `action` field:
-   - **`"reply"`** → show `text` to the player verbatim. Done for this turn — wait for their
-     next message and go back to step 1.
-   - **`"call_agent"`** → call the `Agent` tool with `subagent_type: <subagentType>` and
-     `prompt: <prompt>`, exactly as given (don't add or remove anything). Take its raw output
-     and go to step 3.
-   - **`"invoke_skill"`** → call the `Skill` tool with `skill: <skill>` and `args: <args>`,
-     exactly as given. Take its raw result and go to step 3.
-3. Pipe whatever you got back in step 2 into resume, the same way:
+   (Not `cat pid | xargs kill -0` — `xargs` exits 0 on empty input even when there's no pid
+   file, which reports RUNNING incorrectly. Verified during testing.)
+2. If `NOT_RUNNING`, start it as a detached background process (don't use a foreground/blocking
+   Bash call — it needs to keep running after this turn ends):
    ```
-   node "<skill dir>/scripts/engine.js" resume <<'LLAMADLE_EOF'
-   <the subagent/skill's raw output, exactly as returned>
-   LLAMADLE_EOF
+   nohup node "<skill dir>/scripts/bridge-server.js" > ~/.claude/llamadle/bridge.log 2>&1 &
    ```
-   This prints another action object — go back to step 2 and keep looping until you get a
-   `"reply"`.
+   Give it a second to bind its port, then confirm it's up:
+   ```
+   sleep 1 && curl -s -o /dev/null -w "%{http_code}" http://localhost:4173/state
+   ```
+   (Expect `200`. If it fails, read `~/.claude/llamadle/bridge.log` for the error and report it
+   to the player rather than retrying in a loop.)
+3. Open the browser: `open http://localhost:4173` (macOS `open`, matching this environment).
+4. Tell the player the game is open in their browser now, and that this chat isn't part of
+   play — everything happens in that tab.
 
-That's the entire protocol. It's the same for every command (`play`, `stats`, `share`,
-`notifications on|off`, `difficulty <easy|medium|hard>`, and ordinary guesses while a game is
-active) — the engine decides what any given message means, not this file.
+There is no turn-by-turn protocol here anymore: no `Agent` tool calls, no message/resume loop.
+Once the server is confirmed running and the browser is open, this skill's job for that
+invocation is done.
+
+## Other useful facts (for your own troubleshooting, not part of normal play)
+
+- State lives in `~/.claude/llamadle/state.json` (streak, difficulty, history) — same file and
+  shape the server itself owns; don't hand-edit it while the server is running.
+- `~/.claude/llamadle/bridge.log` has the server's stdout/stderr if something goes wrong.
+- If the player asks to stop the server: `kill $(cat ~/.claude/llamadle/bridge.pid)` and remove
+  `~/.claude/llamadle/bridge.pid`.

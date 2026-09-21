@@ -1,9 +1,9 @@
 ---
-name: llamadle
-description: Play Llamadle, a daily word-guessing game — try to get an AI opponent to say today's secret phrase without using any banned words, in as few tokens as possible. Use this whenever the user runs /llamadle or asks to play/check/share Llamadle.
+name: daily
+description: Play Llamadle's daily puzzle, a Wordle-style word-guessing game — try to get an AI opponent to say today's secret phrase without using any banned words, in as few tokens as possible. Use this whenever the user runs /llamadle:daily or asks to play/check/share today's Llamadle puzzle.
 ---
 
-# Llamadle
+# Llamadle — Daily
 
 A daily, Wordle-style game where the player chats with an AI opponent, trying to get it to
 naturally say today's secret phrase without their own guesses using any of that puzzle's
@@ -29,7 +29,7 @@ against this skill's base directory as reported at invocation time.
    <the player's exact message>
    LLAMADLE_EOF
    ```
-   For the bare `/llamadle:llamadle` invocation with no extra text, pipe in an empty string.
+   For the bare `/llamadle:daily` invocation with no extra text, pipe in an empty string.
 2. It prints exactly one JSON object. Act on its `action` field:
    - **`"reply"`** → show `text` to the player verbatim. Done for this turn — wait for their
      next message and go back to step 1.

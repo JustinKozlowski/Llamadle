@@ -1,0 +1,6 @@
+[
+  { "phrase": "Cat", "bannedWords": ["cat"] },
+  { "phrase": "An apple a day", "bannedWords": ["apple"] },
+  { "phrase": "Pizza", "bannedWords": ["pizza"] },
+  { "phrase": "Out of left field", "bannedWords": ["field"] }
+]

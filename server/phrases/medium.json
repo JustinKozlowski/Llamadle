@@ -1,0 +1,6 @@
+[
+  { "phrase": "Early bird catches the worm", "bannedWords": ["bird", "worm"] },
+  { "phrase": "Second mouse gets the cheese", "bannedWords": ["mouse", "cheese"] },
+  { "phrase": "Out of left field", "bannedWords": ["out", "field"] },
+  { "phrase": "Paris", "bannedWords": ["paris", "france"] }
+]

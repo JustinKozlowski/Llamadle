@@ -67,7 +67,7 @@ jobs:
           echo ${{ vars.DOCKER_USERNAME }}
           docker login --username ${{ vars.DOCKER_USERNAME }} --password '${{ secrets.DOCKER_PASSWORD }}'
           docker info || { echo "Docker login failed"; exit 1; }
-          docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml pull
-          docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml up -d
+          docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml pull llamadle
+          ANTHROPIC_API_KEY='${{ secrets.ANTHROPIC_API_KEY }}' docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml up -d --build
           docker logout
         EOF

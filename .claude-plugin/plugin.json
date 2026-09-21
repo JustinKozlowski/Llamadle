@@ -1,0 +1,6 @@
+{
+  "name": "llamadle",
+  "description": "A daily word-guessing game — get Claude to say the secret phrase in as few tokens as possible.",
+  "version": "0.1.0",
+  "author": { "name": "Justin Kozlowski" }
+}

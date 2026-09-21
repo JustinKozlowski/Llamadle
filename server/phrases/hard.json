@@ -1,0 +1,6 @@
+[
+  { "phrase": "Early bird catches the worm", "bannedWords": ["bird", "worm", "catches", "early"] },
+  { "phrase": "Second mouse gets the cheese", "bannedWords": ["second", "mouse", "cheese"] },
+  { "phrase": "An apple a day keeps the doctor away", "bannedWords": ["apple", "day", "doctor", "away"] },
+  { "phrase": "Albert Einstein", "bannedWords": ["einstein", "albert", "physicist", "relativity"] }
+]

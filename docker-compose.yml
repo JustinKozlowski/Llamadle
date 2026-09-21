@@ -12,3 +12,16 @@ services:
       - LETSENCRYPT_EMAIL=contact@justinkozlowski.me
       - VIRTUAL_PATH=/llamadle
     network_mode: bridge
+
+  llamadle-api:
+    build: ./server
+    container_name: llamadle-api
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    # Shares the llamadle service's network namespace (rather than joining the plain
+    # default bridge network, which has no container-name DNS) so nginx inside that
+    # container can reach this one over plain localhost, with no change to llamadle's
+    # own network_mode (left alone since some external reverse-proxy setup may depend on it).
+    network_mode: "service:llamadle"
+    depends_on:
+      - llamadle

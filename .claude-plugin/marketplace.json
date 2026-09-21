@@ -1,0 +1,11 @@
+{
+  "name": "llamadle-marketplace",
+  "owner": { "name": "Justin Kozlowski" },
+  "plugins": [
+    {
+      "name": "llamadle",
+      "source": { "source": "github", "repo": "JustinKozlowski/Llamadle", "ref": "main" },
+      "description": "A daily word-guessing game — get Claude to say the secret phrase in as few tokens as possible."
+    }
+  ]
+}

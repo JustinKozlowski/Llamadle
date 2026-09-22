@@ -43,14 +43,18 @@ function daysSinceEpoch(date) {
   return Math.floor(date.getTime() / MS_PER_DAY);
 }
 
+// Daily puzzle numbers count from this day as day 0, not from the Unix epoch — otherwise
+// puzzleNumber (shown to players in shareText) would be a huge, meaningless number.
+const LAUNCH_DAY = daysSinceEpoch(new Date('2026-09-22T00:00:00Z'));
+
 // Shared by /daily and /game below. (No longer called by any Claude Code skill — the `daily`
 // skill just opens the browser now, and `endless` has its own separate /endless pool — this
 // stays as the public daily-puzzle endpoint the deployed frontend's /game route also uses.)
 function getDailyPuzzle(difficulty) {
   const pool = POOLS[difficulty];
   if (!pool) return null;
-  const puzzleNumber = daysSinceEpoch(new Date());
-  const entry = pool[puzzleNumber % pool.length];
+  const puzzleNumber = daysSinceEpoch(new Date()) - LAUNCH_DAY;
+  const entry = pool[((puzzleNumber % pool.length) + pool.length) % pool.length];
   return { puzzleNumber, phrase: entry.phrase, bannedWords: entry.bannedWords };
 }
 

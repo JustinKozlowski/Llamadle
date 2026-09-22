@@ -1,6 +1,3164 @@
 [
-  { "phrase": "Cat", "bannedWords": ["cat"] },
-  { "phrase": "An apple a day", "bannedWords": ["apple"] },
-  { "phrase": "Pizza", "bannedWords": ["pizza"] },
-  { "phrase": "Out of left field", "bannedWords": ["field"] }
+  {
+    "phrase": "Cat",
+    "bannedWords": [
+      "cat"
+    ]
+  },
+  {
+    "phrase": "An apple a day",
+    "bannedWords": [
+      "apple"
+    ]
+  },
+  {
+    "phrase": "Pizza",
+    "bannedWords": [
+      "pizza"
+    ]
+  },
+  {
+    "phrase": "Out of left field",
+    "bannedWords": [
+      "field"
+    ]
+  },
+  {
+    "phrase": "Tennis",
+    "bannedWords": [
+      "tennis"
+    ]
+  },
+  {
+    "phrase": "Scratching",
+    "bannedWords": [
+      "scratching"
+    ]
+  },
+  {
+    "phrase": "Deer",
+    "bannedWords": [
+      "deer"
+    ]
+  },
+  {
+    "phrase": "Soap",
+    "bannedWords": [
+      "soap"
+    ]
+  },
+  {
+    "phrase": "Trombone",
+    "bannedWords": [
+      "trombone"
+    ]
+  },
+  {
+    "phrase": "River",
+    "bannedWords": [
+      "river"
+    ]
+  },
+  {
+    "phrase": "Hopping",
+    "bannedWords": [
+      "hopping"
+    ]
+  },
+  {
+    "phrase": "Banana",
+    "bannedWords": [
+      "banana"
+    ]
+  },
+  {
+    "phrase": "The Tortoise And The Hare",
+    "bannedWords": [
+      "tortoise",
+      "hare"
+    ]
+  },
+  {
+    "phrase": "Surgeon",
+    "bannedWords": [
+      "surgeon"
+    ]
+  },
+  {
+    "phrase": "Poker",
+    "bannedWords": [
+      "poker"
+    ]
+  },
+  {
+    "phrase": "Yawning",
+    "bannedWords": [
+      "yawning"
+    ]
+  },
+  {
+    "phrase": "Dessert",
+    "bannedWords": [
+      "dessert"
+    ]
+  },
+  {
+    "phrase": "Bluto",
+    "bannedWords": [
+      "bluto"
+    ]
+  },
+  {
+    "phrase": "Space Needle",
+    "bannedWords": [
+      "space",
+      "needle"
+    ]
+  },
+  {
+    "phrase": "Brooklyn Nine-Nine",
+    "bannedWords": [
+      "brooklyn",
+      "nine"
+    ]
+  },
+  {
+    "phrase": "Hawkeye",
+    "bannedWords": [
+      "hawkeye"
+    ]
+  },
+  {
+    "phrase": "Dinner Time",
+    "bannedWords": [
+      "dinner"
+    ]
+  },
+  {
+    "phrase": "Barber",
+    "bannedWords": [
+      "barber"
+    ]
+  },
+  {
+    "phrase": "Paranormal Activity",
+    "bannedWords": [
+      "paranormal",
+      "activity"
+    ]
+  },
+  {
+    "phrase": "Banjo",
+    "bannedWords": [
+      "banjo"
+    ]
+  },
+  {
+    "phrase": "Skateboard",
+    "bannedWords": [
+      "skateboard"
+    ]
+  },
+  {
+    "phrase": "Mad Men",
+    "bannedWords": [
+      "mad",
+      "man"
+    ]
+  },
+  {
+    "phrase": "Jitterbug",
+    "bannedWords": [
+      "jitterbug"
+    ]
+  },
+  {
+    "phrase": "Billiards",
+    "bannedWords": [
+      "billiards"
+    ]
+  },
+  {
+    "phrase": "Confused",
+    "bannedWords": [
+      "confused"
+    ]
+  },
+  {
+    "phrase": "Simon Says",
+    "bannedWords": [
+      "simon",
+      "says"
+    ]
+  },
+  {
+    "phrase": "Colosseum",
+    "bannedWords": [
+      "colosseum"
+    ]
+  },
+  {
+    "phrase": "Envious",
+    "bannedWords": [
+      "envious"
+    ]
+  },
+  {
+    "phrase": "Coughing",
+    "bannedWords": [
+      "coughing"
+    ]
+  },
+  {
+    "phrase": "Sponge",
+    "bannedWords": [
+      "sponge"
+    ]
+  },
+  {
+    "phrase": "Necklace",
+    "bannedWords": [
+      "necklace"
+    ]
+  },
+  {
+    "phrase": "Christmas",
+    "bannedWords": [
+      "christmas"
+    ]
+  },
+  {
+    "phrase": "Webcam",
+    "bannedWords": [
+      "webcam",
+      "web",
+      "cam"
+    ]
+  },
+  {
+    "phrase": "Train",
+    "bannedWords": [
+      "train"
+    ]
+  },
+  {
+    "phrase": "Black",
+    "bannedWords": [
+      "black"
+    ]
+  },
+  {
+    "phrase": "Ballet",
+    "bannedWords": [
+      "ballet"
+    ]
+  },
+  {
+    "phrase": "Parrot",
+    "bannedWords": [
+      "parrot"
+    ]
+  },
+  {
+    "phrase": "Spoon Feed",
+    "bannedWords": [
+      "spoon",
+      "feed"
+    ]
+  },
+  {
+    "phrase": "Trash Can",
+    "bannedWords": [
+      "trash",
+      "can"
+    ]
+  },
+  {
+    "phrase": "Tuning Fork",
+    "bannedWords": [
+      "tuning",
+      "fork"
+    ]
+  },
+  {
+    "phrase": "Godfather",
+    "bannedWords": [
+      "godfather"
+    ]
+  },
+  {
+    "phrase": "Cook The Books",
+    "bannedWords": [
+      "cook",
+      "books"
+    ]
+  },
+  {
+    "phrase": "Iron Man",
+    "bannedWords": [
+      "iron"
+    ]
+  },
+  {
+    "phrase": "Ashamed",
+    "bannedWords": [
+      "ashamed"
+    ]
+  },
+  {
+    "phrase": "Swimming",
+    "bannedWords": [
+      "swimming"
+    ]
+  },
+  {
+    "phrase": "Henry VIII",
+    "bannedWords": [
+      "henry"
+    ]
+  },
+  {
+    "phrase": "Wine",
+    "bannedWords": [
+      "wine"
+    ]
+  },
+  {
+    "phrase": "Cardigan",
+    "bannedWords": [
+      "cardigan"
+    ]
+  },
+  {
+    "phrase": "The Blair Witch Project",
+    "bannedWords": [
+      "blair",
+      "witch",
+      "project"
+    ]
+  },
+  {
+    "phrase": "Albert Einstein",
+    "bannedWords": [
+      "albert",
+      "einstein"
+    ]
+  },
+  {
+    "phrase": "Bread",
+    "bannedWords": [
+      "bread"
+    ]
+  },
+  {
+    "phrase": "Florence Nightingale",
+    "bannedWords": [
+      "nightingale"
+    ]
+  },
+  {
+    "phrase": "Bite The Bullet",
+    "bannedWords": [
+      "bullet"
+    ]
+  },
+  {
+    "phrase": "Confetti",
+    "bannedWords": [
+      "confetti"
+    ]
+  },
+  {
+    "phrase": "Pulp Fiction",
+    "bannedWords": [
+      "pulp",
+      "fiction"
+    ]
+  },
+  {
+    "phrase": "Sydney Opera House",
+    "bannedWords": [
+      "sydney",
+      "opera",
+      "house"
+    ]
+  },
+  {
+    "phrase": "Report",
+    "bannedWords": [
+      "report"
+    ]
+  },
+  {
+    "phrase": "Franklin D. Roosevelt",
+    "bannedWords": [
+      "roosevelt"
+    ]
+  },
+  {
+    "phrase": "Friday the 13th",
+    "bannedWords": [
+      "friday"
+    ]
+  },
+  {
+    "phrase": "Machu Picchu",
+    "bannedWords": [
+      "machu",
+      "picchu"
+    ]
+  },
+  {
+    "phrase": "Archery",
+    "bannedWords": [
+      "archery"
+    ]
+  },
+  {
+    "phrase": "Bluetooth Speaker",
+    "bannedWords": [
+      "bluetooth",
+      "speaker"
+    ]
+  },
+  {
+    "phrase": "Tongue",
+    "bannedWords": [
+      "tongue"
+    ]
+  },
+  {
+    "phrase": "Sneakers",
+    "bannedWords": [
+      "sneaker"
+    ]
+  },
+  {
+    "phrase": "The Conjuring",
+    "bannedWords": [
+      "conjure"
+    ]
+  },
+  {
+    "phrase": "Thumbs",
+    "bannedWords": [
+      "thumb"
+    ]
+  },
+  {
+    "phrase": "Chalkboard",
+    "bannedWords": [
+      "chalkboard",
+      "chalk",
+      "board"
+    ]
+  },
+  {
+    "phrase": "Upload",
+    "bannedWords": [
+      "upload"
+    ]
+  },
+  {
+    "phrase": "Toothbrush",
+    "bannedWords": [
+      "toothbrush"
+    ]
+  },
+  {
+    "phrase": "Beauty And The Beast",
+    "bannedWords": [
+      "beauty",
+      "beast"
+    ]
+  },
+  {
+    "phrase": "Tea",
+    "bannedWords": [
+      "tea"
+    ]
+  },
+  {
+    "phrase": "Camera",
+    "bannedWords": [
+      "camera"
+    ]
+  },
+  {
+    "phrase": "Lost",
+    "bannedWords": [
+      "lost"
+    ]
+  },
+  {
+    "phrase": "Puss In Boots",
+    "bannedWords": [
+      "puss",
+      "boot"
+    ]
+  },
+  {
+    "phrase": "Skirt",
+    "bannedWords": [
+      "skirt"
+    ]
+  },
+  {
+    "phrase": "Cut To The Chase",
+    "bannedWords": [
+      "cut",
+      "chase"
+    ]
+  },
+  {
+    "phrase": "Sweater",
+    "bannedWords": [
+      "sweater"
+    ]
+  },
+  {
+    "phrase": "Butterfly",
+    "bannedWords": [
+      "butterfly"
+    ]
+  },
+  {
+    "phrase": "Conductor",
+    "bannedWords": [
+      "conductor"
+    ]
+  },
+  {
+    "phrase": "Ribbon",
+    "bannedWords": [
+      "ribbon"
+    ]
+  },
+  {
+    "phrase": "Baa Baa Black Sheep",
+    "bannedWords": [
+      "black",
+      "sheep"
+    ]
+  },
+  {
+    "phrase": "Vision",
+    "bannedWords": [
+      "vision"
+    ]
+  },
+  {
+    "phrase": "Rectangle",
+    "bannedWords": [
+      "rectangle"
+    ]
+  },
+  {
+    "phrase": "The Office",
+    "bannedWords": [
+      "office"
+    ]
+  },
+  {
+    "phrase": "Diploma",
+    "bannedWords": [
+      "diploma"
+    ]
+  },
+  {
+    "phrase": "Tag",
+    "bannedWords": [
+      "tag"
+    ]
+  },
+  {
+    "phrase": "Joan of Arc",
+    "bannedWords": [
+      "arc"
+    ]
+  },
+  {
+    "phrase": "Bowling",
+    "bannedWords": [
+      "bowling"
+    ]
+  },
+  {
+    "phrase": "Ocean",
+    "bannedWords": [
+      "ocean"
+    ]
+  },
+  {
+    "phrase": "Good Things Come To Those Who Wait",
+    "bannedWords": [
+      "wait"
+    ]
+  },
+  {
+    "phrase": "Waving",
+    "bannedWords": [
+      "waving"
+    ]
+  },
+  {
+    "phrase": "Video Call",
+    "bannedWords": [
+      "video",
+      "call"
+    ]
+  },
+  {
+    "phrase": "Skin",
+    "bannedWords": [
+      "skin"
+    ]
+  },
+  {
+    "phrase": "Flip-Flop",
+    "bannedWords": [
+      "flip",
+      "flop"
+    ]
+  },
+  {
+    "phrase": "Foxtrot",
+    "bannedWords": [
+      "foxtrot"
+    ]
+  },
+  {
+    "phrase": "The Enchanted Forest",
+    "bannedWords": [
+      "enchanted",
+      "forest"
+    ]
+  },
+  {
+    "phrase": "Gymnastics",
+    "bannedWords": [
+      "gymnastics"
+    ]
+  },
+  {
+    "phrase": "Snow",
+    "bannedWords": [
+      "snow"
+    ]
+  },
+  {
+    "phrase": "Ant Man",
+    "bannedWords": [
+      "ant"
+    ]
+  },
+  {
+    "phrase": "Brandenburg Gate",
+    "bannedWords": [
+      "brandenburg",
+      "gate"
+    ]
+  },
+  {
+    "phrase": "Towel",
+    "bannedWords": [
+      "towel"
+    ]
+  },
+  {
+    "phrase": "Breakdancing",
+    "bannedWords": [
+      "breakdancing"
+    ]
+  },
+  {
+    "phrase": "Pants",
+    "bannedWords": [
+      "pants"
+    ]
+  },
+  {
+    "phrase": "Keep Your Chin Up",
+    "bannedWords": [
+      "chin"
+    ]
+  },
+  {
+    "phrase": "Octagon",
+    "bannedWords": [
+      "octagon"
+    ]
+  },
+  {
+    "phrase": "Gardener",
+    "bannedWords": [
+      "gardener"
+    ]
+  },
+  {
+    "phrase": "Waiter",
+    "bannedWords": [
+      "waiter"
+    ]
+  },
+  {
+    "phrase": "Ambulance",
+    "bannedWords": [
+      "ambulance"
+    ]
+  },
+  {
+    "phrase": "Salsa",
+    "bannedWords": [
+      "salsa"
+    ]
+  },
+  {
+    "phrase": "Eclipse",
+    "bannedWords": [
+      "eclipse"
+    ]
+  },
+  {
+    "phrase": "Chess",
+    "bannedWords": [
+      "chess"
+    ]
+  },
+  {
+    "phrase": "Scooter",
+    "bannedWords": [
+      "scooter"
+    ]
+  },
+  {
+    "phrase": "Headphones",
+    "bannedWords": [
+      "headphones"
+    ]
+  },
+  {
+    "phrase": "Narcos",
+    "bannedWords": [
+      "narco"
+    ]
+  },
+  {
+    "phrase": "Tie",
+    "bannedWords": [
+      "tie"
+    ]
+  },
+  {
+    "phrase": "Winking",
+    "bannedWords": [
+      "winking"
+    ]
+  },
+  {
+    "phrase": "Stonehenge",
+    "bannedWords": [
+      "stonehenge"
+    ]
+  },
+  {
+    "phrase": "Clapping",
+    "bannedWords": [
+      "clapping"
+    ]
+  },
+  {
+    "phrase": "Gladiator",
+    "bannedWords": [
+      "gladiator"
+    ]
+  },
+  {
+    "phrase": "Strut",
+    "bannedWords": [
+      "strut"
+    ]
+  },
+  {
+    "phrase": "Louis XIV",
+    "bannedWords": [
+      "louis"
+    ]
+  },
+  {
+    "phrase": "Gift",
+    "bannedWords": [
+      "gift"
+    ]
+  },
+  {
+    "phrase": "Forbidden City",
+    "bannedWords": [
+      "forbid",
+      "city"
+    ]
+  },
+  {
+    "phrase": "Fork",
+    "bannedWords": [
+      "fork"
+    ]
+  },
+  {
+    "phrase": "Cyan",
+    "bannedWords": [
+      "cyan"
+    ]
+  },
+  {
+    "phrase": "Burning The Midnight Oil",
+    "bannedWords": [
+      "burning",
+      "midnight",
+      "oil"
+    ]
+  },
+  {
+    "phrase": "Humpty Dumpty",
+    "bannedWords": [
+      "humpty",
+      "dumpty"
+    ]
+  },
+  {
+    "phrase": "Sheet Music",
+    "bannedWords": [
+      "sheet",
+      "music"
+    ]
+  },
+  {
+    "phrase": "Ring",
+    "bannedWords": [
+      "ring"
+    ]
+  },
+  {
+    "phrase": "Griddle",
+    "bannedWords": [
+      "griddle"
+    ]
+  },
+  {
+    "phrase": "Knife Skills",
+    "bannedWords": [
+      "knife",
+      "skill"
+    ]
+  },
+  {
+    "phrase": "Janitor",
+    "bannedWords": [
+      "janitor"
+    ]
+  },
+  {
+    "phrase": "Police Officer",
+    "bannedWords": [
+      "police",
+      "officer"
+    ]
+  },
+  {
+    "phrase": "Cost An Arm And A Leg",
+    "bannedWords": [
+      "cost",
+      "arm",
+      "leg"
+    ]
+  },
+  {
+    "phrase": "Sleeping Beauty's Castle",
+    "bannedWords": [
+      "sleeping",
+      "beauty",
+      "castle"
+    ]
+  },
+  {
+    "phrase": "Harmonica",
+    "bannedWords": [
+      "harmonica"
+    ]
+  },
+  {
+    "phrase": "Truck",
+    "bannedWords": [
+      "truck"
+    ]
+  },
+  {
+    "phrase": "Ayers Rock",
+    "bannedWords": [
+      "ayer",
+      "rock"
+    ]
+  },
+  {
+    "phrase": "Hit The Nail On The Head",
+    "bannedWords": [
+      "nail"
+    ]
+  },
+  {
+    "phrase": "Potato",
+    "bannedWords": [
+      "potato"
+    ]
+  },
+  {
+    "phrase": "Ears",
+    "bannedWords": [
+      "ears"
+    ]
+  },
+  {
+    "phrase": "Tower Bridge",
+    "bannedWords": [
+      "tower",
+      "bridge"
+    ]
+  },
+  {
+    "phrase": "Video Games",
+    "bannedWords": [
+      "video",
+      "games"
+    ]
+  },
+  {
+    "phrase": "The Little Mermaid",
+    "bannedWords": [
+      "little",
+      "mermaid"
+    ]
+  },
+  {
+    "phrase": "Plumber",
+    "bannedWords": [
+      "plumber"
+    ]
+  },
+  {
+    "phrase": "Salt",
+    "bannedWords": [
+      "salt"
+    ]
+  },
+  {
+    "phrase": "Nature Walk",
+    "bannedWords": [
+      "nature",
+      "walk"
+    ]
+  },
+  {
+    "phrase": "Hot Air Balloon",
+    "bannedWords": [
+      "hot",
+      "air",
+      "balloon"
+    ]
+  },
+  {
+    "phrase": "Triangle",
+    "bannedWords": [
+      "triangle"
+    ]
+  },
+  {
+    "phrase": "Get Your Feet Wet",
+    "bannedWords": [
+      "wet"
+    ]
+  },
+  {
+    "phrase": "Homework",
+    "bannedWords": [
+      "homework"
+    ]
+  },
+  {
+    "phrase": "Otter",
+    "bannedWords": [
+      "otter"
+    ]
+  },
+  {
+    "phrase": "Quiz",
+    "bannedWords": [
+      "quiz"
+    ]
+  },
+  {
+    "phrase": "Student",
+    "bannedWords": [
+      "student"
+    ]
+  },
+  {
+    "phrase": "Chair",
+    "bannedWords": [
+      "chair"
+    ]
+  },
+  {
+    "phrase": "Teacher",
+    "bannedWords": [
+      "teacher"
+    ]
+  },
+  {
+    "phrase": "It Follows",
+    "bannedWords": [
+      "follow"
+    ]
+  },
+  {
+    "phrase": "Helicopter",
+    "bannedWords": [
+      "helicopter"
+    ]
+  },
+  {
+    "phrase": "Squirrel",
+    "bannedWords": [
+      "squirrel"
+    ]
+  },
+  {
+    "phrase": "Trolley",
+    "bannedWords": [
+      "trolley"
+    ]
+  },
+  {
+    "phrase": "Beat Around The Bush",
+    "bannedWords": [
+      "beat",
+      "bush"
+    ]
+  },
+  {
+    "phrase": "Thomas Jefferson",
+    "bannedWords": [
+      "thomas",
+      "jefferson"
+    ]
+  },
+  {
+    "phrase": "Tissue Box",
+    "bannedWords": [
+      "tissue",
+      "box"
+    ]
+  },
+  {
+    "phrase": "Grin And Bear It",
+    "bannedWords": [
+      "bear"
+    ]
+  },
+  {
+    "phrase": "Cube",
+    "bannedWords": [
+      "cube"
+    ]
+  },
+  {
+    "phrase": "Boat",
+    "bannedWords": [
+      "boat"
+    ]
+  },
+  {
+    "phrase": "Airplane",
+    "bannedWords": [
+      "airplane",
+      "air",
+      "plane"
+    ]
+  },
+  {
+    "phrase": "Library",
+    "bannedWords": [
+      "library"
+    ]
+  },
+  {
+    "phrase": "Surfing",
+    "bannedWords": [
+      "surfing"
+    ]
+  },
+  {
+    "phrase": "Gray",
+    "bannedWords": [
+      "gray"
+    ]
+  },
+  {
+    "phrase": "Boxing",
+    "bannedWords": [
+      "boxing"
+    ]
+  },
+  {
+    "phrase": "Waterfall",
+    "bannedWords": [
+      "waterfall",
+      "water",
+      "fall"
+    ]
+  },
+  {
+    "phrase": "Cafeteria",
+    "bannedWords": [
+      "cafeteria"
+    ]
+  },
+  {
+    "phrase": "Pen",
+    "bannedWords": [
+      "pen"
+    ]
+  },
+  {
+    "phrase": "Burj Khalifa",
+    "bannedWords": [
+      "burj",
+      "khalifa"
+    ]
+  },
+  {
+    "phrase": "Screenshot",
+    "bannedWords": [
+      "screenshot",
+      "screen",
+      "shot"
+    ]
+  },
+  {
+    "phrase": "Vest",
+    "bannedWords": [
+      "vest"
+    ]
+  },
+  {
+    "phrase": "Firefighter",
+    "bannedWords": [
+      "firefighter"
+    ]
+  },
+  {
+    "phrase": "Ice Skating",
+    "bannedWords": [
+      "ice",
+      "skating"
+    ]
+  },
+  {
+    "phrase": "Get Out",
+    "bannedWords": [
+      "get",
+      "out"
+    ]
+  },
+  {
+    "phrase": "Moon",
+    "bannedWords": [
+      "moon"
+    ]
+  },
+  {
+    "phrase": "Video Game",
+    "bannedWords": [
+      "video",
+      "game"
+    ]
+  },
+  {
+    "phrase": "Shaggy",
+    "bannedWords": [
+      "shaggy"
+    ]
+  },
+  {
+    "phrase": "Daffy Duck",
+    "bannedWords": [
+      "daffy",
+      "duck"
+    ]
+  },
+  {
+    "phrase": "Eating",
+    "bannedWords": [
+      "eat"
+    ]
+  },
+  {
+    "phrase": "Record Player",
+    "bannedWords": [
+      "record",
+      "player"
+    ]
+  },
+  {
+    "phrase": "Cleopatra",
+    "bannedWords": [
+      "cleopatra"
+    ]
+  },
+  {
+    "phrase": "Lightning",
+    "bannedWords": [
+      "lightning"
+    ]
+  },
+  {
+    "phrase": "Taekwondo",
+    "bannedWords": [
+      "taekwondo"
+    ]
+  },
+  {
+    "phrase": "Drums",
+    "bannedWords": [
+      "drums"
+    ]
+  },
+  {
+    "phrase": "Succession",
+    "bannedWords": [
+      "succession"
+    ]
+  },
+  {
+    "phrase": "Zip Lining",
+    "bannedWords": [
+      "zip",
+      "line"
+    ]
+  },
+  {
+    "phrase": "Turtle",
+    "bannedWords": [
+      "turtle"
+    ]
+  },
+  {
+    "phrase": "Dentist",
+    "bannedWords": [
+      "dentist"
+    ]
+  },
+  {
+    "phrase": "Shorts",
+    "bannedWords": [
+      "short"
+    ]
+  },
+  {
+    "phrase": "Online Shopping",
+    "bannedWords": [
+      "online",
+      "shopping"
+    ]
+  },
+  {
+    "phrase": "Table",
+    "bannedWords": [
+      "table"
+    ]
+  },
+  {
+    "phrase": "Ornament",
+    "bannedWords": [
+      "ornament"
+    ]
+  },
+  {
+    "phrase": "Tradition",
+    "bannedWords": [
+      "tradition"
+    ]
+  },
+  {
+    "phrase": "Whiteboard",
+    "bannedWords": [
+      "whiteboard",
+      "white",
+      "board"
+    ]
+  },
+  {
+    "phrase": "Mixing Bowl",
+    "bannedWords": [
+      "mixing",
+      "bowl"
+    ]
+  },
+  {
+    "phrase": "Afraid",
+    "bannedWords": [
+      "afraid"
+    ]
+  },
+  {
+    "phrase": "Don't Put All Your Eggs In One Basket",
+    "bannedWords": [
+      "put",
+      "egg",
+      "basket"
+    ]
+  },
+  {
+    "phrase": "Sleeping Beauty",
+    "bannedWords": [
+      "sleeping",
+      "beauty"
+    ]
+  },
+  {
+    "phrase": "Hips",
+    "bannedWords": [
+      "hip"
+    ]
+  },
+  {
+    "phrase": "Shuffle",
+    "bannedWords": [
+      "shuffle"
+    ]
+  },
+  {
+    "phrase": "Tractor",
+    "bannedWords": [
+      "tractor"
+    ]
+  },
+  {
+    "phrase": "Abraham Lincoln",
+    "bannedWords": [
+      "abraham",
+      "lincoln"
+    ]
+  },
+  {
+    "phrase": "Head",
+    "bannedWords": [
+      "head"
+    ]
+  },
+  {
+    "phrase": "Window",
+    "bannedWords": [
+      "window"
+    ]
+  },
+  {
+    "phrase": "Scuba Diving",
+    "bannedWords": [
+      "scuba",
+      "diving"
+    ]
+  },
+  {
+    "phrase": "Orienteering",
+    "bannedWords": [
+      "orienteering"
+    ]
+  },
+  {
+    "phrase": "Keyboard Shortcut",
+    "bannedWords": [
+      "keyboard",
+      "shortcut"
+    ]
+  },
+  {
+    "phrase": "Sinister",
+    "bannedWords": [
+      "sinister"
+    ]
+  },
+  {
+    "phrase": "Butter",
+    "bannedWords": [
+      "butter"
+    ]
+  },
+  {
+    "phrase": "Album",
+    "bannedWords": [
+      "album"
+    ]
+  },
+  {
+    "phrase": "Slide",
+    "bannedWords": [
+      "slide"
+    ]
+  },
+  {
+    "phrase": "Boots",
+    "bannedWords": [
+      "boot"
+    ]
+  },
+  {
+    "phrase": "Twirl",
+    "bannedWords": [
+      "twirl"
+    ]
+  },
+  {
+    "phrase": "Holiday",
+    "bannedWords": [
+      "holiday"
+    ]
+  },
+  {
+    "phrase": "Hey Diddle Diddle",
+    "bannedWords": [
+      "diddle"
+    ]
+  },
+  {
+    "phrase": "Rosa Parks",
+    "bannedWords": [
+      "parks"
+    ]
+  },
+  {
+    "phrase": "Tap Dancing",
+    "bannedWords": [
+      "tap",
+      "dancing"
+    ]
+  },
+  {
+    "phrase": "Tom Thumb",
+    "bannedWords": [
+      "tom",
+      "thumb"
+    ]
+  },
+  {
+    "phrase": "Cut The Mustard",
+    "bannedWords": [
+      "mustard"
+    ]
+  },
+  {
+    "phrase": "Cone",
+    "bannedWords": [
+      "cone"
+    ]
+  },
+  {
+    "phrase": "Suspicious",
+    "bannedWords": [
+      "suspicious"
+    ]
+  },
+  {
+    "phrase": "Carrot",
+    "bannedWords": [
+      "carrot"
+    ]
+  },
+  {
+    "phrase": "Convertible",
+    "bannedWords": [
+      "convertible"
+    ]
+  },
+  {
+    "phrase": "Worried",
+    "bannedWords": [
+      "worried"
+    ]
+  },
+  {
+    "phrase": "Wedding",
+    "bannedWords": [
+      "wedding"
+    ]
+  },
+  {
+    "phrase": "Scissors",
+    "bannedWords": [
+      "scissors"
+    ]
+  },
+  {
+    "phrase": "Go The Extra Mile",
+    "bannedWords": [
+      "mile"
+    ]
+  },
+  {
+    "phrase": "Toothpaste",
+    "bannedWords": [
+      "toothpaste"
+    ]
+  },
+  {
+    "phrase": "Tango",
+    "bannedWords": [
+      "tango"
+    ]
+  },
+  {
+    "phrase": "George Washington",
+    "bannedWords": [
+      "george",
+      "washington"
+    ]
+  },
+  {
+    "phrase": "Cinderella",
+    "bannedWords": [
+      "cinderella"
+    ]
+  },
+  {
+    "phrase": "Skateboarding",
+    "bannedWords": [
+      "skateboarding"
+    ]
+  },
+  {
+    "phrase": "Noodle Soup",
+    "bannedWords": [
+      "noodle",
+      "soup"
+    ]
+  },
+  {
+    "phrase": "Tablet",
+    "bannedWords": [
+      "tablet"
+    ]
+  },
+  {
+    "phrase": "Greensleeves",
+    "bannedWords": [
+      "greensleeves"
+    ]
+  },
+  {
+    "phrase": "Blizzard",
+    "bannedWords": [
+      "blizzard"
+    ]
+  },
+  {
+    "phrase": "Burst Your Bubble",
+    "bannedWords": [
+      "burst",
+      "bubble"
+    ]
+  },
+  {
+    "phrase": "Parasailing",
+    "bannedWords": [
+      "parasail"
+    ]
+  },
+  {
+    "phrase": "Planet",
+    "bannedWords": [
+      "planet"
+    ]
+  },
+  {
+    "phrase": "Amelia Earhart",
+    "bannedWords": [
+      "earhart"
+    ]
+  },
+  {
+    "phrase": "Umbrella",
+    "bannedWords": [
+      "umbrella"
+    ]
+  },
+  {
+    "phrase": "Hide And Seek",
+    "bannedWords": [
+      "hide",
+      "seek"
+    ]
+  },
+  {
+    "phrase": "Motorcycle",
+    "bannedWords": [
+      "motorcycle"
+    ]
+  },
+  {
+    "phrase": "Dice",
+    "bannedWords": [
+      "dice"
+    ]
+  },
+  {
+    "phrase": "Dolphin",
+    "bannedWords": [
+      "dolphin"
+    ]
+  },
+  {
+    "phrase": "Camping",
+    "bannedWords": [
+      "camping"
+    ]
+  },
+  {
+    "phrase": "Hair",
+    "bannedWords": [
+      "hair"
+    ]
+  },
+  {
+    "phrase": "Break Eggs",
+    "bannedWords": [
+      "eggs"
+    ]
+  },
+  {
+    "phrase": "Bus Driver",
+    "bannedWords": [
+      "bus",
+      "driver"
+    ]
+  },
+  {
+    "phrase": "Don't Burn Your Bridges",
+    "bannedWords": [
+      "burn",
+      "bridges"
+    ]
+  },
+  {
+    "phrase": "Laboratory",
+    "bannedWords": [
+      "laboratory"
+    ]
+  },
+  {
+    "phrase": "Trail Running",
+    "bannedWords": [
+      "trail",
+      "running"
+    ]
+  },
+  {
+    "phrase": "Violin",
+    "bannedWords": [
+      "violin"
+    ]
+  },
+  {
+    "phrase": "Virtual Reality",
+    "bannedWords": [
+      "virtual",
+      "reality"
+    ]
+  },
+  {
+    "phrase": "Melody",
+    "bannedWords": [
+      "melody"
+    ]
+  },
+  {
+    "phrase": "Climbing",
+    "bannedWords": [
+      "climbing"
+    ]
+  },
+  {
+    "phrase": "Bass",
+    "bannedWords": [
+      "bass"
+    ]
+  },
+  {
+    "phrase": "Notebook",
+    "bannedWords": [
+      "notebook"
+    ]
+  },
+  {
+    "phrase": "Musician",
+    "bannedWords": [
+      "musician"
+    ]
+  },
+  {
+    "phrase": "Car",
+    "bannedWords": [
+      "car"
+    ]
+  },
+  {
+    "phrase": "Kicking",
+    "bannedWords": [
+      "kicking"
+    ]
+  },
+  {
+    "phrase": "Eiffel Tower",
+    "bannedWords": [
+      "eiffel"
+    ]
+  },
+  {
+    "phrase": "Red Square",
+    "bannedWords": [
+      "red",
+      "square"
+    ]
+  },
+  {
+    "phrase": "The Shining",
+    "bannedWords": [
+      "shining"
+    ]
+  },
+  {
+    "phrase": "Journalist",
+    "bannedWords": [
+      "journalist"
+    ]
+  },
+  {
+    "phrase": "Calm",
+    "bannedWords": [
+      "calm"
+    ]
+  },
+  {
+    "phrase": "Mother's Day",
+    "bannedWords": [
+      "mother",
+      "day"
+    ]
+  },
+  {
+    "phrase": "Sandals",
+    "bannedWords": [
+      "sandal"
+    ]
+  },
+  {
+    "phrase": "Sylvester",
+    "bannedWords": [
+      "sylvester"
+    ]
+  },
+  {
+    "phrase": "Bra",
+    "bannedWords": [
+      "bra"
+    ]
+  },
+  {
+    "phrase": "Proud",
+    "bannedWords": [
+      "proud"
+    ]
+  },
+  {
+    "phrase": "Champagne",
+    "bannedWords": [
+      "champagne"
+    ]
+  },
+  {
+    "phrase": "Hamburger",
+    "bannedWords": [
+      "hamburger"
+    ]
+  },
+  {
+    "phrase": "Excited",
+    "bannedWords": [
+      "excited"
+    ]
+  },
+  {
+    "phrase": "Dexter",
+    "bannedWords": [
+      "dexter"
+    ]
+  },
+  {
+    "phrase": "Frowning",
+    "bannedWords": [
+      "frowning"
+    ]
+  },
+  {
+    "phrase": "Sauté",
+    "bannedWords": [
+      "saute"
+    ]
+  },
+  {
+    "phrase": "Harriet Tubman",
+    "bannedWords": [
+      "tubman"
+    ]
+  },
+  {
+    "phrase": "Slipper",
+    "bannedWords": [
+      "slipper"
+    ]
+  },
+  {
+    "phrase": "Hat",
+    "bannedWords": [
+      "hat"
+    ]
+  },
+  {
+    "phrase": "Marker",
+    "bannedWords": [
+      "marker"
+    ]
+  },
+  {
+    "phrase": "Desert",
+    "bannedWords": [
+      "desert"
+    ]
+  },
+  {
+    "phrase": "Pilot",
+    "bannedWords": [
+      "pilot"
+    ]
+  },
+  {
+    "phrase": "Ruler",
+    "bannedWords": [
+      "ruler"
+    ]
+  },
+  {
+    "phrase": "Easy As Pie",
+    "bannedWords": [
+      "pie"
+    ]
+  },
+  {
+    "phrase": "Don't Count Your Chickens",
+    "bannedWords": [
+      "count",
+      "chicken"
+    ]
+  },
+  {
+    "phrase": "Receptionist",
+    "bannedWords": [
+      "receptionist"
+    ]
+  },
+  {
+    "phrase": "Screen Saver",
+    "bannedWords": [
+      "screen",
+      "save"
+    ]
+  },
+  {
+    "phrase": "Spider",
+    "bannedWords": [
+      "spider"
+    ]
+  },
+  {
+    "phrase": "The Crown",
+    "bannedWords": [
+      "crown"
+    ]
+  },
+  {
+    "phrase": "Celebration",
+    "bannedWords": [
+      "celebration"
+    ]
+  },
+  {
+    "phrase": "Router",
+    "bannedWords": [
+      "router"
+    ]
+  },
+  {
+    "phrase": "Angry",
+    "bannedWords": [
+      "angry"
+    ]
+  },
+  {
+    "phrase": "Radio",
+    "bannedWords": [
+      "radio"
+    ]
+  },
+  {
+    "phrase": "Aladdin",
+    "bannedWords": [
+      "aladdin"
+    ]
+  },
+  {
+    "phrase": "The Mandalorian",
+    "bannedWords": [
+      "mandalorian"
+    ]
+  },
+  {
+    "phrase": "Boiling Point",
+    "bannedWords": [
+      "boiling"
+    ]
+  },
+  {
+    "phrase": "Cheese",
+    "bannedWords": [
+      "cheese"
+    ]
+  },
+  {
+    "phrase": "Arms",
+    "bannedWords": [
+      "arm"
+    ]
+  },
+  {
+    "phrase": "Nose",
+    "bannedWords": [
+      "nose"
+    ]
+  },
+  {
+    "phrase": "Punching",
+    "bannedWords": [
+      "punching"
+    ]
+  },
+  {
+    "phrase": "Recess",
+    "bannedWords": [
+      "recess"
+    ]
+  },
+  {
+    "phrase": "Best Of Both Worlds",
+    "bannedWords": [
+      "best",
+      "world"
+    ]
+  },
+  {
+    "phrase": "Lake",
+    "bannedWords": [
+      "lake"
+    ]
+  },
+  {
+    "phrase": "Christ The Redeemer",
+    "bannedWords": [
+      "christ"
+    ]
+  },
+  {
+    "phrase": "Mop",
+    "bannedWords": [
+      "mop"
+    ]
+  },
+  {
+    "phrase": "Running",
+    "bannedWords": [
+      "run"
+    ]
+  },
+  {
+    "phrase": "Little Red Riding Hood",
+    "bannedWords": [
+      "little",
+      "red",
+      "riding",
+      "hood"
+    ]
+  },
+  {
+    "phrase": "Green Lantern",
+    "bannedWords": [
+      "green"
+    ]
+  },
+  {
+    "phrase": "Sneezing",
+    "bannedWords": [
+      "sneezing"
+    ]
+  },
+  {
+    "phrase": "Karate",
+    "bannedWords": [
+      "karate"
+    ]
+  },
+  {
+    "phrase": "Teeth",
+    "bannedWords": [
+      "teeth"
+    ]
+  },
+  {
+    "phrase": "Ankles",
+    "bannedWords": [
+      "ankle"
+    ]
+  },
+  {
+    "phrase": "Saw",
+    "bannedWords": [
+      "saw"
+    ]
+  },
+  {
+    "phrase": "Aurora",
+    "bannedWords": [
+      "aurora"
+    ]
+  },
+  {
+    "phrase": "Twinkle Twinkle Little Star",
+    "bannedWords": [
+      "twinkle",
+      "little",
+      "star"
+    ]
+  },
+  {
+    "phrase": "Computer Mouse",
+    "bannedWords": [
+      "computer",
+      "mouse"
+    ]
+  },
+  {
+    "phrase": "Citizen Kane",
+    "bannedWords": [
+      "citizen",
+      "kane"
+    ]
+  },
+  {
+    "phrase": "Michelangelo",
+    "bannedWords": [
+      "michelangelo"
+    ]
+  },
+  {
+    "phrase": "Certificate",
+    "bannedWords": [
+      "certificate"
+    ]
+  },
+  {
+    "phrase": "Eyes",
+    "bannedWords": [
+      "eyes"
+    ]
+  },
+  {
+    "phrase": "Few And Far Between",
+    "bannedWords": [
+      "few"
+    ]
+  },
+  {
+    "phrase": "Present",
+    "bannedWords": [
+      "present"
+    ]
+  },
+  {
+    "phrase": "Bicycle",
+    "bannedWords": [
+      "bicycle"
+    ]
+  },
+  {
+    "phrase": "Meat And Potatoes",
+    "bannedWords": [
+      "meat",
+      "potato"
+    ]
+  },
+  {
+    "phrase": "Sweatpants",
+    "bannedWords": [
+      "sweatpants"
+    ]
+  },
+  {
+    "phrase": "Captain America",
+    "bannedWords": [
+      "captain"
+    ]
+  },
+  {
+    "phrase": "Don't Cry Over Spilled Milk",
+    "bannedWords": [
+      "cry",
+      "spill",
+      "milk"
+    ]
+  },
+  {
+    "phrase": "Make Dinner",
+    "bannedWords": [
+      "make",
+      "dinner"
+    ]
+  },
+  {
+    "phrase": "Trash Bag",
+    "bannedWords": [
+      "trash",
+      "bag"
+    ]
+  },
+  {
+    "phrase": "Frost",
+    "bannedWords": [
+      "frost"
+    ]
+  },
+  {
+    "phrase": "Sway",
+    "bannedWords": [
+      "sway"
+    ]
+  },
+  {
+    "phrase": "Pushing",
+    "bannedWords": [
+      "pushing"
+    ]
+  },
+  {
+    "phrase": "Hold Your Own",
+    "bannedWords": [
+      "hold"
+    ]
+  },
+  {
+    "phrase": "Barney Rubble",
+    "bannedWords": [
+      "barney",
+      "rubble"
+    ]
+  },
+  {
+    "phrase": "Groove",
+    "bannedWords": [
+      "groove"
+    ]
+  },
+  {
+    "phrase": "Great Wall Of China",
+    "bannedWords": [
+      "wall"
+    ]
+  },
+  {
+    "phrase": "Harry S. Truman",
+    "bannedWords": [
+      "truman"
+    ]
+  },
+  {
+    "phrase": "Emily In Paris",
+    "bannedWords": [
+      "emily",
+      "paris"
+    ]
+  },
+  {
+    "phrase": "Microwave",
+    "bannedWords": [
+      "microwave"
+    ]
+  },
+  {
+    "phrase": "Jealous",
+    "bannedWords": [
+      "jealous"
+    ]
+  },
+  {
+    "phrase": "Cheerful",
+    "bannedWords": [
+      "cheerful"
+    ]
+  },
+  {
+    "phrase": "Mariana Trench",
+    "bannedWords": [
+      "mariana",
+      "trench"
+    ]
+  },
+  {
+    "phrase": "Brooch",
+    "bannedWords": [
+      "brooch"
+    ]
+  },
+  {
+    "phrase": "Catching",
+    "bannedWords": [
+      "catching"
+    ]
+  },
+  {
+    "phrase": "Badminton",
+    "bannedWords": [
+      "badminton"
+    ]
+  },
+  {
+    "phrase": "Times Square",
+    "bannedWords": [
+      "time",
+      "square"
+    ]
+  },
+  {
+    "phrase": "The Glass Slipper",
+    "bannedWords": [
+      "glass",
+      "slipper"
+    ]
+  },
+  {
+    "phrase": "Hansel And Gretel",
+    "bannedWords": [
+      "hansel",
+      "gretel"
+    ]
+  },
+  {
+    "phrase": "Bring Home The Bacon",
+    "bannedWords": [
+      "bring",
+      "bacon"
+    ]
+  },
+  {
+    "phrase": "Cake",
+    "bannedWords": [
+      "cake"
+    ]
+  },
+  {
+    "phrase": "Halloween",
+    "bannedWords": [
+      "halloween"
+    ]
+  },
+  {
+    "phrase": "Surprised",
+    "bannedWords": [
+      "surprised"
+    ]
+  },
+  {
+    "phrase": "Clean Plate Club",
+    "bannedWords": [
+      "plate"
+    ]
+  },
+  {
+    "phrase": "Plate Clean",
+    "bannedWords": [
+      "plate",
+      "clean"
+    ]
+  },
+  {
+    "phrase": "Square",
+    "bannedWords": [
+      "square"
+    ]
+  },
+  {
+    "phrase": "Hereditary",
+    "bannedWords": [
+      "hereditary"
+    ]
+  },
+  {
+    "phrase": "Mickey Mouse",
+    "bannedWords": [
+      "mickey",
+      "mouse"
+    ]
+  },
+  {
+    "phrase": "Jeans",
+    "bannedWords": [
+      "jean"
+    ]
+  },
+  {
+    "phrase": "Donut",
+    "bannedWords": [
+      "donut"
+    ]
+  },
+  {
+    "phrase": "Old Mother Hubbard",
+    "bannedWords": [
+      "old",
+      "mother",
+      "hubbard"
+    ]
+  },
+  {
+    "phrase": "Jeep",
+    "bannedWords": [
+      "jeep"
+    ]
+  },
+  {
+    "phrase": "Star",
+    "bannedWords": [
+      "star"
+    ]
+  },
+  {
+    "phrase": "Gentle",
+    "bannedWords": [
+      "gentle"
+    ]
+  },
+  {
+    "phrase": "Chernobyl",
+    "bannedWords": [
+      "chernobyl"
+    ]
+  },
+  {
+    "phrase": "Mary Had A Little Lamb",
+    "bannedWords": [
+      "mary",
+      "lamb"
+    ]
+  },
+  {
+    "phrase": "Test",
+    "bannedWords": [
+      "test"
+    ]
+  },
+  {
+    "phrase": "Tender",
+    "bannedWords": [
+      "tender"
+    ]
+  },
+  {
+    "phrase": "Ping Pong",
+    "bannedWords": [
+      "ping",
+      "pong"
+    ]
+  },
+  {
+    "phrase": "Mountain",
+    "bannedWords": [
+      "mountain"
+    ]
+  },
+  {
+    "phrase": "Trumpet",
+    "bannedWords": [
+      "trumpet"
+    ]
+  },
+  {
+    "phrase": "Pirouette",
+    "bannedWords": [
+      "pirouette"
+    ]
+  },
+  {
+    "phrase": "Download",
+    "bannedWords": [
+      "download"
+    ]
+  },
+  {
+    "phrase": "Email",
+    "bannedWords": [
+      "email"
+    ]
+  },
+  {
+    "phrase": "Wolfgang Amadeus Mozart",
+    "bannedWords": [
+      "wolfgang",
+      "amadeus",
+      "mozart"
+    ]
+  },
+  {
+    "phrase": "White",
+    "bannedWords": [
+      "white"
+    ]
+  },
+  {
+    "phrase": "Lettuce",
+    "bannedWords": [
+      "lettuce"
+    ]
+  },
+  {
+    "phrase": "Rapunzel",
+    "bannedWords": [
+      "rapunzel"
+    ]
+  },
+  {
+    "phrase": "Hail",
+    "bannedWords": [
+      "hail"
+    ]
+  },
+  {
+    "phrase": "Christopher Columbus",
+    "bannedWords": [
+      "columbus"
+    ]
+  },
+  {
+    "phrase": "Broccoli",
+    "bannedWords": [
+      "broccoli"
+    ]
+  },
+  {
+    "phrase": "Donald Duck",
+    "bannedWords": [
+      "donald",
+      "duck"
+    ]
+  },
+  {
+    "phrase": "Vincent van Gogh",
+    "bannedWords": [
+      "vincent",
+      "gogh"
+    ]
+  },
+  {
+    "phrase": "Pillow",
+    "bannedWords": [
+      "pillow"
+    ]
+  },
+  {
+    "phrase": "Paddleboarding",
+    "bannedWords": [
+      "paddleboarding"
+    ]
+  },
+  {
+    "phrase": "Glue",
+    "bannedWords": [
+      "glue"
+    ]
+  },
+  {
+    "phrase": "Shaking",
+    "bannedWords": [
+      "shaking"
+    ]
+  },
+  {
+    "phrase": "Carpet",
+    "bannedWords": [
+      "carpet"
+    ]
+  },
+  {
+    "phrase": "Jumping",
+    "bannedWords": [
+      "jumping"
+    ]
+  },
+  {
+    "phrase": "Snow White",
+    "bannedWords": [
+      "snow",
+      "white"
+    ]
+  },
+  {
+    "phrase": "Bike",
+    "bannedWords": [
+      "bike"
+    ]
+  },
+  {
+    "phrase": "Hallway",
+    "bannedWords": [
+      "hallway"
+    ]
+  },
+  {
+    "phrase": "Waist",
+    "bannedWords": [
+      "waist"
+    ]
+  },
+  {
+    "phrase": "Mahatma Gandhi",
+    "bannedWords": [
+      "gandhi"
+    ]
+  },
+  {
+    "phrase": "The Sopranos",
+    "bannedWords": [
+      "soprano"
+    ]
+  },
+  {
+    "phrase": "Gallop",
+    "bannedWords": [
+      "gallop"
+    ]
+  },
+  {
+    "phrase": "Electrician",
+    "bannedWords": [
+      "electrician"
+    ]
+  },
+  {
+    "phrase": "Butter Fingers",
+    "bannedWords": [
+      "fingers"
+    ]
+  },
+  {
+    "phrase": "Leaning Tower Of Pisa",
+    "bannedWords": [
+      "leaning"
+    ]
+  },
+  {
+    "phrase": "Alien",
+    "bannedWords": [
+      "alien"
+    ]
+  },
+  {
+    "phrase": "Laptop Battery",
+    "bannedWords": [
+      "laptop",
+      "battery"
+    ]
+  },
+  {
+    "phrase": "Listening",
+    "bannedWords": [
+      "listening"
+    ]
+  },
+  {
+    "phrase": "Nikola Tesla",
+    "bannedWords": [
+      "nikola",
+      "tesla"
+    ]
+  },
+  {
+    "phrase": "Charger",
+    "bannedWords": [
+      "charger",
+      "charge"
+    ]
+  },
+  {
+    "phrase": "Hedgehog",
+    "bannedWords": [
+      "hedgehog"
+    ]
+  },
+  {
+    "phrase": "Stereo",
+    "bannedWords": [
+      "stereo"
+    ]
+  },
+  {
+    "phrase": "Koala",
+    "bannedWords": [
+      "koala"
+    ]
+  },
+  {
+    "phrase": "Sunrise",
+    "bannedWords": [
+      "sunrise",
+      "sun",
+      "rise"
+    ]
+  },
+  {
+    "phrase": "Nurse",
+    "bannedWords": [
+      "nurse"
+    ]
+  },
+  {
+    "phrase": "Zebra",
+    "bannedWords": [
+      "zebra"
+    ]
+  },
+  {
+    "phrase": "South Park",
+    "bannedWords": [
+      "south",
+      "park"
+    ]
+  },
+  {
+    "phrase": "Microphone",
+    "bannedWords": [
+      "microphone"
+    ]
+  },
+  {
+    "phrase": "Susan B. Anthony",
+    "bannedWords": [
+      "anthony"
+    ]
+  },
+  {
+    "phrase": "Jaws",
+    "bannedWords": [
+      "jaws"
+    ]
+  },
+  {
+    "phrase": "Anniversary",
+    "bannedWords": [
+      "anniversary"
+    ]
+  },
+  {
+    "phrase": "Face The Music",
+    "bannedWords": [
+      "music"
+    ]
+  },
+  {
+    "phrase": "Jack Be Nimble",
+    "bannedWords": [
+      "jack",
+      "nimble"
+    ]
+  },
+  {
+    "phrase": "Oboe",
+    "bannedWords": [
+      "oboe"
+    ]
+  },
+  {
+    "phrase": "John F. Kennedy",
+    "bannedWords": [
+      "kennedy"
+    ]
+  },
+  {
+    "phrase": "Gym",
+    "bannedWords": [
+      "gym"
+    ]
+  },
+  {
+    "phrase": "Glass",
+    "bannedWords": [
+      "glass"
+    ]
+  },
+  {
+    "phrase": "Biking",
+    "bannedWords": [
+      "biking"
+    ]
+  },
+  {
+    "phrase": "Statue Of Liberty",
+    "bannedWords": [
+      "statue"
+    ]
+  },
+  {
+    "phrase": "Diwali",
+    "bannedWords": [
+      "diwali"
+    ]
+  },
+  {
+    "phrase": "Touchscreen",
+    "bannedWords": [
+      "touchscreen",
+      "touch",
+      "screen"
+    ]
+  },
+  {
+    "phrase": "Frog",
+    "bannedWords": [
+      "frog"
+    ]
+  },
+  {
+    "phrase": "Black Panther",
+    "bannedWords": [
+      "black"
+    ]
+  },
+  {
+    "phrase": "Embarrassed",
+    "bannedWords": [
+      "embarrassed"
+    ]
+  },
+  {
+    "phrase": "Looking",
+    "bannedWords": [
+      "looking"
+    ]
+  },
+  {
+    "phrase": "Fork Over",
+    "bannedWords": [
+      "fork"
+    ]
+  },
+  {
+    "phrase": "The Good Place",
+    "bannedWords": [
+      "place"
+    ]
+  },
+  {
+    "phrase": "Accountant",
+    "bannedWords": [
+      "accountant"
+    ]
+  },
+  {
+    "phrase": "Sink",
+    "bannedWords": [
+      "sink"
+    ]
+  },
+  {
+    "phrase": "Handstand",
+    "bannedWords": [
+      "handstand"
+    ]
+  },
+  {
+    "phrase": "Earring",
+    "bannedWords": [
+      "earring"
+    ]
+  },
+  {
+    "phrase": "Niagara Falls",
+    "bannedWords": [
+      "niagara",
+      "fall"
+    ]
+  },
+  {
+    "phrase": "Monkey",
+    "bannedWords": [
+      "monkey"
+    ]
+  },
+  {
+    "phrase": "Pyramids Of Giza",
+    "bannedWords": [
+      "pyramids"
+    ]
+  },
+  {
+    "phrase": "Dew",
+    "bannedWords": [
+      "dew"
+    ]
+  },
+  {
+    "phrase": "The Wicked Witch",
+    "bannedWords": [
+      "wicked",
+      "witch"
+    ]
+  },
+  {
+    "phrase": "Balloons",
+    "bannedWords": [
+      "balloon"
+    ]
+  },
+  {
+    "phrase": "Watch",
+    "bannedWords": [
+      "watch"
+    ]
+  },
+  {
+    "phrase": "Cha Cha",
+    "bannedWords": [
+      "cha"
+    ]
+  },
+  {
+    "phrase": "Olive Oyl",
+    "bannedWords": [
+      "olive"
+    ]
+  },
+  {
+    "phrase": "Terminator",
+    "bannedWords": [
+      "terminator"
+    ]
+  },
+  {
+    "phrase": "Parade",
+    "bannedWords": [
+      "parade"
+    ]
+  },
+  {
+    "phrase": "Sugar",
+    "bannedWords": [
+      "sugar"
+    ]
+  },
+  {
+    "phrase": "How I Met Your Mother",
+    "bannedWords": [
+      "mother"
+    ]
+  },
+  {
+    "phrase": "Circle",
+    "bannedWords": [
+      "circle"
+    ]
+  },
+  {
+    "phrase": "Waltz",
+    "bannedWords": [
+      "waltz"
+    ]
+  },
+  {
+    "phrase": "Oven",
+    "bannedWords": [
+      "oven"
+    ]
+  },
+  {
+    "phrase": "Jogging",
+    "bannedWords": [
+      "jog"
+    ]
+  },
+  {
+    "phrase": "Bear",
+    "bannedWords": [
+      "bear"
+    ]
+  },
+  {
+    "phrase": "Parthenon",
+    "bannedWords": [
+      "parthenon"
+    ]
+  },
+  {
+    "phrase": "Bird",
+    "bannedWords": [
+      "bird"
+    ]
+  },
+  {
+    "phrase": "Frustrated",
+    "bannedWords": [
+      "frustrated"
+    ]
+  },
+  {
+    "phrase": "Trevi Fountain",
+    "bannedWords": [
+      "trevi",
+      "fountain"
+    ]
+  },
+  {
+    "phrase": "Blue",
+    "bannedWords": [
+      "blue"
+    ]
+  },
+  {
+    "phrase": "Playground",
+    "bannedWords": [
+      "playground"
+    ]
+  },
+  {
+    "phrase": "Hulk",
+    "bannedWords": [
+      "hulk"
+    ]
+  },
+  {
+    "phrase": "Marco Polo",
+    "bannedWords": [
+      "polo"
+    ]
+  },
+  {
+    "phrase": "Pot Roast",
+    "bannedWords": [
+      "pot",
+      "roast"
+    ]
+  },
+  {
+    "phrase": "Baseball",
+    "bannedWords": [
+      "baseball",
+      "base",
+      "ball"
+    ]
+  },
+  {
+    "phrase": "Thumbelina",
+    "bannedWords": [
+      "thumbelina"
+    ]
+  },
+  {
+    "phrase": "Hard Drive",
+    "bannedWords": [
+      "hard",
+      "drive"
+    ]
+  },
+  {
+    "phrase": "Sledding",
+    "bannedWords": [
+      "sledding"
+    ]
+  },
+  {
+    "phrase": "Seinfeld",
+    "bannedWords": [
+      "seinfeld"
+    ]
+  },
+  {
+    "phrase": "Amazed",
+    "bannedWords": [
+      "amazed"
+    ]
+  },
+  {
+    "phrase": "Printer",
+    "bannedWords": [
+      "printer",
+      "print"
+    ]
+  },
+  {
+    "phrase": "Fishing",
+    "bannedWords": [
+      "fishing"
+    ]
+  },
+  {
+    "phrase": "Flash",
+    "bannedWords": [
+      "flash"
+    ]
+  },
+  {
+    "phrase": "Sphere",
+    "bannedWords": [
+      "sphere"
+    ]
+  },
+  {
+    "phrase": "SUV",
+    "bannedWords": [
+      "suv"
+    ]
+  },
+  {
+    "phrase": "Handbag",
+    "bannedWords": [
+      "handbag"
+    ]
+  },
+  {
+    "phrase": "Nervous",
+    "bannedWords": [
+      "nervous"
+    ]
+  },
+  {
+    "phrase": "Popeye",
+    "bannedWords": [
+      "popeye"
+    ]
+  },
+  {
+    "phrase": "Rumpelstiltskin",
+    "bannedWords": [
+      "rumpelstiltskin"
+    ]
+  },
+  {
+    "phrase": "Tense",
+    "bannedWords": [
+      "tense"
+    ]
+  },
+  {
+    "phrase": "In The Long Run",
+    "bannedWords": [
+      "run"
+    ]
+  },
+  {
+    "phrase": "Cartwheel",
+    "bannedWords": [
+      "cartwheel"
+    ]
+  },
+  {
+    "phrase": "Architect",
+    "bannedWords": [
+      "architect"
+    ]
+  },
+  {
+    "phrase": "Hockey",
+    "bannedWords": [
+      "hockey"
+    ]
+  },
+  {
+    "phrase": "Snowboarding",
+    "bannedWords": [
+      "snowboarding"
+    ]
+  },
+  {
+    "phrase": "Withcer",
+    "bannedWords": [
+      "witcher"
+    ]
+  },
+  {
+    "phrase": "Grass Is Always Greener",
+    "bannedWords": [
+      "grass",
+      "greener"
+    ]
+  },
+  {
+    "phrase": "Sedan",
+    "bannedWords": [
+      "sedan"
+    ]
+  },
+  {
+    "phrase": "Queen Victoria",
+    "bannedWords": [
+      "victoria"
+    ]
+  },
+  {
+    "phrase": "Big Ben",
+    "bannedWords": [
+      "ben"
+    ]
+  },
+  {
+    "phrase": "Everything But The Kitchen Sink",
+    "bannedWords": [
+      "kitchen",
+      "sink"
+    ]
+  },
+  {
+    "phrase": "Pencil",
+    "bannedWords": [
+      "pencil"
+    ]
+  },
+  {
+    "phrase": "Cashier",
+    "bannedWords": [
+      "cashier"
+    ]
+  },
+  {
+    "phrase": "Neck",
+    "bannedWords": [
+      "neck"
+    ]
+  },
+  {
+    "phrase": "Ice",
+    "bannedWords": [
+      "ice"
+    ]
+  }
 ]

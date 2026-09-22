@@ -1,6 +1,3773 @@
 [
-  { "phrase": "Don't judge a book by its cover", "bannedWords": ["judge", "book", "cover"] },
-  { "phrase": "The grass is always greener", "bannedWords": ["grass", "greener", "always"] },
-  { "phrase": "When it rains it pours", "bannedWords": ["rains", "pours", "when"] },
-  { "phrase": "Rome wasn't built in a day", "bannedWords": ["rome", "built", "day"] }
+  {
+    "phrase": "Don't judge a book by its cover",
+    "bannedWords": [
+      "judge",
+      "book",
+      "cover"
+    ]
+  },
+  {
+    "phrase": "The grass is always greener",
+    "bannedWords": [
+      "grass",
+      "greener",
+      "always"
+    ]
+  },
+  {
+    "phrase": "When it rains it pours",
+    "bannedWords": [
+      "rains",
+      "pours",
+      "when"
+    ]
+  },
+  {
+    "phrase": "Rome wasn't built in a day",
+    "bannedWords": [
+      "rome",
+      "built",
+      "day"
+    ]
+  },
+  {
+    "phrase": "Albatross",
+    "bannedWords": [
+      "albatross",
+      "golf",
+      "score",
+      "three",
+      "under",
+      "par"
+    ]
+  },
+  {
+    "phrase": "Latency",
+    "bannedWords": [
+      "latency",
+      "delay",
+      "lag",
+      "response",
+      "time",
+      "slow"
+    ]
+  },
+  {
+    "phrase": "Ceiling Fan Pull Chain",
+    "bannedWords": [
+      "ceiling",
+      "fan",
+      "pull",
+      "chain",
+      "cord"
+    ]
+  },
+  {
+    "phrase": "Independent Study",
+    "bannedWords": [
+      "independent",
+      "study",
+      "alone",
+      "self-paced",
+      "research"
+    ]
+  },
+  {
+    "phrase": "Scaffolding",
+    "bannedWords": [
+      "scaffolding",
+      "support",
+      "structure",
+      "help",
+      "framework"
+    ]
+  },
+  {
+    "phrase": "Tiramisu",
+    "bannedWords": [
+      "tiramisu",
+      "italian",
+      "dessert",
+      "coffee",
+      "cream",
+      "mascarpone"
+    ]
+  },
+  {
+    "phrase": "Head Over Heels",
+    "bannedWords": [
+      "head",
+      "heels",
+      "fall",
+      "in love",
+      "tumble",
+      "deeply"
+    ]
+  },
+  {
+    "phrase": "Gastrique",
+    "bannedWords": [
+      "gastrique",
+      "glaze",
+      "caramel",
+      "vinegar",
+      "reduction",
+      "sweet"
+    ]
+  },
+  {
+    "phrase": "Contemptuous",
+    "bannedWords": [
+      "contemptuous",
+      "scorn",
+      "disdain",
+      "superior",
+      "dismissive"
+    ]
+  },
+  {
+    "phrase": "Sardonic Smile",
+    "bannedWords": [
+      "sardonic",
+      "smile",
+      "mocking",
+      "sarcastic",
+      "cynical"
+    ]
+  },
+  {
+    "phrase": "Wood Stain",
+    "bannedWords": [
+      "wood",
+      "stain",
+      "color",
+      "finish",
+      "paint"
+    ]
+  },
+  {
+    "phrase": "Achilles Heel",
+    "bannedWords": [
+      "achilles",
+      "heel",
+      "vulnerability",
+      "weakness",
+      "weakness"
+    ]
+  },
+  {
+    "phrase": "Contortionism",
+    "bannedWords": [
+      "contortionism",
+      "contortionist",
+      "contort",
+      "flexible",
+      "bend",
+      "twist"
+    ]
+  },
+  {
+    "phrase": "Breaking Bad",
+    "bannedWords": [
+      "breaking",
+      "bad",
+      "meth",
+      "methamphetamine",
+      "walter",
+      "heisenberg",
+      "crime"
+    ]
+  },
+  {
+    "phrase": "Deckhand",
+    "bannedWords": [
+      "deckhand",
+      "deck",
+      "hand",
+      "sailor",
+      "ship",
+      "maritime"
+    ]
+  },
+  {
+    "phrase": "Porthole Window",
+    "bannedWords": [
+      "porthole",
+      "window",
+      "port",
+      "round",
+      "ship"
+    ]
+  },
+  {
+    "phrase": "Offside",
+    "bannedWords": [
+      "offside",
+      "soccer",
+      "football",
+      "rule",
+      "forward",
+      "penalty"
+    ]
+  },
+  {
+    "phrase": "Gerbil",
+    "bannedWords": [
+      "gerbil",
+      "rodent",
+      "small",
+      "desert",
+      "pet"
+    ]
+  },
+  {
+    "phrase": "Tango",
+    "bannedWords": [
+      "tango",
+      "dance",
+      "couple",
+      "rhythm",
+      "passion",
+      "argentine"
+    ]
+  },
+  {
+    "phrase": "Black Panther",
+    "bannedWords": [
+      "black",
+      "panther",
+      "t'challa",
+      "wakanda",
+      "cat",
+      "feline",
+      "africa",
+      "king"
+    ]
+  },
+  {
+    "phrase": "Yo-Yo Tricks",
+    "bannedWords": [
+      "yo",
+      "yo-yo",
+      "tricks",
+      "trick",
+      "spin",
+      "string",
+      "toy"
+    ]
+  },
+  {
+    "phrase": "Fish Out Of Water",
+    "bannedWords": [
+      "fish",
+      "water",
+      "uncomfortable",
+      "displaced",
+      "alien"
+    ]
+  },
+  {
+    "phrase": "Bogey",
+    "bannedWords": [
+      "bogey",
+      "golf",
+      "score",
+      "above",
+      "par",
+      "hole"
+    ]
+  },
+  {
+    "phrase": "X-Men",
+    "bannedWords": [
+      "x",
+      "men",
+      "mutant",
+      "mutation",
+      "professor",
+      "xavier",
+      "power",
+      "superhero"
+    ]
+  },
+  {
+    "phrase": "Portage",
+    "bannedWords": [
+      "portage",
+      "carry",
+      "transport",
+      "canoe"
+    ]
+  },
+  {
+    "phrase": "Leaning Tower Of Pisa",
+    "bannedWords": [
+      "leaning",
+      "tower",
+      "pisa",
+      "italy",
+      "tilt",
+      "lean",
+      "incline",
+      "bell"
+    ]
+  },
+  {
+    "phrase": "Birdie",
+    "bannedWords": [
+      "birdie",
+      "golf",
+      "score",
+      "below",
+      "par",
+      "hole"
+    ]
+  },
+  {
+    "phrase": "Isaac Newton",
+    "bannedWords": [
+      "isaac",
+      "newton",
+      "physics",
+      "gravity",
+      "apple",
+      "mathematician"
+    ]
+  },
+  {
+    "phrase": "Ossobuco",
+    "bannedWords": [
+      "ossobuco",
+      "veal",
+      "shank",
+      "bone",
+      "marrow",
+      "braise"
+    ]
+  },
+  {
+    "phrase": "Plaid",
+    "bannedWords": [
+      "plaid",
+      "pattern",
+      "tartan",
+      "checkered"
+    ]
+  },
+  {
+    "phrase": "Dialectician",
+    "bannedWords": [
+      "dialectician",
+      "dialectic",
+      "logic",
+      "philosophy",
+      "argument",
+      "debate"
+    ]
+  },
+  {
+    "phrase": "Graupel",
+    "bannedWords": [
+      "graupel",
+      "precipitation",
+      "soft",
+      "hail",
+      "pellet",
+      "sleet",
+      "snow"
+    ]
+  },
+  {
+    "phrase": "Pantone",
+    "bannedWords": [
+      "pantone",
+      "color",
+      "system",
+      "company",
+      "matching"
+    ]
+  },
+  {
+    "phrase": "The Americans",
+    "bannedWords": [
+      "americans",
+      "american",
+      "spy",
+      "russian",
+      "cold",
+      "war"
+    ]
+  },
+  {
+    "phrase": "Confit",
+    "bannedWords": [
+      "confit",
+      "preserve",
+      "duck",
+      "slow",
+      "cook",
+      "fat"
+    ]
+  },
+  {
+    "phrase": "Beauty And The Beast",
+    "bannedWords": [
+      "beauty",
+      "beast",
+      "belle",
+      "prince",
+      "cursed",
+      "curse",
+      "monster",
+      "rose"
+    ]
+  },
+  {
+    "phrase": "Syllabus",
+    "bannedWords": [
+      "syllabus",
+      "course",
+      "outline",
+      "schedule",
+      "content"
+    ]
+  },
+  {
+    "phrase": "Fore",
+    "bannedWords": [
+      "fore",
+      "golf",
+      "warning",
+      "danger",
+      "lookout",
+      "shout"
+    ]
+  },
+  {
+    "phrase": "Hook",
+    "bannedWords": [
+      "hook",
+      "golf",
+      "curve",
+      "shot",
+      "ball",
+      "direction"
+    ]
+  },
+  {
+    "phrase": "Cartweel",
+    "bannedWords": [
+      "cartwheel",
+      "cart",
+      "wheel",
+      "handspring",
+      "flip",
+      "rotate"
+    ]
+  },
+  {
+    "phrase": "Waltz",
+    "bannedWords": [
+      "waltz",
+      "dance",
+      "music",
+      "three-time",
+      "spin",
+      "classical"
+    ]
+  },
+  {
+    "phrase": "Wistful",
+    "bannedWords": [
+      "wistful",
+      "longing",
+      "yearning",
+      "nostalgic",
+      "regretful"
+    ]
+  },
+  {
+    "phrase": "Crocodile Tears",
+    "bannedWords": [
+      "crocodile",
+      "tears",
+      "fake",
+      "insincere",
+      "crying"
+    ]
+  },
+  {
+    "phrase": "Cryptographer",
+    "bannedWords": [
+      "cryptographer",
+      "cryptography",
+      "code",
+      "cipher",
+      "secret",
+      "encrypt"
+    ]
+  },
+  {
+    "phrase": "The Worm",
+    "bannedWords": [
+      "worm",
+      "crawling",
+      "crawl",
+      "slither",
+      "ground",
+      "floor"
+    ]
+  },
+  {
+    "phrase": "The Gingerbread Man",
+    "bannedWords": [
+      "gingerbread",
+      "man",
+      "cookie",
+      "bake",
+      "run",
+      "chase"
+    ]
+  },
+  {
+    "phrase": "Juggling",
+    "bannedWords": [
+      "juggling",
+      "juggle",
+      "toss",
+      "catch",
+      "ball"
+    ]
+  },
+  {
+    "phrase": "Catamaran",
+    "bannedWords": [
+      "catamaran",
+      "boat",
+      "hull",
+      "twin",
+      "double"
+    ]
+  },
+  {
+    "phrase": "Light Dimmer",
+    "bannedWords": [
+      "light",
+      "dimmer",
+      "dim",
+      "brightness",
+      "switch"
+    ]
+  },
+  {
+    "phrase": "Soufflé",
+    "bannedWords": [
+      "souffle",
+      "egg",
+      "fluffy",
+      "rise",
+      "air",
+      "delicate"
+    ]
+  },
+  {
+    "phrase": "Cassoulet",
+    "bannedWords": [
+      "cassoulet",
+      "bean",
+      "duck",
+      "stew",
+      "french",
+      "casserole"
+    ]
+  },
+  {
+    "phrase": "Platonic Academy",
+    "bannedWords": [
+      "platonic",
+      "academy",
+      "plato",
+      "ancient",
+      "philosophy"
+    ]
+  },
+  {
+    "phrase": "Big Ben",
+    "bannedWords": [
+      "big",
+      "ben",
+      "london",
+      "clock",
+      "tower",
+      "bell",
+      "england",
+      "parliament"
+    ]
+  },
+  {
+    "phrase": "Proctor",
+    "bannedWords": [
+      "proctor",
+      "monitor",
+      "exam",
+      "test",
+      "supervise"
+    ]
+  },
+  {
+    "phrase": "Blitz",
+    "bannedWords": [
+      "blitz",
+      "chess",
+      "fast",
+      "time",
+      "quick",
+      "rapid"
+    ]
+  },
+  {
+    "phrase": "Cheese Grater",
+    "bannedWords": [
+      "cheese",
+      "grater",
+      "grate",
+      "shred",
+      "sharp"
+    ]
+  },
+  {
+    "phrase": "Christ The Redeemer",
+    "bannedWords": [
+      "christ",
+      "redeemer",
+      "jesus",
+      "rio",
+      "brazil",
+      "statue",
+      "arms",
+      "mountain"
+    ]
+  },
+  {
+    "phrase": "Andor",
+    "bannedWords": [
+      "andor",
+      "star",
+      "wars",
+      "rebel",
+      "heist",
+      "empire"
+    ]
+  },
+  {
+    "phrase": "Don't Throw The Baby Out With The Bathwater",
+    "bannedWords": [
+      "throw",
+      "baby",
+      "bathwater",
+      "discard",
+      "waste",
+      "keep"
+    ]
+  },
+  {
+    "phrase": "Pulling A Rabbit From A Hat",
+    "bannedWords": [
+      "pulling",
+      "rabbit",
+      "hat",
+      "magic",
+      "magician",
+      "trick"
+    ]
+  },
+  {
+    "phrase": "Lie",
+    "bannedWords": [
+      "lie",
+      "golf",
+      "position",
+      "ball",
+      "grass",
+      "rest"
+    ]
+  },
+  {
+    "phrase": "Dead Inside",
+    "bannedWords": [
+      "dead",
+      "inside",
+      "empty",
+      "soulless",
+      "lifeless"
+    ]
+  },
+  {
+    "phrase": "One Flew Over The Cuckoo's Nest",
+    "bannedWords": [
+      "flew",
+      "cuckoo",
+      "nest",
+      "hospital",
+      "asylum",
+      "nurse",
+      "rebellion"
+    ]
+  },
+  {
+    "phrase": "Downburst",
+    "bannedWords": [
+      "downburst",
+      "wind",
+      "down",
+      "burst",
+      "microburst",
+      "severe",
+      "damage"
+    ]
+  },
+  {
+    "phrase": "Star Wars",
+    "bannedWords": [
+      "star",
+      "wars",
+      "conflict",
+      "luke",
+      "force",
+      "lightsaber",
+      "rebellion"
+    ]
+  },
+  {
+    "phrase": "Executrix",
+    "bannedWords": [
+      "executrix",
+      "execute",
+      "will",
+      "estate",
+      "legal",
+      "inherit"
+    ]
+  },
+  {
+    "phrase": "Burj Khalifa",
+    "bannedWords": [
+      "burj",
+      "khalifa",
+      "dubai",
+      "skyscraper",
+      "tall",
+      "building"
+    ]
+  },
+  {
+    "phrase": "Terrine",
+    "bannedWords": [
+      "terrine",
+      "pate",
+      "mold",
+      "loaf",
+      "meat",
+      "liver"
+    ]
+  },
+  {
+    "phrase": "Smug",
+    "bannedWords": [
+      "smug",
+      "self-satisfied",
+      "arrogant",
+      "conceited",
+      "superior"
+    ]
+  },
+  {
+    "phrase": "Periwinkle",
+    "bannedWords": [
+      "periwinkle",
+      "purple",
+      "blue",
+      "color",
+      "flower"
+    ]
+  },
+  {
+    "phrase": "Don't Look A Gift Horse In The Mouth",
+    "bannedWords": [
+      "look",
+      "gift",
+      "horse",
+      "mouth",
+      "ungrateful",
+      "thankful"
+    ]
+  },
+  {
+    "phrase": "Leave No Trace",
+    "bannedWords": [
+      "leave",
+      "trace",
+      "evidence",
+      "sign",
+      "mark",
+      "impact"
+    ]
+  },
+  {
+    "phrase": "Speed Cubing",
+    "bannedWords": [
+      "speed",
+      "cubing",
+      "cube",
+      "rubik",
+      "puzzle",
+      "solve"
+    ]
+  },
+  {
+    "phrase": "Pâté",
+    "bannedWords": [
+      "pate",
+      "liver",
+      "spread",
+      "loaf",
+      "terrine",
+      "meat"
+    ]
+  },
+  {
+    "phrase": "Föhn Wind",
+    "bannedWords": [
+      "fohn",
+      "wind",
+      "warm",
+      "dry",
+      "alpine",
+      "downslope"
+    ]
+  },
+  {
+    "phrase": "The Leftovers",
+    "bannedWords": [
+      "leftovers",
+      "leftover",
+      "remaining",
+      "disappear",
+      "mysterious",
+      "vanish"
+    ]
+  },
+  {
+    "phrase": "Moonwalking",
+    "bannedWords": [
+      "moonwalking",
+      "moonwalk",
+      "moon",
+      "walking",
+      "walk",
+      "michael",
+      "jackson"
+    ]
+  },
+  {
+    "phrase": "Accountant",
+    "bannedWords": [
+      "accountant",
+      "account",
+      "accounting",
+      "bookkeeper",
+      "auditor",
+      "tax"
+    ]
+  },
+  {
+    "phrase": "Fall By The Wayside",
+    "bannedWords": [
+      "fall",
+      "wayside",
+      "abandon",
+      "neglect",
+      "decline"
+    ]
+  },
+  {
+    "phrase": "Fencing",
+    "bannedWords": [
+      "fencing",
+      "fence",
+      "sword",
+      "foil",
+      "épée",
+      "duel"
+    ]
+  },
+  {
+    "phrase": "Thumbtack",
+    "bannedWords": [
+      "thumbtack",
+      "thumb",
+      "tack",
+      "pin",
+      "fastener"
+    ]
+  },
+  {
+    "phrase": "The Ugly Duckling",
+    "bannedWords": [
+      "ugly",
+      "duckling",
+      "duck",
+      "swan",
+      "bird",
+      "transform",
+      "change",
+      "beautiful"
+    ]
+  },
+  {
+    "phrase": "Freightliner",
+    "bannedWords": [
+      "freightliner",
+      "truck",
+      "freight",
+      "cargo",
+      "semi"
+    ]
+  },
+  {
+    "phrase": "Flapper",
+    "bannedWords": [
+      "flapper",
+      "dance",
+      "1920s",
+      "roaring",
+      "twenties",
+      "dress",
+      "fashion"
+    ]
+  },
+  {
+    "phrase": "Chernobyl",
+    "bannedWords": [
+      "chernobyl",
+      "nuclear",
+      "disaster",
+      "ukraine",
+      "reactor",
+      "explosion"
+    ]
+  },
+  {
+    "phrase": "Hansel And Gretel",
+    "bannedWords": [
+      "hansel",
+      "gretel",
+      "children",
+      "witch",
+      "gingerbread",
+      "candy"
+    ]
+  },
+  {
+    "phrase": "The Shining",
+    "bannedWords": [
+      "shining",
+      "hotel",
+      "isolated",
+      "madness",
+      "winter",
+      "overlook",
+      "stanley"
+    ]
+  },
+  {
+    "phrase": "The Boy Who Cried Wolf",
+    "bannedWords": [
+      "boy",
+      "cried",
+      "cry",
+      "wolf",
+      "liar",
+      "false",
+      "alarm"
+    ]
+  },
+  {
+    "phrase": "Versailles Palace",
+    "bannedWords": [
+      "versailles",
+      "palace",
+      "france",
+      "royal",
+      "french",
+      "mansion"
+    ]
+  },
+  {
+    "phrase": "Socratic Method",
+    "bannedWords": [
+      "socratic",
+      "method",
+      "socrates",
+      "questioning",
+      "philosophy"
+    ]
+  },
+  {
+    "phrase": "Exorcist",
+    "bannedWords": [
+      "exorcist",
+      "exorcism",
+      "demon",
+      "spirit",
+      "religious",
+      "possession"
+    ]
+  },
+  {
+    "phrase": "Goodfellas",
+    "bannedWords": [
+      "goodfellas",
+      "good",
+      "fellas",
+      "mobster",
+      "mob",
+      "mafia",
+      "crime",
+      "henry"
+    ]
+  },
+  {
+    "phrase": "Golden Gate Bridge",
+    "bannedWords": [
+      "golden",
+      "gate",
+      "bridge",
+      "san",
+      "francisco",
+      "california",
+      "america",
+      "span"
+    ]
+  },
+  {
+    "phrase": "Fake Laugh",
+    "bannedWords": [
+      "fake",
+      "laugh",
+      "insincere",
+      "forced",
+      "phony"
+    ]
+  },
+  {
+    "phrase": "Sampan",
+    "bannedWords": [
+      "sampan",
+      "boat",
+      "asian",
+      "river",
+      "oar"
+    ]
+  },
+  {
+    "phrase": "Bitumen",
+    "bannedWords": [
+      "bitumen",
+      "asphalt",
+      "road",
+      "tar",
+      "pave"
+    ]
+  },
+  {
+    "phrase": "Engraver",
+    "bannedWords": [
+      "engraver",
+      "engrave",
+      "carve",
+      "cut",
+      "metal",
+      "art"
+    ]
+  },
+  {
+    "phrase": "Tugboat",
+    "bannedWords": [
+      "tugboat",
+      "boat",
+      "tug",
+      "pull",
+      "barge"
+    ]
+  },
+  {
+    "phrase": "Rime Ice",
+    "bannedWords": [
+      "rime",
+      "ice",
+      "frost",
+      "freeze",
+      "coating",
+      "fog",
+      "frozen"
+    ]
+  },
+  {
+    "phrase": "Fly Fishing",
+    "bannedWords": [
+      "fly",
+      "fishing",
+      "fish",
+      "lure",
+      "cast",
+      "rod"
+    ]
+  },
+  {
+    "phrase": "Se7en",
+    "bannedWords": [
+      "se7en",
+      "seven",
+      "sins",
+      "serial",
+      "killer",
+      "murder",
+      "darkness",
+      "detective"
+    ]
+  },
+  {
+    "phrase": "Shin Splints",
+    "bannedWords": [
+      "shin",
+      "splints",
+      "injury",
+      "pain",
+      "running"
+    ]
+  },
+  {
+    "phrase": "Montessori Method",
+    "bannedWords": [
+      "montessori",
+      "method",
+      "education",
+      "pedagogy",
+      "approach"
+    ]
+  },
+  {
+    "phrase": "Shader",
+    "bannedWords": [
+      "shader",
+      "graphics",
+      "program",
+      "rendering",
+      "visual",
+      "computer"
+    ]
+  },
+  {
+    "phrase": "Fit The Bill",
+    "bannedWords": [
+      "fit",
+      "bill",
+      "suitable",
+      "appropriate",
+      "match"
+    ]
+  },
+  {
+    "phrase": "Parkour",
+    "bannedWords": [
+      "parkour",
+      "parkering",
+      "running",
+      "jumping",
+      "obstacle",
+      "urban"
+    ]
+  },
+  {
+    "phrase": "Shadow Puppets",
+    "bannedWords": [
+      "shadow",
+      "puppets",
+      "puppet",
+      "light",
+      "wall",
+      "silhouette"
+    ]
+  },
+  {
+    "phrase": "Beaver",
+    "bannedWords": [
+      "beaver",
+      "rodent",
+      "dam",
+      "teeth",
+      "water"
+    ]
+  },
+  {
+    "phrase": "Shower Curtain Rod",
+    "bannedWords": [
+      "shower",
+      "curtain",
+      "rod",
+      "hang",
+      "bar"
+    ]
+  },
+  {
+    "phrase": "Badger",
+    "bannedWords": [
+      "badger",
+      "burrowing",
+      "striped",
+      "mammal",
+      "pester"
+    ]
+  },
+  {
+    "phrase": "Cost An Arm And A Leg",
+    "bannedWords": [
+      "cost",
+      "arm",
+      "leg",
+      "expensive",
+      "price",
+      "money"
+    ]
+  },
+  {
+    "phrase": "Ostinato",
+    "bannedWords": [
+      "ostinato",
+      "pattern",
+      "repetition",
+      "music",
+      "rhythm"
+    ]
+  },
+  {
+    "phrase": "Hawkeye",
+    "bannedWords": [
+      "hawkeye",
+      "clint",
+      "barton",
+      "archer",
+      "bow",
+      "arrow",
+      "aim",
+      "sight"
+    ]
+  },
+  {
+    "phrase": "Remedial Class",
+    "bannedWords": [
+      "remedial",
+      "class",
+      "catch-up",
+      "struggling",
+      "intervention"
+    ]
+  },
+  {
+    "phrase": "Tower Of London",
+    "bannedWords": [
+      "tower",
+      "london",
+      "england",
+      "fortress",
+      "castle",
+      "prison",
+      "crown",
+      "jewel"
+    ]
+  },
+  {
+    "phrase": "Compass Rose",
+    "bannedWords": [
+      "compass",
+      "rose",
+      "directions",
+      "navigation",
+      "north",
+      "symbol"
+    ]
+  },
+  {
+    "phrase": "Off The Beaten Path",
+    "bannedWords": [
+      "off",
+      "beaten",
+      "path",
+      "unusual",
+      "different",
+      "unexplored"
+    ]
+  },
+  {
+    "phrase": "Nikola Tesla",
+    "bannedWords": [
+      "nikola",
+      "tesla",
+      "electricity",
+      "inventor",
+      "wireless",
+      "engineer"
+    ]
+  },
+  {
+    "phrase": "Bandwidth",
+    "bannedWords": [
+      "bandwidth",
+      "capacity",
+      "communication",
+      "data",
+      "network",
+      "speed"
+    ]
+  },
+  {
+    "phrase": "Barefoot Contessa",
+    "bannedWords": [
+      "barefoot",
+      "contessa",
+      "ava",
+      "gardener",
+      "cooking"
+    ]
+  },
+  {
+    "phrase": "Pedagogical Approach",
+    "bannedWords": [
+      "pedagogical",
+      "approach",
+      "teaching",
+      "method",
+      "instruction"
+    ]
+  },
+  {
+    "phrase": "Billow Clouds",
+    "bannedWords": [
+      "billow",
+      "cloud",
+      "wave",
+      "undulate",
+      "ripple",
+      "parallel",
+      "shear"
+    ]
+  },
+  {
+    "phrase": "Hat Trick",
+    "bannedWords": [
+      "hat",
+      "trick",
+      "three",
+      "goal",
+      "soccer",
+      "football"
+    ]
+  },
+  {
+    "phrase": "Pantile",
+    "bannedWords": [
+      "pantile",
+      "tile",
+      "roof",
+      "curved"
+    ]
+  },
+  {
+    "phrase": "Hamstring",
+    "bannedWords": [
+      "hamstring",
+      "hinder",
+      "obstruct",
+      "limit",
+      "restrict"
+    ]
+  },
+  {
+    "phrase": "Yoga",
+    "bannedWords": [
+      "yoga",
+      "stretch",
+      "pose",
+      "meditation",
+      "namaste",
+      "zen"
+    ]
+  },
+  {
+    "phrase": "Dhole",
+    "bannedWords": [
+      "dhole",
+      "wild",
+      "dog",
+      "asian",
+      "canine"
+    ]
+  },
+  {
+    "phrase": "Mirepoix",
+    "bannedWords": [
+      "mirepoix",
+      "dice",
+      "vegetable",
+      "carrot",
+      "celery",
+      "onion"
+    ]
+  },
+  {
+    "phrase": "Leonardo da Vinci",
+    "bannedWords": [
+      "leonardo",
+      "vinci",
+      "artist",
+      "inventor",
+      "renaissance",
+      "painter"
+    ]
+  },
+  {
+    "phrase": "In Deep Water",
+    "bannedWords": [
+      "deep",
+      "water",
+      "trouble",
+      "problem",
+      "difficulty",
+      "difficulty"
+    ]
+  },
+  {
+    "phrase": "Landing Gear",
+    "bannedWords": [
+      "landing",
+      "gear",
+      "wheel",
+      "airplane",
+      "plane"
+    ]
+  },
+  {
+    "phrase": "Binturong",
+    "bannedWords": [
+      "binturong",
+      "civet",
+      "asian",
+      "furry",
+      "carnivore"
+    ]
+  },
+  {
+    "phrase": "Limbo",
+    "bannedWords": [
+      "limbo",
+      "bend",
+      "backwards",
+      "pole",
+      "bar",
+      "low"
+    ]
+  },
+  {
+    "phrase": "Mary Had A Little Lamb",
+    "bannedWords": [
+      "mary",
+      "little",
+      "lamb",
+      "sheep",
+      "wool",
+      "fleece"
+    ]
+  },
+  {
+    "phrase": "Taj Mahal",
+    "bannedWords": [
+      "taj",
+      "mahal",
+      "india",
+      "monument",
+      "tomb",
+      "love",
+      "white",
+      "mausoleum"
+    ]
+  },
+  {
+    "phrase": "Shit-Eating Grin",
+    "bannedWords": [
+      "shit",
+      "eating",
+      "grin",
+      "smug",
+      "self-satisfied"
+    ]
+  },
+  {
+    "phrase": "Surge Protector",
+    "bannedWords": [
+      "surge",
+      "protector",
+      "protect",
+      "outlet",
+      "electrical"
+    ]
+  },
+  {
+    "phrase": "Skate",
+    "bannedWords": [
+      "skate",
+      "ice",
+      "hockey",
+      "blade",
+      "rink",
+      "glide"
+    ]
+  },
+  {
+    "phrase": "Lozenge",
+    "bannedWords": [
+      "lozenge",
+      "shape",
+      "diamond",
+      "rhombus",
+      "candy",
+      "throat"
+    ]
+  },
+  {
+    "phrase": "Wire Walking",
+    "bannedWords": [
+      "wire",
+      "walking",
+      "walk",
+      "rope",
+      "balance",
+      "high"
+    ]
+  },
+  {
+    "phrase": "Aileron",
+    "bannedWords": [
+      "aileron",
+      "airplane",
+      "wing",
+      "control",
+      "flap"
+    ]
+  },
+  {
+    "phrase": "Charles Darwin",
+    "bannedWords": [
+      "charles",
+      "darwin",
+      "evolution",
+      "naturalist",
+      "species",
+      "biology"
+    ]
+  },
+  {
+    "phrase": "Bloom's Taxonomy",
+    "bannedWords": [
+      "bloom",
+      "taxonomy",
+      "classification",
+      "learning",
+      "levels"
+    ]
+  },
+  {
+    "phrase": "Dishcloth",
+    "bannedWords": [
+      "dishcloth",
+      "dish",
+      "cloth",
+      "towel",
+      "wipe"
+    ]
+  },
+  {
+    "phrase": "Baroque",
+    "bannedWords": [
+      "baroque",
+      "ornate",
+      "elaborate",
+      "style",
+      "period"
+    ]
+  },
+  {
+    "phrase": "Derecho",
+    "bannedWords": [
+      "derecho",
+      "wind",
+      "storm",
+      "straight",
+      "severe",
+      "fast",
+      "destructive"
+    ]
+  },
+  {
+    "phrase": "Dinghy",
+    "bannedWords": [
+      "dinghy",
+      "boat",
+      "small",
+      "tender",
+      "rowing"
+    ]
+  },
+  {
+    "phrase": "Waist Deep",
+    "bannedWords": [
+      "waist",
+      "deep",
+      "involved",
+      "immersed",
+      "submerged"
+    ]
+  },
+  {
+    "phrase": "Bee-eater",
+    "bannedWords": [
+      "bee",
+      "eater",
+      "bird",
+      "eating",
+      "insects"
+    ]
+  },
+  {
+    "phrase": "Calf Muscle",
+    "bannedWords": [
+      "calf",
+      "muscle",
+      "leg",
+      "strength"
+    ]
+  },
+  {
+    "phrase": "Hertz",
+    "bannedWords": [
+      "hertz",
+      "frequency",
+      "cycles",
+      "speed",
+      "measure",
+      "per second"
+    ]
+  },
+  {
+    "phrase": "Axolotl",
+    "bannedWords": [
+      "axolotl",
+      "salamander",
+      "amphibian",
+      "aquatic",
+      "mexican"
+    ]
+  },
+  {
+    "phrase": "Fargo",
+    "bannedWords": [
+      "fargo",
+      "minnesota",
+      "kidnapping",
+      "crime",
+      "snow",
+      "ewood",
+      "pregnant"
+    ]
+  },
+  {
+    "phrase": "Arancini",
+    "bannedWords": [
+      "arancini",
+      "rice",
+      "ball",
+      "sicilian",
+      "fried",
+      "italian"
+    ]
+  },
+  {
+    "phrase": "Bottle Opener",
+    "bannedWords": [
+      "bottle",
+      "opener",
+      "open",
+      "cap",
+      "lid"
+    ]
+  },
+  {
+    "phrase": "Nacreous Clouds",
+    "bannedWords": [
+      "nacreous",
+      "cloud",
+      "mother",
+      "pearl",
+      "iridescent",
+      "ice",
+      "stratosphere"
+    ]
+  },
+  {
+    "phrase": "Hipbone Connected",
+    "bannedWords": [
+      "hipbone",
+      "connected",
+      "connected",
+      "linked",
+      "related"
+    ]
+  },
+  {
+    "phrase": "Trivium And Quadrivium",
+    "bannedWords": [
+      "trivium",
+      "quadrivium",
+      "liberal",
+      "arts",
+      "education",
+      "classical"
+    ]
+  },
+  {
+    "phrase": "Ethnomusicologist",
+    "bannedWords": [
+      "ethnomusicologist",
+      "ethnomusicology",
+      "music",
+      "culture",
+      "study",
+      "folk"
+    ]
+  },
+  {
+    "phrase": "Beatboxing",
+    "bannedWords": [
+      "beatboxing",
+      "beatbox",
+      "beat",
+      "boxing",
+      "rhythm",
+      "percussion",
+      "mouth"
+    ]
+  },
+  {
+    "phrase": "Supercell",
+    "bannedWords": [
+      "supercell",
+      "storm",
+      "thunderstorm",
+      "rotating",
+      "cell",
+      "severe",
+      "tornado"
+    ]
+  },
+  {
+    "phrase": "The Robot",
+    "bannedWords": [
+      "robot",
+      "mechanical",
+      "jerky",
+      "stiff",
+      "movement",
+      "automated"
+    ]
+  },
+  {
+    "phrase": "Blade Runner",
+    "bannedWords": [
+      "blade",
+      "runner",
+      "android",
+      "replicant",
+      "cyborg",
+      "dystopian",
+      "future"
+    ]
+  },
+  {
+    "phrase": "Funicular",
+    "bannedWords": [
+      "funicular",
+      "cable",
+      "incline",
+      "mountain",
+      "climb"
+    ]
+  },
+  {
+    "phrase": "Statue Of Liberty",
+    "bannedWords": [
+      "statue",
+      "liberty",
+      "lady",
+      "new",
+      "york",
+      "torch",
+      "america",
+      "freedom"
+    ]
+  },
+  {
+    "phrase": "Stranger Things",
+    "bannedWords": [
+      "stranger",
+      "things",
+      "upside",
+      "demogorgon",
+      "supernatural",
+      "monster",
+      "1980s"
+    ]
+  },
+  {
+    "phrase": "The Chunnel",
+    "bannedWords": [
+      "chunnel",
+      "tunnel",
+      "channel",
+      "english"
+    ]
+  },
+  {
+    "phrase": "Bladesmith",
+    "bannedWords": [
+      "bladesmith",
+      "blade",
+      "smith",
+      "sword",
+      "forge",
+      "metal"
+    ]
+  },
+  {
+    "phrase": "Colander",
+    "bannedWords": [
+      "colander",
+      "drain",
+      "strainer",
+      "pasta",
+      "filter"
+    ]
+  },
+  {
+    "phrase": "The Sopranos",
+    "bannedWords": [
+      "sopranos",
+      "soprano",
+      "mafia",
+      "mob",
+      "therapy",
+      "tony",
+      "new jersey"
+    ]
+  },
+  {
+    "phrase": "Turning A Blind Eye",
+    "bannedWords": [
+      "turning",
+      "blind",
+      "eye",
+      "ignore",
+      "overlook",
+      "disregard"
+    ]
+  },
+  {
+    "phrase": "Haboob",
+    "bannedWords": [
+      "haboob",
+      "dust",
+      "storm",
+      "wind",
+      "sand",
+      "wall",
+      "collapse"
+    ]
+  },
+  {
+    "phrase": "Goldilocks And The Three Bears",
+    "bannedWords": [
+      "goldilocks",
+      "three",
+      "bears",
+      "locks",
+      "girl",
+      "porridge",
+      "fairy",
+      "tale"
+    ]
+  },
+  {
+    "phrase": "Distiller",
+    "bannedWords": [
+      "distiller",
+      "distill",
+      "alcohol",
+      "spirits",
+      "liquor",
+      "ferment"
+    ]
+  },
+  {
+    "phrase": "Colosseum",
+    "bannedWords": [
+      "colosseum",
+      "rome",
+      "italy",
+      "arena",
+      "ancient",
+      "amphitheater",
+      "gladiator",
+      "ruin"
+    ]
+  },
+  {
+    "phrase": "Spatula",
+    "bannedWords": [
+      "spatula",
+      "flip",
+      "scrape",
+      "utensil"
+    ]
+  },
+  {
+    "phrase": "Puppy Dog Eyes",
+    "bannedWords": [
+      "puppy",
+      "dog",
+      "eyes",
+      "cute",
+      "sad",
+      "pleading"
+    ]
+  },
+  {
+    "phrase": "Paint Roller",
+    "bannedWords": [
+      "paint",
+      "roller",
+      "roll",
+      "brush",
+      "coat"
+    ]
+  },
+  {
+    "phrase": "Bowerbird",
+    "bannedWords": [
+      "bower",
+      "bird",
+      "building",
+      "decorating",
+      "australian"
+    ]
+  },
+  {
+    "phrase": "Amaretti",
+    "bannedWords": [
+      "amaretti",
+      "almond",
+      "cookie",
+      "italian",
+      "macaroon",
+      "sweet"
+    ]
+  },
+  {
+    "phrase": "Hypervisor",
+    "bannedWords": [
+      "hypervisor",
+      "virtual",
+      "machine",
+      "emulate",
+      "software",
+      "server"
+    ]
+  },
+  {
+    "phrase": "Caboose",
+    "bannedWords": [
+      "caboose",
+      "train",
+      "car",
+      "rear",
+      "red"
+    ]
+  },
+  {
+    "phrase": "Incredulous Look",
+    "bannedWords": [
+      "incredulous",
+      "look",
+      "disbelief",
+      "skeptical",
+      "doubtful"
+    ]
+  },
+  {
+    "phrase": "Dour",
+    "bannedWords": [
+      "dour",
+      "gloomy",
+      "sullen",
+      "stern",
+      "morose"
+    ]
+  },
+  {
+    "phrase": "Captain America",
+    "bannedWords": [
+      "captain",
+      "america",
+      "steve",
+      "rogers",
+      "shield",
+      "soldier",
+      "super",
+      "serum"
+    ]
+  },
+  {
+    "phrase": "Caracal",
+    "bannedWords": [
+      "caracal",
+      "wildcat",
+      "feline",
+      "lynx",
+      "african"
+    ]
+  },
+  {
+    "phrase": "Coleopteran",
+    "bannedWords": [
+      "coleopteran",
+      "beetle",
+      "insect",
+      "winged",
+      "arthropod"
+    ]
+  },
+  {
+    "phrase": "Paperclip",
+    "bannedWords": [
+      "paperclip",
+      "paper",
+      "clip",
+      "fastener",
+      "hold"
+    ]
+  },
+  {
+    "phrase": "Bow Echo",
+    "bannedWords": [
+      "bow",
+      "echo",
+      "radar",
+      "pattern",
+      "wind",
+      "storm",
+      "shape"
+    ]
+  },
+  {
+    "phrase": "Muleback",
+    "bannedWords": [
+      "muleback",
+      "mule",
+      "back",
+      "animal",
+      "transport"
+    ]
+  },
+  {
+    "phrase": "Belly Laugh",
+    "bannedWords": [
+      "belly",
+      "laugh",
+      "deep",
+      "hearty",
+      "genuine"
+    ]
+  },
+  {
+    "phrase": "Fuselage",
+    "bannedWords": [
+      "fuselage",
+      "airplane",
+      "body",
+      "aircraft",
+      "plane"
+    ]
+  },
+  {
+    "phrase": "The Dark Knight",
+    "bannedWords": [
+      "dark",
+      "knight",
+      "batman",
+      "joker",
+      "superhero",
+      "gotham",
+      "vigilante"
+    ]
+  },
+  {
+    "phrase": "Dark",
+    "bannedWords": [
+      "dark",
+      "shadow",
+      "time",
+      "travel",
+      "german",
+      "loop"
+    ]
+  },
+  {
+    "phrase": "Barking Up The Wrong Tree",
+    "bannedWords": [
+      "barking",
+      "wrong",
+      "tree",
+      "dog",
+      "mistake",
+      "incorrect"
+    ]
+  },
+  {
+    "phrase": "Hip To It",
+    "bannedWords": [
+      "hip",
+      "aware",
+      "aware",
+      "cool",
+      "trendy"
+    ]
+  },
+  {
+    "phrase": "Service Break",
+    "bannedWords": [
+      "service",
+      "break",
+      "tennis",
+      "serve",
+      "hold",
+      "game"
+    ]
+  },
+  {
+    "phrase": "Pinocchio",
+    "bannedWords": [
+      "pinocchio",
+      "puppet",
+      "nose",
+      "grow",
+      "lie",
+      "wood",
+      "wooden",
+      "real"
+    ]
+  },
+  {
+    "phrase": "Paisley",
+    "bannedWords": [
+      "paisley",
+      "pattern",
+      "floral",
+      "ornate"
+    ]
+  },
+  {
+    "phrase": "Frigate",
+    "bannedWords": [
+      "frigate",
+      "ship",
+      "naval",
+      "warship",
+      "military"
+    ]
+  },
+  {
+    "phrase": "Ace",
+    "bannedWords": [
+      "ace",
+      "tennis",
+      "serve",
+      "point",
+      "unreturnable",
+      "winner"
+    ]
+  },
+  {
+    "phrase": "The Seventh Seal",
+    "bannedWords": [
+      "seventh",
+      "seal",
+      "movie",
+      "death",
+      "chess",
+      "ingmar",
+      "bergman",
+      "swedish"
+    ]
+  },
+  {
+    "phrase": "Polenta",
+    "bannedWords": [
+      "polenta",
+      "corn",
+      "porridge",
+      "italian",
+      "creamy",
+      "grits"
+    ]
+  },
+  {
+    "phrase": "Switchback",
+    "bannedWords": [
+      "switchback",
+      "switch",
+      "back",
+      "zigzag",
+      "turn"
+    ]
+  },
+  {
+    "phrase": "Smize",
+    "bannedWords": [
+      "smize",
+      "smile",
+      "eyes",
+      "tyra",
+      "fierce"
+    ]
+  },
+  {
+    "phrase": "Circuit Board",
+    "bannedWords": [
+      "circuit",
+      "board",
+      "electronic",
+      "hardware",
+      "computer",
+      "chip"
+    ]
+  },
+  {
+    "phrase": "Angkor Wat",
+    "bannedWords": [
+      "angkor",
+      "wat",
+      "cambodia",
+      "temple",
+      "khmer",
+      "asia",
+      "ruins",
+      "ancient"
+    ]
+  },
+  {
+    "phrase": "Activewear",
+    "bannedWords": [
+      "activewear",
+      "active",
+      "wear",
+      "clothing",
+      "exercise",
+      "gym",
+      "sports"
+    ]
+  },
+  {
+    "phrase": "Thor",
+    "bannedWords": [
+      "thor",
+      "god",
+      "thunder",
+      "hammer",
+      "mjolnir",
+      "norway",
+      "viking",
+      "lightning"
+    ]
+  },
+  {
+    "phrase": "Psycho",
+    "bannedWords": [
+      "psycho",
+      "psychotic",
+      "crazy",
+      "insane",
+      "madness"
+    ]
+  },
+  {
+    "phrase": "Mulligan",
+    "bannedWords": [
+      "mulligan",
+      "golf",
+      "do",
+      "over",
+      "second",
+      "chance"
+    ]
+  },
+  {
+    "phrase": "The Princess And The Pea",
+    "bannedWords": [
+      "princess",
+      "pea",
+      "prince",
+      "mattress",
+      "sensitive",
+      "royal"
+    ]
+  },
+  {
+    "phrase": "Chamois",
+    "bannedWords": [
+      "chamois",
+      "goat",
+      "mountain",
+      "antelope",
+      "alpine"
+    ]
+  },
+  {
+    "phrase": "Eagle",
+    "bannedWords": [
+      "eagle",
+      "golf",
+      "score",
+      "two",
+      "under",
+      "par"
+    ]
+  },
+  {
+    "phrase": "Cider Master",
+    "bannedWords": [
+      "cider",
+      "master",
+      "apple",
+      "ferment",
+      "drink",
+      "beverage"
+    ]
+  },
+  {
+    "phrase": "Bouillabaisse",
+    "bannedWords": [
+      "bouillabaisse",
+      "soup",
+      "fish",
+      "seafood",
+      "provencal",
+      "saffron"
+    ]
+  },
+  {
+    "phrase": "Peaky Blinders",
+    "bannedWords": [
+      "peaky",
+      "blinders",
+      "blind",
+      "gang",
+      "birmingham",
+      "criminal"
+    ]
+  },
+  {
+    "phrase": "Lob",
+    "bannedWords": [
+      "lob",
+      "tennis",
+      "high",
+      "ball",
+      "arc",
+      "over"
+    ]
+  },
+  {
+    "phrase": "Side-Eye",
+    "bannedWords": [
+      "side",
+      "eye",
+      "glance",
+      "suspicious",
+      "judgmental"
+    ]
+  },
+  {
+    "phrase": "Eat Your Heart Out",
+    "bannedWords": [
+      "eat",
+      "heart",
+      "jealous",
+      "envy"
+    ]
+  },
+  {
+    "phrase": "L.A. Confidential",
+    "bannedWords": [
+      "confidential",
+      "los angeles",
+      "la",
+      "corruption",
+      "police",
+      "noir",
+      "scandal"
+    ]
+  },
+  {
+    "phrase": "Calisthenics",
+    "bannedWords": [
+      "calisthenics",
+      "calisthenics",
+      "exercise",
+      "bodyweight",
+      "strength",
+      "physical"
+    ]
+  },
+  {
+    "phrase": "Whip Cracking",
+    "bannedWords": [
+      "whip",
+      "cracking",
+      "crack",
+      "snap",
+      "leather",
+      "sound"
+    ]
+  },
+  {
+    "phrase": "Oscillating Fan",
+    "bannedWords": [
+      "oscillating",
+      "fan",
+      "oscillate",
+      "swing",
+      "cool"
+    ]
+  },
+  {
+    "phrase": "Cut To The Chase",
+    "bannedWords": [
+      "cut",
+      "chase",
+      "direct",
+      "hurry",
+      "skip",
+      "main"
+    ]
+  },
+  {
+    "phrase": "Chaps",
+    "bannedWords": [
+      "chaps",
+      "leather",
+      "pants",
+      "cowboy",
+      "western",
+      "legs"
+    ]
+  },
+  {
+    "phrase": "Risotto Milanese",
+    "bannedWords": [
+      "risotto",
+      "milanese",
+      "rice",
+      "saffron",
+      "yellow",
+      "italian"
+    ]
+  },
+  {
+    "phrase": "Pulp Fiction",
+    "bannedWords": [
+      "pulp",
+      "fiction",
+      "crime",
+      "nonlinear",
+      "tarantino",
+      "briefcase",
+      "john"
+    ]
+  },
+  {
+    "phrase": "Tiered Cake",
+    "bannedWords": [
+      "tiered",
+      "cake",
+      "layer",
+      "wedding",
+      "dessert",
+      "stack"
+    ]
+  },
+  {
+    "phrase": "Gnocchi Gorgonzola",
+    "bannedWords": [
+      "gnocchi",
+      "gorgonzola",
+      "potato",
+      "cheese",
+      "blue",
+      "italian"
+    ]
+  },
+  {
+    "phrase": "Crack Of Dawn",
+    "bannedWords": [
+      "crack",
+      "dawn",
+      "early",
+      "morning",
+      "sunrise",
+      "break"
+    ]
+  },
+  {
+    "phrase": "Bain-Marie",
+    "bannedWords": [
+      "bain",
+      "marie",
+      "bath",
+      "water",
+      "double",
+      "boiler"
+    ]
+  },
+  {
+    "phrase": "Aoudad",
+    "bannedWords": [
+      "aoudad",
+      "wild",
+      "sheep",
+      "horned",
+      "african"
+    ]
+  },
+  {
+    "phrase": "A Penny For Your Thoughts",
+    "bannedWords": [
+      "penny",
+      "thoughts",
+      "thinking",
+      "opinion",
+      "mind",
+      "money"
+    ]
+  },
+  {
+    "phrase": "Slice",
+    "bannedWords": [
+      "slice",
+      "golf",
+      "curve",
+      "shot",
+      "ball",
+      "direction"
+    ]
+  },
+  {
+    "phrase": "Navel Gazing",
+    "bannedWords": [
+      "navel",
+      "gazing",
+      "self-absorption",
+      "contemplation",
+      "egocentric"
+    ]
+  },
+  {
+    "phrase": "Motherboard",
+    "bannedWords": [
+      "motherboard",
+      "circuit",
+      "board",
+      "main",
+      "computer",
+      "hardware"
+    ]
+  },
+  {
+    "phrase": "Caught Red-Handed",
+    "bannedWords": [
+      "caught",
+      "red",
+      "handed",
+      "guilty",
+      "evidence",
+      "proven"
+    ]
+  },
+  {
+    "phrase": "Chichen Itza",
+    "bannedWords": [
+      "chichen",
+      "itza",
+      "mexico",
+      "mayan",
+      "maya",
+      "pyramid",
+      "ancient",
+      "ruin"
+    ]
+  },
+  {
+    "phrase": "Chip Shot",
+    "bannedWords": [
+      "chip",
+      "shot",
+      "golf",
+      "short",
+      "green",
+      "near"
+    ]
+  },
+  {
+    "phrase": "Stracciatella",
+    "bannedWords": [
+      "stracciatella",
+      "soup",
+      "egg",
+      "cheese",
+      "italian",
+      "drop"
+    ]
+  },
+  {
+    "phrase": "Taxi Driver",
+    "bannedWords": [
+      "taxi",
+      "driver",
+      "cab",
+      "new york",
+      "violence",
+      "insomnia"
+    ]
+  },
+  {
+    "phrase": "Kick Up Your Heels",
+    "bannedWords": [
+      "kick",
+      "heels",
+      "celebrate",
+      "party",
+      "dance"
+    ]
+  },
+  {
+    "phrase": "Béarnaise Sauce",
+    "bannedWords": [
+      "bearnaise",
+      "sauce",
+      "butter",
+      "egg",
+      "tarragon",
+      "emulsion"
+    ]
+  },
+  {
+    "phrase": "Draw The Line",
+    "bannedWords": [
+      "draw",
+      "line",
+      "limit",
+      "boundary",
+      "stop",
+      "refuse"
+    ]
+  },
+  {
+    "phrase": "Little Miss Muffet",
+    "bannedWords": [
+      "little",
+      "miss",
+      "muffet",
+      "spider",
+      "sat",
+      "whey"
+    ]
+  },
+  {
+    "phrase": "Posterize",
+    "bannedWords": [
+      "posterize",
+      "effect",
+      "color",
+      "poster",
+      "bold"
+    ]
+  },
+  {
+    "phrase": "Potato Ricer",
+    "bannedWords": [
+      "potato",
+      "ricer",
+      "rice",
+      "mash",
+      "press"
+    ]
+  },
+  {
+    "phrase": "Fleabag",
+    "bannedWords": [
+      "fleabag",
+      "flea",
+      "bag",
+      "british",
+      "comedy",
+      "woman"
+    ]
+  },
+  {
+    "phrase": "Tarte Tatin",
+    "bannedWords": [
+      "tarte",
+      "tatin",
+      "apple",
+      "caramel",
+      "pastry",
+      "inverted",
+      "upside"
+    ]
+  },
+  {
+    "phrase": "Cha-Cha",
+    "bannedWords": [
+      "cha",
+      "dance",
+      "latin",
+      "rhythm",
+      "step"
+    ]
+  },
+  {
+    "phrase": "Cellist",
+    "bannedWords": [
+      "cellist",
+      "cello",
+      "violin",
+      "music",
+      "string",
+      "orchestra"
+    ]
+  },
+  {
+    "phrase": "Severance",
+    "bannedWords": [
+      "severance",
+      "sever",
+      "separate",
+      "memory",
+      "work",
+      "consciousness"
+    ]
+  },
+  {
+    "phrase": "Marie Curie",
+    "bannedWords": [
+      "marie",
+      "curie",
+      "scientist",
+      "physicist",
+      "radioactivity",
+      "nobel"
+    ]
+  },
+  {
+    "phrase": "Pommes Anna",
+    "bannedWords": [
+      "pommes",
+      "anna",
+      "potato",
+      "slice",
+      "cake",
+      "crispy"
+    ]
+  },
+  {
+    "phrase": "Adam's Apple",
+    "bannedWords": [
+      "adam",
+      "apple",
+      "throat"
+    ]
+  },
+  {
+    "phrase": "Fianchetto",
+    "bannedWords": [
+      "fianchetto",
+      "chess",
+      "opening",
+      "bishop",
+      "develop",
+      "italian"
+    ]
+  },
+  {
+    "phrase": "Deglaze",
+    "bannedWords": [
+      "deglaze",
+      "pan",
+      "liquid",
+      "sauce",
+      "cooking"
+    ]
+  },
+  {
+    "phrase": "Chaplain",
+    "bannedWords": [
+      "chaplain",
+      "priest",
+      "clergy",
+      "religious",
+      "spiritual",
+      "minister"
+    ]
+  },
+  {
+    "phrase": "Parkway",
+    "bannedWords": [
+      "parkway",
+      "road",
+      "scenic",
+      "tree"
+    ]
+  },
+  {
+    "phrase": "Battlestar Galactica",
+    "bannedWords": [
+      "battlestar",
+      "galactica",
+      "spaceship",
+      "cylons",
+      "robot",
+      "spacecraft"
+    ]
+  },
+  {
+    "phrase": "Slugging Percentage",
+    "bannedWords": [
+      "slugging",
+      "percentage",
+      "baseball",
+      "stat",
+      "power",
+      "batting"
+    ]
+  },
+  {
+    "phrase": "Leer",
+    "bannedWords": [
+      "leer",
+      "lecherous",
+      "creepy",
+      "inappropriate",
+      "predatory"
+    ]
+  },
+  {
+    "phrase": "Basilisk",
+    "bannedWords": [
+      "basilisk",
+      "lizard",
+      "reptile",
+      "mythical",
+      "venomous"
+    ]
+  },
+  {
+    "phrase": "2001: A Space Odyssey",
+    "bannedWords": [
+      "2001",
+      "space",
+      "odyssey",
+      "spaceship",
+      "mission",
+      "hal",
+      "astronaut"
+    ]
+  },
+  {
+    "phrase": "Zugzwang",
+    "bannedWords": [
+      "zugzwang",
+      "chess",
+      "move",
+      "forced",
+      "compelled",
+      "german"
+    ]
+  },
+  {
+    "phrase": "Cumulonimbus Anvil",
+    "bannedWords": [
+      "cumulonimbus",
+      "anvil",
+      "thunderstorm",
+      "top",
+      "flat",
+      "ice",
+      "spread"
+    ]
+  },
+  {
+    "phrase": "Bewildered",
+    "bannedWords": [
+      "bewildered",
+      "confused",
+      "puzzled",
+      "perplexed",
+      "lost"
+    ]
+  },
+  {
+    "phrase": "Doctor Strange",
+    "bannedWords": [
+      "doctor",
+      "strange",
+      "stephen",
+      "stephen",
+      "magic",
+      "mystic",
+      "sorcerer",
+      "spell"
+    ]
+  },
+  {
+    "phrase": "Altocumulus Castellanus",
+    "bannedWords": [
+      "altocumulus",
+      "castellanus",
+      "cloud",
+      "turret",
+      "tower",
+      "mid-level",
+      "castle"
+    ]
+  },
+  {
+    "phrase": "Maglev Train",
+    "bannedWords": [
+      "maglev",
+      "train",
+      "magnetic",
+      "levitation",
+      "bullet"
+    ]
+  },
+  {
+    "phrase": "Machu Picchu",
+    "bannedWords": [
+      "machu",
+      "picchu",
+      "peru",
+      "inca",
+      "mountain",
+      "ruins",
+      "ancient",
+      "incline"
+    ]
+  },
+  {
+    "phrase": "Fuschia",
+    "bannedWords": [
+      "fuschia",
+      "pink",
+      "purple",
+      "color",
+      "bright"
+    ]
+  },
+  {
+    "phrase": "Topspin",
+    "bannedWords": [
+      "topspin",
+      "tennis",
+      "spin",
+      "forward",
+      "ball",
+      "rotation"
+    ]
+  },
+  {
+    "phrase": "Knuckle Down",
+    "bannedWords": [
+      "knuckle",
+      "down",
+      "focus",
+      "work",
+      "buckle"
+    ]
+  },
+  {
+    "phrase": "Foxtrot",
+    "bannedWords": [
+      "foxtrot",
+      "dance",
+      "ballroom",
+      "smooth",
+      "movement",
+      "step"
+    ]
+  },
+  {
+    "phrase": "Flesh And Blood",
+    "bannedWords": [
+      "flesh",
+      "blood",
+      "family",
+      "relative",
+      "human",
+      "real"
+    ]
+  },
+  {
+    "phrase": "Extracurricular Activity",
+    "bannedWords": [
+      "extracurricular",
+      "activity",
+      "outside",
+      "class",
+      "club"
+    ]
+  },
+  {
+    "phrase": "Swing",
+    "bannedWords": [
+      "swing",
+      "dance",
+      "music",
+      "jazz",
+      "1940s"
+    ]
+  },
+  {
+    "phrase": "Argyle",
+    "bannedWords": [
+      "argyle",
+      "pattern",
+      "diamond",
+      "sock"
+    ]
+  },
+  {
+    "phrase": "Día De Muertos",
+    "bannedWords": [
+      "dia",
+      "muertos",
+      "death",
+      "mexican",
+      "skull",
+      "holiday"
+    ]
+  },
+  {
+    "phrase": "Mad Men",
+    "bannedWords": [
+      "mad",
+      "men",
+      "advertising",
+      "admen",
+      "1960s",
+      "manhattan",
+      "don"
+    ]
+  },
+  {
+    "phrase": "Mr. Robot",
+    "bannedWords": [
+      "mr",
+      "robot",
+      "hacker",
+      "cyberattack",
+      "computer",
+      "machine"
+    ]
+  },
+  {
+    "phrase": "Accreditation",
+    "bannedWords": [
+      "accreditation",
+      "approval",
+      "certification",
+      "official",
+      "recognized"
+    ]
+  },
+  {
+    "phrase": "Chartreuse",
+    "bannedWords": [
+      "chartreuse",
+      "green",
+      "yellow",
+      "color",
+      "bright"
+    ]
+  },
+  {
+    "phrase": "En Passant",
+    "bannedWords": [
+      "en",
+      "passant",
+      "chess",
+      "pawn",
+      "capture",
+      "passing"
+    ]
+  },
+  {
+    "phrase": "Noctilucent Clouds",
+    "bannedWords": [
+      "noctilucent",
+      "cloud",
+      "night",
+      "shining",
+      "luminous",
+      "upper",
+      "ice"
+    ]
+  },
+  {
+    "phrase": "Wooden Spoon",
+    "bannedWords": [
+      "wooden",
+      "spoon",
+      "wood",
+      "stir",
+      "utensil"
+    ]
+  },
+  {
+    "phrase": "Shanked Shot",
+    "bannedWords": [
+      "shanked",
+      "shot",
+      "golf",
+      "miss",
+      "bad",
+      "off"
+    ]
+  },
+  {
+    "phrase": "Biometrician",
+    "bannedWords": [
+      "biometrician",
+      "biometric",
+      "statistics",
+      "biology",
+      "measure",
+      "data"
+    ]
+  },
+  {
+    "phrase": "Diarist",
+    "bannedWords": [
+      "diarist",
+      "diary",
+      "journal",
+      "write",
+      "record",
+      "personal"
+    ]
+  },
+  {
+    "phrase": "Pilates",
+    "bannedWords": [
+      "pilates",
+      "core",
+      "exercise",
+      "strength",
+      "flexibility",
+      "joseph"
+    ]
+  },
+  {
+    "phrase": "The Twilight Zone",
+    "bannedWords": [
+      "twilight",
+      "zone",
+      "dimension",
+      "episode",
+      "rod",
+      "serling"
+    ]
+  },
+  {
+    "phrase": "Sword Swallowing",
+    "bannedWords": [
+      "sword",
+      "swallowing",
+      "swallow",
+      "blade",
+      "throat",
+      "danger"
+    ]
+  },
+  {
+    "phrase": "Julienne",
+    "bannedWords": [
+      "julienne",
+      "cut",
+      "slice",
+      "matchstick",
+      "thin",
+      "strip"
+    ]
+  },
+  {
+    "phrase": "Backspin",
+    "bannedWords": [
+      "backspin",
+      "tennis",
+      "spin",
+      "reverse",
+      "ball",
+      "rotation"
+    ]
+  },
+  {
+    "phrase": "Gondolier",
+    "bannedWords": [
+      "gondolier",
+      "gondola",
+      "venetian",
+      "venice",
+      "pole"
+    ]
+  },
+  {
+    "phrase": "Zone Of Proximal Development",
+    "bannedWords": [
+      "zone",
+      "proximal",
+      "development",
+      "potential",
+      "vygotsky"
+    ]
+  },
+  {
+    "phrase": "Coney",
+    "bannedWords": [
+      "coney",
+      "rabbit",
+      "hare",
+      "bunny",
+      "furry"
+    ]
+  },
+  {
+    "phrase": "The Shape Of Water",
+    "bannedWords": [
+      "shape",
+      "water",
+      "creature",
+      "monster",
+      "fantasy",
+      "mysterious",
+      "amphibian"
+    ]
+  },
+  {
+    "phrase": "Gaiter",
+    "bannedWords": [
+      "gaiter",
+      "clothing",
+      "leg",
+      "foot",
+      "protection",
+      "wear"
+    ]
+  },
+  {
+    "phrase": "Pileus Cloud",
+    "bannedWords": [
+      "pileus",
+      "cloud",
+      "cap",
+      "smooth",
+      "top",
+      "lenticular",
+      "hat"
+    ]
+  },
+  {
+    "phrase": "Extension Cord",
+    "bannedWords": [
+      "extension",
+      "cord",
+      "cable",
+      "reach",
+      "electrical"
+    ]
+  },
+  {
+    "phrase": "Singin' In The Rain",
+    "bannedWords": [
+      "singin",
+      "rain",
+      "movie",
+      "dancing",
+      "musical",
+      "kelly",
+      "classic"
+    ]
+  },
+  {
+    "phrase": "A Clockwork Orange",
+    "bannedWords": [
+      "clockwork",
+      "orange",
+      "violence",
+      "dystopia",
+      "futuristic",
+      "orange"
+    ]
+  },
+  {
+    "phrase": "Jack And The Beanstalk",
+    "bannedWords": [
+      "jack",
+      "beanstalk",
+      "bean",
+      "giant",
+      "plant",
+      "climb"
+    ]
+  },
+  {
+    "phrase": "Wolverine",
+    "bannedWords": [
+      "wolverine",
+      "logan",
+      "claws",
+      "mutant",
+      "healing",
+      "factor",
+      "animal",
+      "berserker"
+    ]
+  },
+  {
+    "phrase": "Easy Come Easy Go",
+    "bannedWords": [
+      "easy",
+      "come",
+      "go",
+      "simple",
+      "quick",
+      "temporary"
+    ]
+  },
+  {
+    "phrase": "Knife Throwing",
+    "bannedWords": [
+      "knife",
+      "throwing",
+      "throw",
+      "blade",
+      "sharp",
+      "target"
+    ]
+  },
+  {
+    "phrase": "Golden Boot",
+    "bannedWords": [
+      "golden",
+      "boot",
+      "soccer",
+      "award",
+      "goal",
+      "scorer"
+    ]
+  },
+  {
+    "phrase": "There Will Be Blood",
+    "bannedWords": [
+      "blood",
+      "oil",
+      "greed",
+      "rivalry",
+      "preacher",
+      "drinking",
+      "competition"
+    ]
+  },
+  {
+    "phrase": "Quenelle",
+    "bannedWords": [
+      "quenelle",
+      "spoon",
+      "oval",
+      "shape",
+      "garnish"
+    ]
+  },
+  {
+    "phrase": "Eiffel Tower",
+    "bannedWords": [
+      "eiffel",
+      "tower",
+      "paris",
+      "france",
+      "iron",
+      "tall",
+      "monument",
+      "structure"
+    ]
+  },
+  {
+    "phrase": "Wonder Woman",
+    "bannedWords": [
+      "wonder",
+      "woman",
+      "diana",
+      "amazonian",
+      "amazon",
+      "lasso",
+      "truth",
+      "warrior"
+    ]
+  },
+  {
+    "phrase": "Overshooting Top",
+    "bannedWords": [
+      "overshooting",
+      "top",
+      "overshoot",
+      "cumulonimbus",
+      "penetrate",
+      "anvil"
+    ]
+  },
+  {
+    "phrase": "Tai Chi",
+    "bannedWords": [
+      "tai",
+      "chi",
+      "martial",
+      "art",
+      "chinese",
+      "slow"
+    ]
+  },
+  {
+    "phrase": "Parthenon",
+    "bannedWords": [
+      "parthenon",
+      "greece",
+      "athens",
+      "temple",
+      "ancient",
+      "column",
+      "doric",
+      "classical"
+    ]
+  },
+  {
+    "phrase": "Fossa",
+    "bannedWords": [
+      "fossa",
+      "carnivore",
+      "madagascar",
+      "cat",
+      "predator"
+    ]
+  },
+  {
+    "phrase": "Metacognition",
+    "bannedWords": [
+      "metacognition",
+      "thinking",
+      "awareness",
+      "learn",
+      "mind"
+    ]
+  },
+  {
+    "phrase": "Fire Eating",
+    "bannedWords": [
+      "fire",
+      "eating",
+      "eat",
+      "flame",
+      "torch",
+      "burn"
+    ]
+  },
+  {
+    "phrase": "It's A Wonderful Life",
+    "bannedWords": [
+      "wonderful",
+      "life",
+      "movie",
+      "christmas",
+      "clarence",
+      "stewart",
+      "angel"
+    ]
+  },
+  {
+    "phrase": "Kick The Bucket",
+    "bannedWords": [
+      "kick",
+      "bucket",
+      "die",
+      "death"
+    ]
+  },
+  {
+    "phrase": "Magenta",
+    "bannedWords": [
+      "magenta",
+      "pink",
+      "purple",
+      "color",
+      "bright"
+    ]
+  },
+  {
+    "phrase": "Undulatus Asperatus",
+    "bannedWords": [
+      "undulatus",
+      "asperatus",
+      "cloud",
+      "wave",
+      "rough",
+      "undulate",
+      "wavy"
+    ]
+  },
+  {
+    "phrase": "The Last Of Us",
+    "bannedWords": [
+      "last",
+      "us",
+      "zombie",
+      "apocalypse",
+      "plague",
+      "fungus"
+    ]
+  },
+  {
+    "phrase": "Gnetum",
+    "bannedWords": [
+      "gnetum",
+      "plant",
+      "tropical",
+      "climbing",
+      "genus"
+    ]
+  },
+  {
+    "phrase": "Chevron",
+    "bannedWords": [
+      "chevron",
+      "pattern",
+      "zigzag",
+      "arrow"
+    ]
+  },
+  {
+    "phrase": "Kwanzaa",
+    "bannedWords": [
+      "kwanzaa",
+      "african",
+      "american",
+      "holiday",
+      "candles",
+      "cultural"
+    ]
+  },
+  {
+    "phrase": "Sous Vide",
+    "bannedWords": [
+      "sous",
+      "vide",
+      "vacuum",
+      "seal",
+      "cook",
+      "precise",
+      "temperature"
+    ]
+  },
+  {
+    "phrase": "Gegenschein",
+    "bannedWords": [
+      "gegenschein",
+      "light",
+      "glow",
+      "zodiacal",
+      "opposite",
+      "sun"
+    ]
+  },
+  {
+    "phrase": "Algorithm",
+    "bannedWords": [
+      "algorithm",
+      "computation",
+      "procedure",
+      "method",
+      "formula",
+      "step"
+    ]
+  },
+  {
+    "phrase": "Ventriloquism",
+    "bannedWords": [
+      "ventriloquism",
+      "ventriloquist",
+      "dummy",
+      "puppet",
+      "voice",
+      "throw"
+    ]
+  },
+  {
+    "phrase": "Honors Program",
+    "bannedWords": [
+      "honors",
+      "program",
+      "advanced",
+      "gifted",
+      "excellence"
+    ]
+  },
+  {
+    "phrase": "Orphan Black",
+    "bannedWords": [
+      "orphan",
+      "black",
+      "clone",
+      "cloning",
+      "genetic",
+      "sister"
+    ]
+  },
+  {
+    "phrase": "Undulatus Undulatus",
+    "bannedWords": [
+      "undulatus",
+      "cloud",
+      "wave",
+      "undulate",
+      "ripple",
+      "parallel"
+    ]
+  },
+  {
+    "phrase": "Game Of Thrones",
+    "bannedWords": [
+      "game",
+      "thrones",
+      "throne",
+      "kingdoms",
+      "ice",
+      "fire",
+      "fantasy",
+      "westeros"
+    ]
+  },
+  {
+    "phrase": "Trick Or Treat",
+    "bannedWords": [
+      "trick",
+      "treat",
+      "halloween",
+      "candy",
+      "children",
+      "costume"
+    ]
+  },
+  {
+    "phrase": "Corset",
+    "bannedWords": [
+      "corset",
+      "clothing",
+      "lace",
+      "tight",
+      "waist",
+      "undergarment",
+      "victorian"
+    ]
+  },
+  {
+    "phrase": "Zabaglione",
+    "bannedWords": [
+      "zabaglione",
+      "custard",
+      "cream",
+      "egg",
+      "wine",
+      "marsala"
+    ]
+  },
+  {
+    "phrase": "Citizen Kane",
+    "bannedWords": [
+      "citizen",
+      "kane",
+      "movie",
+      "rosebud",
+      "film",
+      "classic",
+      "orson",
+      "welles"
+    ]
+  },
+  {
+    "phrase": "Sleeping Beauty",
+    "bannedWords": [
+      "sleeping",
+      "beauty",
+      "sleep",
+      "princess",
+      "spell",
+      "castle",
+      "prick"
+    ]
+  },
+  {
+    "phrase": "Pitot Tube",
+    "bannedWords": [
+      "pitot",
+      "tube",
+      "speed",
+      "air",
+      "velocity"
+    ]
+  },
+  {
+    "phrase": "Dunnock",
+    "bannedWords": [
+      "dunnock",
+      "bird",
+      "sparrow",
+      "brown",
+      "songbird"
+    ]
+  }
 ]

@@ -1,0 +1,687 @@
+Aoudad
+Axolotl
+Babirusa
+Badger
+Bantam
+Barracuda
+Basilisk
+Beaver
+Bee-eater
+Binturong
+Bison
+Bobcat
+Bowerbird
+Caracal
+Cassowary
+Chamois
+Chevrotain
+Chough
+Civet
+Cob
+Coleopteran
+Colugo
+Coney
+Coypu
+Dik-dik
+Dodo
+Dhole
+Dhow
+Duiker
+Dunnock
+Emu
+Éland
+Fennec
+Ferret
+Fossa
+Gerbil
+Gibbon
+Gnetum
+Grackle
+Grison
+Paperclip
+Thumbtack
+Dishcloth
+Spatula
+Colander
+Cheese Grater
+Bottle Opener
+Corkscrew
+Potato Ricer
+Wooden Spoon
+Rubber Mallet
+Paint Roller
+Caulk Gun
+Tape Measure
+C-Clamp
+Oscillating Fan
+Humidifier
+Dehumidifier
+Door Hinge
+Deadbolt
+Door Knocker
+Towel Rack
+Toilet Paper Holder
+Shower Curtain Rod
+Drain Plug
+U-Bend
+Drywall Anchor
+Toggle Bolt
+Wood Stain
+Furniture Polish
+Feather Duster
+Lint Trap
+Vacuum Hose
+Extension Cord
+Power Strip
+Surge Protector
+Light Dimmer
+Ceiling Fan Pull Chain
+Fluorescent Bulb
+Night Light
+Beef Wellington
+Eggs Royale
+Coq Au Vin
+Crème Brûlée
+Hollandaise Sauce
+Béarnaise Sauce
+Beurre Blanc
+Tarte Tatin
+Cassoulet
+Bouillabaisse
+Foie Gras
+Escargot
+Ratatouille
+Dauphinoise
+Pommes Anna
+Soufflé
+Pâté
+Terrine
+Confit
+Brunoise
+Mirepoix
+Julienne
+Chiffonade
+Bain-Marie
+Sous Vide
+Demi-Glace
+Gastrique
+Zabaglione
+Tiramisu
+Zabaione
+Panna Cotta
+Affogato
+Ossobuco
+Risotto Milanese
+Gnocchi Gorgonzola
+Polenta
+Arancini
+Panettone
+Amaretti
+Stracciatella
+Juggling
+Tightrope Walking
+Sleepwalking
+Pickpocketing
+Tap Dancing
+Mime Trapped In A Box
+Pulling A Rabbit From A Hat
+Sword Swallowing
+Fire Eating
+Handstand
+Cartweel
+Ventriloquism
+Pilates
+Yoga
+Shadow Puppets
+Tai Chi
+Breakdancing
+Moonwalking
+Limbo
+The Robot
+Flossing
+The Worm
+Trust Fall
+Slack Wire Walking
+Plate Spinning
+Contortionism
+Beatboxing
+Yo-Yo Tricks
+Speed Cubing
+Knot Tying
+Whip Cracking
+Knife Throwing
+Acrobatics
+Parkour
+Tai Kwon Do
+Fencing
+Tumbling
+Wire Walking
+Escapology
+Calisthenics
+Poker Face
+Resting Bitch Face
+Dead Inside
+Thousand-Yard Stare
+Puppy Dog Eyes
+Side-Eye
+Smize
+Bitchy Resting Face
+Crocodile Tears
+Fake Laugh
+Genuine Smile
+Shit-Eating Grin
+Shit-Eating Smile
+Scowl
+Sneer
+Wince
+Grimace
+Stoic
+Hangdog Expression
+Goofy Grin
+Maniacal Laugh
+Hysterical Laughter
+Belly Laugh
+Sardonic Smile
+Smug
+Dour
+Glare
+Coy Smile
+Dreamy Look
+Bewildered
+Wide-Eyed Wonder
+Rictus Grin
+Pained Expression
+Befuddled
+Incredulous Look
+Leer
+Melancholic
+Exasperated
+Contemptuous
+Wistful
+Hole In One
+Love All
+Deuce
+Break Point
+Volley
+Bicycle Kick
+Nutmeg
+Golden Boot
+Hat Trick
+Offside
+Checkmate
+Stalemate
+En Passant
+Gambit
+Zugzwang
+Fianchetto
+Castling
+Bunt
+Slugging Percentage
+Shanked Shot
+Bogey
+Birdie
+Eagle
+Albatross
+Chip Shot
+Lie
+Mulligan
+Fore
+Slice
+Hook
+Ace
+Service Break
+Lob
+Forehand
+Backspin
+Topspin
+Blitz
+Bullet
+Rapid Fire
+Skate
+Accountant
+Actuarial Scientist
+Arbitrator
+Archivist
+Auctioneer
+Barista
+Biometrician
+Bladesmith
+Botanist
+Cartographer
+Cellist
+Chaplain
+Choreographer
+Cider Master
+Cinematographer
+Classicist
+Clinician
+Cowherd
+Cryptographer
+Curator
+Deckhand
+Demographer
+Dendrologist
+Dermatologist
+Diagnostician
+Dialectician
+Diarist
+Dietitian
+Dishwasher
+Distiller
+Dobro Player
+Dramaturg
+Echocardiographer
+Edenologist
+Emcee
+Engraver
+Ethnomusicologist
+Executrix
+Exorcist
+Farrier
+Feldspar Cutter
+Virga
+Gegenschein
+Nacreous Clouds
+Petrichor
+Chinook Wind
+Föhn Wind
+Mammatus Clouds
+Lenticular Clouds
+Altocumulus Castellanus
+Noctilucent Clouds
+Virga Streak
+Crepuscular Rays
+Sun Dog
+Moon Dog
+Haboob
+Derecho
+Downburst
+Supercell
+Bow Echo
+Virga Rain
+Graupel
+Rime Ice
+Rime Frost
+Hoarfrost
+Virga Column
+Kelvin-Helmholtz Waves
+Billow Clouds
+Undulatus Asperatus
+Undulatus Undulatus
+Rotor Cloud
+Gravity Wave Cloud
+Fallstreak Hole
+Scud Clouds
+Fractocumulus
+Cumulonimbus Anvil
+Overshooting Top
+Pileus Cloud
+Cap Cloud
+Tenting Cloud
+Pouch Cloud
+The Chunnel
+Maglev Train
+Autoroute
+Carpool Lane
+Deadheading
+Parkway
+Beltway
+Thoroughfare
+Portage
+Caboose
+Gondola
+Tarmac
+Bitumen
+Freightliner
+Porthole Window
+Landing Gear
+Fuselage
+Aileron
+Pitot Tube
+Transponder
+Catamaran
+Galleon
+Clipper Ship
+Frigate
+Tugboat
+Schooner
+Dinghy
+Sampan
+Gondolier
+Flatbed Truck
+Tanker Truck
+Semi-Trailer
+Muleback
+Stagecoach
+Omnibus
+Trolleybus
+Monorail
+Funicular
+Switchback
+Achilles Heel
+Adam's Apple
+Elbow Grease
+Giving The Cold Shoulder
+Turning A Blind Eye
+Break A Leg
+Bite The Bullet
+Bite The Dust
+Knuckle Down
+Knuckle Under
+Kick The Bucket
+Kick Up Your Heels
+Foot The Bill
+Foot Dragging
+Heel Turn
+Heel Nipping
+Ankle Biter
+Knee-Jerk Reaction
+Knee Slapper
+Shin Splints
+Shin Kicking
+Ribald Humor
+Ribcage Breaker
+Waist Deep
+Belly Button Fluff
+Navel Gazing
+Hip To It
+Hipbone Connected
+Hip Pocket
+Hamstring
+Hamstrung
+Calf Muscle
+Calf Rope
+Toe The Line
+Toe Jam
+Heel And Toe
+Sole Proprietor
+Barefoot Contessa
+Socratic Method
+Pythagorean Theorem
+Dewey Decimal System
+Montessori Method
+Bloom's Taxonomy
+Platonic Academy
+Trivium And Quadrivium
+Heuristic Learning
+Pedagogical Approach
+Metacognition
+Epistemic Curiosity
+Scaffolding
+Zone Of Proximal Development
+Syllabus
+Rubric
+Prerequisite
+Remedial Class
+Honors Program
+Accreditation
+Tenure
+Adjunct Professor
+Teaching Assistant
+Proctor
+Office Hours
+Study Hall
+Independent Study
+Extracurricular Activity
+Graduation Ceremony
+Baroque
+Ostinato
+Retrograde
+Ombré
+Fuschia
+Chartreuse
+Cerulean
+Vermillion
+Periwinkle
+Magenta
+Sienna
+Ochre
+Pantone
+Houndstooth
+Plaid
+Paisley
+Herringbone
+Chevron
+Argyle
+Tie Dye
+Gradient
+Posterize
+Pantile
+Rhombus
+Trapezoid
+Dodecagon
+Crescent
+Lozenge
+Ash Wednesday
+Día De Muertos
+Epiphany
+Hanukkah
+Juneteenth
+Kwanzaa
+Tiered Cake
+Trick Or Treat
+Yule Log
+Diwali
+Jack-O'-Lantern
+Activewear
+Ascot
+Beret
+Cardigan
+Chaps
+Corset
+Denim
+Garland
+Gaiter
+Holster
+Hose
+Citizen Kane
+The Seventh Seal
+Singin' In The Rain
+It's A Wonderful Life
+Vertigo
+Psycho
+The Manchurian Candidate
+Breakfast At Tiffany's
+2001: A Space Odyssey
+A Clockwork Orange
+One Flew Over The Cuckoo's Nest
+The Godfather
+The Exorcist
+Taxi Driver
+Jaws
+Star Wars
+The Shining
+Blade Runner
+Scarface
+Blue Velvet
+Goodfellas
+Barton Fink
+Pulp Fiction
+Se7en
+The Usual Suspects
+Fargo
+L.A. Confidential
+American Beauty
+There Will Be Blood
+No Country For Old Men
+The Dark Knight
+Inception
+Moonlight
+The Shape Of Water
+The Sopranos
+Breaking Bad
+Game Of Thrones
+The Wire
+Mad Men
+Stranger Things
+The Office
+Friends
+The Crown
+Seinfeld
+The Twilight Zone
+The X-Files
+Twin Peaks
+Battlestar Galactica
+True Detective
+Chernobyl
+Mindhunter
+Fleabag
+The Marvelous Mrs. Maisel
+Succession
+The Last Of Us
+Severance
+Dark
+Ozark
+House Of Cards
+Dexter
+The Leftovers
+Better Call Saul
+Lost
+Heroes
+The Good Wife
+The Americans
+Mr. Robot
+Peaky Blinders
+Orphan Black
+Andor
+The Frog Prince
+Hansel And Gretel
+Puss In Boots
+The Gingerbread Man
+Cinderella's Slipper
+Jack And The Beanstalk
+The Boy Who Cried Wolf
+Little Miss Muffet
+Humpty Dumpty
+Mary Had A Little Lamb
+The Three Little Pigs
+Snow White And The Seven Dwarfs
+Sleeping Beauty
+The Princess And The Pea
+Goldilocks And The Three Bears
+Peter Pan
+The Ugly Duckling
+Pinocchio
+The Little Mermaid
+Beauty And The Beast
+Rumpelstiltskin
+Batman
+Superman
+Wonder Woman
+Spider-Man
+Iron Man
+Captain America
+Thor
+Hulk
+Black Widow
+Hawkeye
+Doctor Strange
+Ant-Man
+Black Panther
+Guardians Of The Galaxy
+X-Men
+Wolverine
+Big Ben
+Statue Of Liberty
+Leaning Tower Of Pisa
+Great Wall Of China
+Taj Mahal
+Christ The Redeemer
+Colosseum
+Eiffel Tower
+Stonehenge
+Machu Picchu
+Parthenon
+Angkor Wat
+Chichen Itza
+Sagrada Familia
+Brandenburg Gate
+Golden Gate Bridge
+Tower Of London
+Arc De Triomphe
+Kremlin
+Hagia Sophia
+Sacre Coeur
+Petra
+Vatican City
+Versailles Palace
+Burj Khalifa
+Sydney Opera House
+Marie Curie
+Charles Darwin
+Isaac Newton
+Nikola Tesla
+Stephen Hawking
+Richard Feynman
+Galileo Galilei
+Leonardo da Vinci
+A Penny For Your Thoughts
+Actions Speak Louder Than Words
+Add Insult To Injury
+Against All Odds
+Barking Up The Wrong Tree
+Beat A Dead Horse
+Beat Around The Bush
+Blow Off Steam
+Burn The Midnight Oil
+Bury The Hatchet
+Burst Your Bubble
+Call It A Day
+Caught Red-Handed
+Cost An Arm And A Leg
+Cut And Dried
+Cut To The Chase
+Don't Count Your Chickens Before They Hatch
+Don't Look A Gift Horse In The Mouth
+Don't Throw The Baby Out With The Bathwater
+Down In The Dumps
+Down To Earth
+Draw The Line
+Easy Come Easy Go
+Eat Your Heart Out
+Fall By The Wayside
+Few And Far Between
+Fish Out Of Water
+Fit The Bill
+Flash In The Pan
+Flesh And Blood
+Flip Your Lid
+Mise En Place
+Deglaze
+Quenelle
+Compass Rose
+Crack Of Dawn
+Dead Reckoning
+Fly Fishing
+Grit Your Teeth
+Hang Gliding
+Head Over Heels
+High And Dry
+Hold Your Own
+In Deep Water
+Leave No Trace
+Level Playing Field
+No Stone Unturned
+Off The Beaten Path
+Algorithm
+Bandwidth
+Cache
+Circuit Board
+Hertz
+Hypervisor
+Latency
+Motherboard
+Neural Network
+Shader
+Timestamp
+Tango
+Waltz
+Foxtrot
+Quickstep
+Cha-Cha
+Samba
+Jive
+Swing
+Flapper
+Twist
+Moonwalk

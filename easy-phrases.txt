@@ -1,0 +1,1000 @@
+Bird
+Fish
+Lion
+Tiger
+Elephant
+Monkey
+Penguin
+Dolphin
+Whale
+Bear
+Zebra
+Giraffe
+Hippopotamus
+Crocodile
+Snake
+Parrot
+Butterfly
+Bee
+Ant
+Spider
+Kangaroo
+Panda
+Koala
+Rabbit
+Squirrel
+Deer
+Owl
+Eagle
+Shark
+Octopus
+Flamingo
+Peacock
+Turtle
+Frog
+Hedgehog
+Otter
+Sloth
+Cheetah
+Chair
+Table
+Lamp
+Desk
+Bed
+Sofa
+Couch
+Door
+Window
+Mirror
+Carpet
+Curtain
+Pillow
+Blanket
+Towel
+Soap
+Toothbrush
+Toothpaste
+Refrigerator
+Oven
+Microwave
+Dishwasher
+Sink
+Faucet
+Knife
+Fork
+Spoon
+Plate
+Bowl
+Cup
+Glass
+Trash Can
+Vacuum
+Broom
+Mop
+Sponge
+Trash Bag
+Tissue Box
+Clock
+Light Bulb
+Bread
+Butter
+Cheese
+Milk
+Eggs
+Bacon
+Chicken
+Steak
+Hamburger
+Pasta
+Rice
+Beans
+Corn
+Broccoli
+Carrot
+Potato
+Tomato
+Lettuce
+Apple
+Banana
+Orange
+Strawberry
+Chocolate
+Vanilla
+Donut
+Cookie
+Cake
+Coffee
+Tea
+Water
+Juice
+Soda
+Beer
+Wine
+Salt
+Sugar
+Honey
+Pepper
+Sleeping
+Eating
+Running
+Walking
+Jumping
+Dancing
+Swimming
+Climbing
+Falling
+Pushing
+Pulling
+Throwing
+Catching
+Kicking
+Punching
+Clapping
+Waving
+Nodding
+Shaking
+Laughing
+Crying
+Yawning
+Sneezing
+Coughing
+Winking
+Blinking
+Listening
+Looking
+Pointing
+Sitting
+Standing
+Lying Down
+Stretching
+Bending
+Spinning
+Skipping
+Hopping
+Crawling
+Hugging
+Scratching
+Smiling
+Frowning
+Angry
+Sad
+Happy
+Confused
+Surprised
+Excited
+Worried
+Calm
+Nervous
+Embarrassed
+Proud
+Ashamed
+Shocked
+Disgusted
+Afraid
+Brave
+Loving
+Jealous
+Envious
+Grateful
+Disappointed
+Frustrated
+Relieved
+Amazed
+Bored
+Interested
+Suspicious
+Trusting
+Tender
+Gentle
+Fierce
+Relaxed
+Tense
+Hopeful
+Hopeless
+Cheerful
+Gloomy
+Content
+Baseball
+Basketball
+Football
+Soccer
+Tennis
+Golf
+Volleyball
+Bowling
+Hockey
+Cricket
+Boxing
+Wrestling
+Gymnastics
+Track And Field
+Cycling
+Skiing
+Snowboarding
+Ice Skating
+Surfing
+Rock Climbing
+Skateboarding
+Badminton
+Ping Pong
+Billiards
+Darts
+Archery
+Karate
+Judo
+Taekwondo
+Poker
+Chess
+Checkers
+Monopoly
+Scrabble
+Video Games
+Dodgeball
+Tag
+Hide And Seek
+Simon Says
+Doctor
+Nurse
+Teacher
+Chef
+Firefighter
+Police Officer
+Pilot
+Engineer
+Architect
+Lawyer
+Accountant
+Electrician
+Plumber
+Carpenter
+Mechanic
+Farmer
+Veterinarian
+Dentist
+Surgeon
+Pharmacist
+Barber
+Hairdresser
+Janitor
+Waiter
+Cashier
+Manager
+Secretary
+Receptionist
+Gardener
+Painter
+Truck Driver
+Bus Driver
+Taxi Driver
+Lifeguard
+Bouncer
+Coach
+Referee
+Journalist
+Photographer
+Musician
+Lightning
+Thunder
+Snow
+Ice
+Hail
+Wind
+Cloud
+Fog
+Dew
+Frost
+Drought
+Tornado
+Hurricane
+Blizzard
+Earthquake
+Volcano
+Mountain
+Forest
+Desert
+Ocean
+Beach
+River
+Waterfall
+Lake
+Pond
+Sunset
+Sunrise
+Star
+Moon
+Planet
+Meteor
+Comet
+Eclipse
+Aurora
+Quicksand
+Monsoon
+Glacier
+Avalanche
+Geyser
+Bike
+Car
+Truck
+Bus
+Train
+Airplane
+Helicopter
+Boat
+Ship
+Submarine
+Taxi
+Ambulance
+Police Car
+Fire Truck
+Tractor
+Motorcycle
+Scooter
+Skateboard
+Roller Skates
+Canoe
+Kayak
+Sailboat
+Hot Air Balloon
+Rocket
+Bicycle
+Surfboard
+Sled
+Wagon
+Carriage
+Trolley
+Minivan
+Sedan
+Convertible
+SUV
+Jeep
+Bulldozer
+Crane
+Anchor
+Compass
+Steering Wheel
+Head
+Eyes
+Nose
+Mouth
+Ears
+Teeth
+Tongue
+Neck
+Shoulders
+Arms
+Elbows
+Wrists
+Hands
+Fingers
+Thumbs
+Chest
+Back
+Stomach
+Waist
+Hips
+Legs
+Knees
+Ankles
+Feet
+Toes
+Hair
+Skin
+Bones
+Muscles
+Heart
+Brain
+Lungs
+Liver
+Kidneys
+Pencil
+Pen
+Eraser
+Notebook
+Textbook
+Chalkboard
+Whiteboard
+Marker
+Chalk
+Ruler
+Scissors
+Glue
+Tape
+Backpack
+Locker
+Bell
+Grade
+Test
+Quiz
+Homework
+Assignment
+Report
+Diploma
+Certificate
+Principal
+Student
+Lunch
+Cafeteria
+Gym
+Recess
+Playground
+Library
+Laboratory
+Classroom
+Hallway
+Uniform
+Piano
+Guitar
+Violin
+Drums
+Trumpet
+Flute
+Saxophone
+Harmonica
+Banjo
+Ukulele
+Harp
+Trombone
+Clarinet
+Oboe
+Cymbal
+Xylophone
+Accordion
+Mandolin
+Cello
+Bass
+Microphone
+Speaker
+Headphones
+Radio
+Stereo
+Violin Bow
+Metronome
+Tuning Fork
+Sheet Music
+Conductor
+Orchestra
+Symphony
+Concert
+Album
+Record Player
+Jukebox
+Karaoke
+Choir
+Opera
+Lyric
+Melody
+Blue
+Red
+Yellow
+Green
+Purple
+Pink
+Black
+White
+Brown
+Gray
+Cyan
+Magenta
+Turquoise
+Gold
+Silver
+Indigo
+Violet
+Maroon
+Navy
+Circle
+Square
+Triangle
+Rectangle
+Pentagon
+Hexagon
+Octagon
+Diamond
+Crescent
+Oval
+Cube
+Sphere
+Pyramid
+Cone
+Cylinder
+Spiral
+Cross
+Line
+Christmas
+New Year's Eve
+Halloween
+Thanksgiving
+Easter
+Hanukkah
+Diwali
+Valentine's Day
+Mother's Day
+Father's Day
+Wedding
+Anniversary
+Graduation
+Fireworks
+Confetti
+Champagne
+Candles
+Balloons
+Decoration
+Party
+Festival
+Carnival
+Parade
+Costume
+Mask
+Wreath
+Ornament
+Ribbon
+Gift
+Present
+Celebration
+Festive
+Joyful
+Feast
+Banquet
+Ceremony
+Tradition
+Holiday
+Barbecue
+Shirt
+Pants
+Jacket
+Sweater
+Hat
+Shoes
+Socks
+Tie
+Scarf
+Gloves
+Coat
+Dress
+Skirt
+Jeans
+Boots
+Sneakers
+Sandals
+Shorts
+Underwear
+Bra
+Belt
+Vest
+Cardigan
+Hoodie
+Sweatpants
+Leggings
+Slipper
+Flip-Flop
+Sunglasses
+Watch
+Bracelet
+Necklace
+Ring
+Earring
+Brooch
+Handbag
+Wallet
+Purse
+Umbrella
+Titanic
+Avatar
+Inception
+The Matrix
+Gladiator
+Jaws
+Casablanca
+Forrest Gump
+The Wizard of Oz
+Pulp Fiction
+Jurassic Park
+The Shining
+Psycho
+Vertigo
+Citizen Kane
+Godfather
+Scarface
+Rocky
+Rambo
+Terminator
+Predator
+Alien
+The Exorcist
+Friday the 13th
+Scream
+Gremlins
+Gremlins 2
+The Sixth Sense
+The Ring
+Saw
+Insidious
+Sinister
+The Conjuring
+Paranormal Activity
+The Blair Witch Project
+Get Out
+Hereditary
+It Follows
+Mama
+Poltergeist
+The Others
+Friends
+The Office
+Game Of Thrones
+Breaking Bad
+Stranger Things
+The Crown
+Seinfeld
+Cheers
+The Sopranos
+Mad Men
+The West Wing
+Dexter
+Grey's Anatomy
+The Simpsons
+South Park
+Family Guy
+The Big Bang Theory
+How I Met Your Mother
+Parks And Recreation
+The Good Place
+Succession
+Veep
+Better Call Saul
+Ozark
+The Mandalorian
+Withcer
+House
+The X-Files
+Lost
+The Walking Dead
+Fleabag
+Peaky Blinders
+Brooklyn Nine-Nine
+The Handmaid's Tale
+Mindhunter
+Narcos
+Chernobyl
+True Detective
+Workin' Moms
+Emily In Paris
+Cinderella
+Snow White
+Rapunzel
+Sleeping Beauty
+Little Red Riding Hood
+The Three Little Pigs
+Goldilocks
+Jack And The Beanstalk
+Hansel And Gretel
+The Ugly Duckling
+Pinocchio
+Peter Pan
+Humpty Dumpty
+The Tortoise And The Hare
+Puss In Boots
+The Princess And The Frog
+Beauty And The Beast
+Aladdin
+The Little Mermaid
+Rumpelstiltskin
+Thumbelina
+The Twelve Dancing Princesses
+Greensleeves
+Old Mother Hubbard
+Mary Had A Little Lamb
+Twinkle Twinkle Little Star
+Baa Baa Black Sheep
+Hey Diddle Diddle
+Hickory Dickory Dock
+Jack Be Nimble
+Little Bo Peep
+The Boy Who Cried Wolf
+The Gingerbread Man
+Tom Thumb
+The Pied Piper
+Sleeping Beauty's Castle
+The Magic Mirror
+The Glass Slipper
+The Wicked Witch
+The Enchanted Forest
+Mickey Mouse
+Minnie Mouse
+Donald Duck
+Bugs Bunny
+Daffy Duck
+Tweety
+Sylvester
+Porky Pig
+Road Runner
+Wile E Coyote
+Scooby Doo
+Shaggy
+Fred Flintstone
+Barney Rubble
+Wilma Flintstone
+Betty Rubble
+Yogi Bear
+Boo Boo
+Elmer Fudd
+Foghorn Leghorn
+Popeye
+Olive Oyl
+Bluto
+Superman
+Batman
+Wonder Woman
+Spiderman
+Iron Man
+Captain America
+Thor
+Hulk
+Black Widow
+Ant Man
+Aquaman
+Flash
+Green Lantern
+Hawkeye
+Black Panther
+Doctor Strange
+Vision
+Eiffel Tower
+Statue Of Liberty
+Big Ben
+Great Wall Of China
+Colosseum
+Leaning Tower Of Pisa
+Taj Mahal
+Christ The Redeemer
+Pyramids Of Giza
+Golden Gate Bridge
+Empire State Building
+Tower Of London
+Notre Dame
+Stonehenge
+Mount Rushmore
+White House
+Buckingham Palace
+Kremlin
+Arc De Triomphe
+Brandenburg Gate
+Parthenon
+Space Needle
+Sydney Opera House
+Big Sur
+Niagara Falls
+Grand Canyon
+Liberty Bell
+Hollywood Sign
+Times Square
+Red Square
+Tower Bridge
+Alcatraz
+Machu Picchu
+Forbidden City
+Sagrada Familia
+Mariana Trench
+Ayers Rock
+Trevi Fountain
+Moai Statues
+Burj Khalifa
+Albert Einstein
+Marie Curie
+Isaac Newton
+Charles Darwin
+Galileo Galilei
+Stephen Hawking
+Nikola Tesla
+Wolfgang Amadeus Mozart
+Leonardo da Vinci
+Michelangelo
+Pablo Picasso
+Vincent van Gogh
+Cleopatra
+Julius Caesar
+Napoleon Bonaparte
+Abraham Lincoln
+George Washington
+Benjamin Franklin
+Thomas Jefferson
+Winston Churchill
+Franklin D. Roosevelt
+Harry S. Truman
+Dwight D. Eisenhower
+John F. Kennedy
+Martin Luther King Jr.
+Mahatma Gandhi
+Joan of Arc
+Florence Nightingale
+Amelia Earhart
+Christopher Columbus
+Marco Polo
+Ferdinand Magellan
+Pocahontas
+Harriet Tubman
+Rosa Parks
+Susan B. Anthony
+Elizabeth I
+Queen Victoria
+Louis XIV
+Henry VIII
+A Penny Saved Is A Penny Earned
+Actions Speak Louder Than Words
+Add Insult To Injury
+Beat Around The Bush
+Best Of Both Worlds
+Bite The Bullet
+Break The Ice
+Bring Home The Bacon
+Burning The Midnight Oil
+Burst Your Bubble
+Caught Red Handed
+Clear As Day
+Come Rain Or Shine
+Cost An Arm And A Leg
+Cry Over Spilled Milk
+Cut To The Chase
+Don't Count Your Chickens
+Don't Cry Over Spilled Milk
+Don't Put All Your Eggs In One Basket
+Easy As Pie
+Face The Music
+Fall Head Over Heels
+Few And Far Between
+Get Your Feet Wet
+Give And Take
+Go The Extra Mile
+Goes Without Saying
+Good Things Come To Those Who Wait
+Grass Is Always Greener
+Grin And Bear It
+Grow On Trees
+Head Over Heels
+Heart Of Gold
+Heavy As Lead
+Hit The Nail On The Head
+Hold Your Own
+In The Long Run
+Jump On The Bandwagon
+Keep Your Chin Up
+Last But Not Least
+Boiling Point
+Break Eggs
+Bread And Butter
+Butter Fingers
+Chef's Kiss
+Chop Chop
+Clean Plate Club
+Cook The Books
+Cooking Show
+Cream Of The Crop
+Culinary Arts
+Cut The Mustard
+Dessert
+Dice
+Dinner Time
+Don't Burn Your Bridges
+Everything But The Kitchen Sink
+Fork Over
+French Fries
+Frying Pan
+Griddle
+Grill Master
+Half Baked
+Hand Whisk
+Hot Stove
+Ice Cream Cone
+Jam Session
+Knife Skills
+Lunchbox
+Make Dinner
+Meat And Potatoes
+Mixing Bowl
+Noodle Soup
+Oven Mitt
+Plate Clean
+Pot Roast
+Sauté
+Simmer Down
+Spoon Feed
+Stir Fry
+Hiking
+Camping
+Fishing
+Picnic
+Biking
+Kayaking
+Frisbee
+Paddleboarding
+Snorkeling
+Scuba Diving
+Skateboard Park
+Roller Skating
+Sledding
+Horseback Riding
+Mountain Biking
+Trail Running
+Orienteering
+Geocaching
+Birdwatching
+Nature Walk
+Jogging
+Zip Lining
+Parasailing
+Hang Gliding
+Canoeing
+Smartphone
+Laptop
+Television
+Remote Control
+Video Game
+Camera
+Printer
+Router
+Keyboard
+Mouse Pad
+Flash Drive
+USB Cable
+Touchscreen
+Screen Saver
+Wifi Password
+Bluetooth Speaker
+Webcam
+Monitor
+Hard Drive
+Memory Card
+Charger
+Tablet
+Smartwatch
+Drone
+Virtual Reality
+Video Call
+Email
+Password
+Download
+Upload
+Screenshot
+Laptop Battery
+Power Cord
+Computer Mouse
+Keyboard Shortcut
+Video Conference
+Online Shopping
+Search Engine
+Ballet
+Tango
+Waltz
+Salsa
+Hip Hop
+Breakdancing
+Tap Dancing
+Jive
+Foxtrot
+Quickstep
+Samba
+Mambo
+Cha Cha
+Limbo
+Moonwalk
+Backflip
+Cartwheel
+Handstand
+Pirouette
+Leap
+Twirl
+Spin
+Shuffle
+Slide
+Hop
+Skip
+Gallop
+Prance
+Strut
+Sway
+Groove
+Boogie
+Jitterbug
+Swing Dance
+Flamenco
+Hula

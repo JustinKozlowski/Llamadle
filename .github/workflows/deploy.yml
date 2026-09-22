@@ -33,6 +33,14 @@ jobs:
           push: true
           tags: justinkozlowski/projects:llamadle
 
+      # Build and push the API's Docker image (server/ has its own Dockerfile)
+      - name: Build and push API Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./server
+          push: true
+          tags: justinkozlowski/projects:llamadle-api
+
       # Optional: Log out from Docker registry
       - name: Log out from Docker registry
         run: docker logout
@@ -67,7 +75,7 @@ jobs:
           echo ${{ vars.DOCKER_USERNAME }}
           docker login --username ${{ vars.DOCKER_USERNAME }} --password '${{ secrets.DOCKER_PASSWORD }}'
           docker info || { echo "Docker login failed"; exit 1; }
-          docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml pull llamadle
-          ANTHROPIC_API_KEY='${{ secrets.ANTHROPIC_API_KEY }}' docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml up -d --build
+          docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml pull llamadle llamadle-api
+          ANTHROPIC_API_KEY='${{ secrets.ANTHROPIC_API_KEY }}' GEMINI_API_KEY='${{ secrets.GEMINI_API_KEY }}' SESSION_SECRET='${{ secrets.SESSION_SECRET }}' LLM_PROVIDER='${{ vars.LLM_PROVIDER }}' docker compose -f /var/www/${{ github.event.repository.name }}/docker-compose.yml up -d
           docker logout
         EOF

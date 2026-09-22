@@ -14,10 +14,19 @@ services:
     network_mode: bridge
 
   llamadle-api:
+    # `image:` is what `docker compose pull` resolves in production (built and pushed by
+    # .github/workflows/deploy.yml); `build:` is kept so local dev can still build it directly.
+    image: justinkozlowski/projects:llamadle-api
     build: ./server
     container_name: llamadle-api
     environment:
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - SESSION_SECRET=${SESSION_SECRET}
+      # 'gemini' (default) or 'anthropic' — which provider /guess's judge+opponent+scoring
+      # calls use. Empty/unset falls back to the default inside server/index.js.
+      - LLM_PROVIDER=${LLM_PROVIDER}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL}
     # Shares the llamadle service's network namespace (rather than joining the plain
     # default bridge network, which has no container-name DNS) so nginx inside that
     # container can reach this one over plain localhost, with no change to llamadle's

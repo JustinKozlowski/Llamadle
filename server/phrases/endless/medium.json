@@ -1,0 +1,6 @@
+[
+  { "phrase": "Better late than never", "bannedWords": ["late", "never"] },
+  { "phrase": "Practice makes perfect", "bannedWords": ["practice", "perfect"] },
+  { "phrase": "Curiosity killed the cat", "bannedWords": ["curiosity", "cat"] },
+  { "phrase": "Actions speak louder than words", "bannedWords": ["actions", "louder"] }
+]

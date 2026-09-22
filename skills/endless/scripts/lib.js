@@ -6,13 +6,11 @@ const STATE_DIR = path.join(os.homedir(), '.claude', 'llamadle');
 const STATE_FILE = path.join(STATE_DIR, 'state.json');
 const SESSION_FILE = path.join(STATE_DIR, 'session.json');
 
+// Endless mode has no daily gating, streak, or history — every round is an independent,
+// unlimited replay against a random phrase, so the only thing worth persisting across
+// invocations is the difficulty preference.
 const DEFAULT_STATE = {
-  notificationsEnabled: false,
-  notificationRoutineId: null,
   difficulty: 'medium',
-  streak: 0,
-  lastCompletedPuzzleNumber: { easy: null, medium: null, hard: null },
-  history: [],
 };
 
 function ensureDir() {
@@ -61,47 +59,25 @@ function readStdin() {
   }
 }
 
-function todayISO() {
-  return new Date().toISOString().slice(0, 10);
-}
-
-// ---- pure state-mutation helpers (operate on an already-loaded state object) ----
-
-function alreadyCompleted(state, difficulty, puzzleNumber) {
-  return state.lastCompletedPuzzleNumber[difficulty] === puzzleNumber;
-}
-
-function findResult(state, difficulty, puzzleNumber) {
-  const entry = state.history.find(
-    (h) => h.difficulty === difficulty && h.puzzleNumber === puzzleNumber
-  );
-  return entry ? { found: true, ...entry, streak: state.streak } : { found: false };
-}
-
-function recordResult(state, difficulty, puzzleNumber, won, guesses, tokens) {
-  const prevCompleted = state.lastCompletedPuzzleNumber[difficulty];
-  state.lastCompletedPuzzleNumber[difficulty] = puzzleNumber;
-  state.streak = won ? (prevCompleted === puzzleNumber - 1 ? state.streak + 1 : 1) : 0;
-  state.history.push({ date: todayISO(), puzzleNumber, difficulty, won, guesses, tokens });
-  return state;
-}
-
-function shareText({ puzzleNumber, difficulty, won, guesses, tokens, streak }) {
+function shareText({ won, guesses, tokens }) {
   const headline = won
     ? `🦙 Solved in ${guesses} guesses, ${tokens} tokens`
     : `🏳️ Gave up after ${guesses} guesses, ${tokens} tokens`;
-  return `Llamadle #${puzzleNumber} — ${difficulty}\n${headline}\nStreak: ${streak}`;
+  return `Llamadle Endless\n${headline}`;
 }
 
 // ---- backend HTTP calls (the only network access in this plugin) ----
 
 const BASE_URL = process.env.LLAMADLE_BASE_URL || 'https://www.justinkozlowski.me/llamadle';
 
-async function fetchDaily(difficulty) {
+// Endless mode's own pool, disjoint from the daily puzzle's — never overlaps with or spoils a
+// phrase that might come up as a future daily puzzle. No puzzleNumber: each call returns a
+// random pick, not a day-keyed one.
+async function fetchPuzzle(difficulty) {
   try {
-    const res = await fetch(`${BASE_URL}/daily?difficulty=${encodeURIComponent(difficulty)}`);
+    const res = await fetch(`${BASE_URL}/endless?difficulty=${encodeURIComponent(difficulty)}`);
     const body = await res.json().catch(() => null);
-    if (!res.ok || !body) return { error: `daily request failed (${res.status})`, detail: body };
+    if (!res.ok || !body) return { error: `endless request failed (${res.status})`, detail: body };
     return body;
   } catch (err) {
     return { error: 'failed to reach puzzle server', detail: String(err) };
@@ -125,27 +101,6 @@ async function fetchCountTokens(text) {
   }
 }
 
-// ---- judge output parsing ----
-
-function parseJudgeOutput(raw) {
-  const match = raw.match(/\{[\s\S]*\}/);
-  if (match) {
-    try {
-      const parsed = JSON.parse(match[0]);
-      if (
-        typeof parsed.flagged === 'boolean' &&
-        Array.isArray(parsed.matchedWords) &&
-        typeof parsed.reason === 'string'
-      ) {
-        return parsed;
-      }
-    } catch {
-      // fall through
-    }
-  }
-  return { parseError: true };
-}
-
 module.exports = {
   STATE_FILE,
   SESSION_FILE,
@@ -156,12 +111,7 @@ module.exports = {
   writeSession,
   clearSession,
   readStdin,
-  todayISO,
-  alreadyCompleted,
-  findResult,
-  recordResult,
   shareText,
-  fetchDaily,
+  fetchPuzzle,
   fetchCountTokens,
-  parseJudgeOutput,
 };

@@ -1,55 +1,23 @@
 ---
 name: daily
-description: Play Llamadle's daily puzzle, a Wordle-style word-guessing game — try to get an AI opponent to say today's secret phrase without using any banned words, in as few tokens as possible. Use this whenever the user runs /llamadle:daily or asks to play/check/share today's Llamadle puzzle.
+description: Open today's Llamadle daily puzzle in the browser — a Wordle-style word-guessing game where you try to get an AI opponent to say the secret phrase without using any banned words, in as few tokens as possible. Use this whenever the user runs /llamadle:daily or asks to play/check/share today's Llamadle puzzle.
 ---
 
 # Llamadle — Daily
 
-A daily, Wordle-style game where the player chats with an AI opponent, trying to get it to
-naturally say today's secret phrase without their own guesses using any of that puzzle's
-banned words.
-
-**The game runs entirely in a local browser tab, backed by a self-contained local server** —
-not in this chat. Judge/scoring/opponent/win-detection/state are all handled by
-`scripts/bridge-server.js` itself (via fast headless `claude --safe-mode` calls, not the
-`Agent` tool — see that file's comments for why). Your only job on `/llamadle:daily` is to make
-sure that server is running and open the browser to it.
-
-Path note: every path below is relative to this skill's own directory (the one this SKILL.md
-lives in), not wherever Bash's current working directory happens to be — resolve it against
-this skill's base directory as reported at invocation time.
+The daily puzzle is a shared, one-attempt-per-day challenge, judged and scored entirely by the
+deployed site (session cookies, daily gating, share text) — this skill's only job is to open it.
 
 ## What to do
 
-1. Check whether the bridge server is already running:
-   ```
-   test -f ~/.claude/llamadle/bridge.pid && kill -0 "$(cat ~/.claude/llamadle/bridge.pid)" 2>/dev/null && echo RUNNING || echo NOT_RUNNING
-   ```
-   (Not `cat pid | xargs kill -0` — `xargs` exits 0 on empty input even when there's no pid
-   file, which reports RUNNING incorrectly. Verified during testing.)
-2. If `NOT_RUNNING`, start it as a detached background process (don't use a foreground/blocking
-   Bash call — it needs to keep running after this turn ends):
-   ```
-   nohup node "<skill dir>/scripts/bridge-server.js" > ~/.claude/llamadle/bridge.log 2>&1 &
-   ```
-   Give it a second to bind its port, then confirm it's up:
-   ```
-   sleep 1 && curl -s -o /dev/null -w "%{http_code}" http://localhost:4173/state
-   ```
-   (Expect `200`. If it fails, read `~/.claude/llamadle/bridge.log` for the error and report it
-   to the player rather than retrying in a loop.)
-3. Open the browser: `open http://localhost:4173` (macOS `open`, matching this environment).
-4. Tell the player the game is open in their browser now, and that this chat isn't part of
-   play — everything happens in that tab.
+Run:
+```
+open https://www.justinkozlowski.me/llamadle
+```
+(macOS `open`, matching this environment.) Then tell the player the game is open in their
+browser now — this chat isn't part of play.
 
-There is no turn-by-turn protocol here anymore: no `Agent` tool calls, no message/resume loop.
-Once the server is confirmed running and the browser is open, this skill's job for that
-invocation is done.
+That's the entire skill. No local server, no `Agent` tool calls, nothing else to check.
 
-## Other useful facts (for your own troubleshooting, not part of normal play)
-
-- State lives in `~/.claude/llamadle/state.json` (streak, difficulty, history) — same file and
-  shape the server itself owns; don't hand-edit it while the server is running.
-- `~/.claude/llamadle/bridge.log` has the server's stdout/stderr if something goes wrong.
-- If the player asks to stop the server: `kill $(cat ~/.claude/llamadle/bridge.pid)` and remove
-  `~/.claude/llamadle/bridge.pid`.
+For unlimited replay against your own Claude usage instead of the shared daily puzzle, see the
+`/llamadle:endless` skill.

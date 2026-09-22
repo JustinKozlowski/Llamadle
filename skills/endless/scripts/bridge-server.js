@@ -92,7 +92,9 @@ function isGiveUp(text) {
 let sessionProcs = null; // { key, judge, opponent }
 
 function sessionKey(session) {
-  return `${session.difficulty}:${session.puzzleNumber}`;
+  // No puzzleNumber in endless mode (each round is a random pick, not day-keyed) — the phrase
+  // itself is what distinguishes one round from the next.
+  return `${session.difficulty}:${session.phrase}`;
 }
 
 function teardownSessionProcs() {
@@ -154,29 +156,21 @@ async function handleState(req, res) {
 async function handleGame(req, res, query) {
   const state = lib.readState();
   const difficulty = query.get('difficulty') || state.difficulty;
-  const daily = await lib.fetchDaily(difficulty);
-  if (daily.error) return sendJson(res, 502, { error: daily.error });
-
-  if (lib.alreadyCompleted(state, difficulty, daily.puzzleNumber)) {
-    const result = lib.findResult(state, difficulty, daily.puzzleNumber);
-    return sendJson(res, 200, {
-      alreadyCompleted: true,
-      puzzleNumber: daily.puzzleNumber,
-      difficulty,
-      share: result.found ? lib.shareText(result) : null,
-    });
-  }
-
+  // An existing session file only ever represents an unfinished round (finishGame clears it) —
+  // its mere presence for this difficulty means "resume," not "already completed" (that concept
+  // doesn't exist in endless mode). No session, or one for a different difficulty, means fetch
+  // a fresh random phrase.
   const existing = lib.readSession();
   let session;
-  if (existing && existing.puzzleNumber === daily.puzzleNumber && existing.difficulty === difficulty) {
+  if (existing && existing.difficulty === difficulty) {
     session = existing;
   } else {
+    const puzzle = await lib.fetchPuzzle(difficulty);
+    if (puzzle.error) return sendJson(res, 502, { error: puzzle.error });
     session = {
       difficulty,
-      puzzleNumber: daily.puzzleNumber,
-      phrase: daily.phrase,
-      bannedWords: daily.bannedWords,
+      phrase: puzzle.phrase,
+      bannedWords: puzzle.bannedWords,
       guessCount: 0,
       tokenTotal: 0,
       transcript: [],
@@ -185,8 +179,6 @@ async function handleGame(req, res, query) {
   }
 
   sendJson(res, 200, {
-    alreadyCompleted: false,
-    puzzleNumber: session.puzzleNumber,
     difficulty: session.difficulty,
     phrase: session.phrase,
     bannedWords: session.bannedWords,
@@ -307,19 +299,7 @@ async function handleGuess(req, res) {
 
 function finishGame(res, session, won, extra) {
   teardownSessionProcs();
-  const state = lib.readState();
-  lib.recordResult(state, session.difficulty, session.puzzleNumber, won, session.guessCount, session.tokenTotal);
-  lib.writeState(state);
-  lib.clearSession();
-
-  const shareEntry = {
-    puzzleNumber: session.puzzleNumber,
-    difficulty: session.difficulty,
-    won,
-    guesses: session.guessCount,
-    tokens: session.tokenTotal,
-    streak: state.streak,
-  };
+  lib.clearSession(); // next /game call fetches a fresh random phrase, not a resumed one
 
   sendJson(res, 200, {
     flagged: false,
@@ -328,8 +308,7 @@ function finishGame(res, session, won, extra) {
     guessCount: session.guessCount,
     tokenTotal: session.tokenTotal,
     scoringNote: (extra && extra.scoringNote) || null,
-    share: lib.shareText(shareEntry),
-    streak: state.streak,
+    share: lib.shareText({ won, guesses: session.guessCount, tokens: session.tokenTotal }),
   });
 }
 

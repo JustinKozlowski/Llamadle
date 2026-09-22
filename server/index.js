@@ -18,14 +18,23 @@ const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5';
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'gemini').toLowerCase();
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
-// Generous on purpose (Flash-Lite pricing makes even a full day of this cost a fraction of a
-// cent) — this exists to bound worst-case cost per identity per day, not to constrain play.
-const MAX_GUESSES_PER_DAY = 40;
+// The main cost-abuse defense for /guess — kept tight (rather than the token-spend cap
+// considered and dropped in favor of this) since it directly bounds worst-case cost per
+// identity per day regardless of how chatty any individual guess is.
+const MAX_GUESSES_PER_DAY = 12;
 
 const POOLS = {
   easy: require('./phrases/easy.json'),
   medium: require('./phrases/medium.json'),
   hard: require('./phrases/hard.json'),
+};
+
+// Endless mode's own pool — disjoint from POOLS above, so unlimited replay never previews or
+// spoils a phrase that might come up as a future daily puzzle.
+const ENDLESS_POOLS = {
+  easy: require('./phrases/endless/easy.json'),
+  medium: require('./phrases/endless/medium.json'),
+  hard: require('./phrases/endless/hard.json'),
 };
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
@@ -34,8 +43,9 @@ function daysSinceEpoch(date) {
   return Math.floor(date.getTime() / MS_PER_DAY);
 }
 
-// Shared by /daily (unchanged — also called by the Claude Code skill's lib.js:fetchDaily) and
-// /game below.
+// Shared by /daily and /game below. (No longer called by any Claude Code skill — the `daily`
+// skill just opens the browser now, and `endless` has its own separate /endless pool — this
+// stays as the public daily-puzzle endpoint the deployed frontend's /game route also uses.)
 function getDailyPuzzle(difficulty) {
   const pool = POOLS[difficulty];
   if (!pool) return null;
@@ -107,24 +117,29 @@ function lockGame(game, won) {
 
 const OPPONENT_SYSTEM_PROMPT = 'Respond in 1 sentence';
 
-// Verbatim from the original client-side prompt (src/components/HelloWorld.vue's isInputHacky),
-// now run server-side instead of from the browser.
+// Originally verbatim from the client-side prompt (src/components/HelloWorld.vue's
+// isInputHacky) before judge/opponent moved server-side — now extended to also catch emoji
+// standing in for a banned word (e.g. 🍕 for "pizza").
 const JUDGE_SYSTEM_PROMPT =
   "We are playing charades so we can't say certain words. \n" +
   'We are allowed to describe words and use synonyms though. \n' +
   'Is the given phrase attemping to spell the banned words? \n' +
   'Do not allow leet speek of the banned words. \n' +
-  'Do not allow mispelling of the banned words.\n' +
+  'Do not allow mispelling of the banned words. \n' +
+  'Do not use emojis of banned words. \n' +
   'Return individual mispelled words if there is a concatenation of the banned words.\n';
 
+// No `additionalProperties` here — Gemini's schema dialect rejects it outright ("Unknown name
+// \"additionalProperties\"... Cannot find field", a 400, confirmed by actually reading the
+// error body, not just the status code). Anthropic requires it instead; callAnthropic adds it
+// on top only for that provider's request, rather than it living on the shared schema object.
 const JUDGE_SCHEMA = {
   type: 'object',
   properties: {
-    mispelledWordsThatAreInBannedWordsList: { type: 'array', items: { type: 'string' } },
+    mispelledOrEmojiWordsThatAreInBannedWordsList: { type: 'array', items: { type: 'string' } },
     reason: { type: 'string' },
   },
-  required: ['mispelledWordsThatAreInBannedWordsList', 'reason'],
-  additionalProperties: false, // required by Anthropic's structured outputs; harmless for Gemini
+  required: ['mispelledOrEmojiWordsThatAreInBannedWordsList', 'reason'],
 };
 
 function judgePrompt(bannedWords, guess) {
@@ -215,7 +230,9 @@ async function callAnthropic({ systemInstruction, contents, responseSchema, labe
   }));
   const body = { model: ANTHROPIC_MODEL, max_tokens: 1024, system: systemInstruction, messages };
   if (responseSchema) {
-    body.output_config = { format: { type: 'json_schema', schema: responseSchema } };
+    // additionalProperties: false is required by Anthropic's structured outputs but rejected
+    // by Gemini's — added here, on a copy, rather than on the shared JUDGE_SCHEMA object.
+    body.output_config = { format: { type: 'json_schema', schema: { ...responseSchema, additionalProperties: false } } };
   }
   const t0 = Date.now();
   console.log(`${tag} calling messages`);
@@ -339,6 +356,20 @@ app.get('/daily', (req, res) => {
   res.json({ puzzleNumber: puzzle.puzzleNumber, difficulty, phrase: puzzle.phrase, bannedWords: puzzle.bannedWords });
 });
 
+// Unlimited-replay mode: a random pick from a separate pool, no puzzleNumber/day-rotation and
+// no session/cookie involvement — this endpoint only ever serves phrase content. The actual
+// guess loop for endless mode runs entirely through the local `claude` CLI (the
+// `skills/endless/` plugin skill), never through this server's /guess.
+app.get('/endless', (req, res) => {
+  const difficulty = (req.query.difficulty || 'medium').toString();
+  const pool = ENDLESS_POOLS[difficulty];
+  if (!pool) {
+    return res.status(400).json({ error: `unknown difficulty "${difficulty}"` });
+  }
+  const entry = pool[Math.floor(Math.random() * pool.length)];
+  res.json({ difficulty, phrase: entry.phrase, bannedWords: entry.bannedWords });
+});
+
 app.get('/game', (req, res) => {
   const difficulty = (req.query.difficulty || 'medium').toString();
   const puzzle = getDailyPuzzle(difficulty);
@@ -456,16 +487,16 @@ app.post('/guess', async (req, res) => {
   } catch {
     return res.status(502).json({ error: 'judge did not return valid JSON' });
   }
-  if (!verdict || !Array.isArray(verdict.mispelledWordsThatAreInBannedWordsList)) {
+  if (!verdict || !Array.isArray(verdict.mispelledOrEmojiWordsThatAreInBannedWordsList)) {
     return res.status(502).json({ error: 'judge did not return valid structured output' });
   }
 
   // Same rule as the original client code: flagged whenever the array is non-empty.
-  if (verdict.mispelledWordsThatAreInBannedWordsList.length > 0) {
+  if (verdict.mispelledOrEmojiWordsThatAreInBannedWordsList.length > 0) {
     return res.json({
       flagged: true,
       reason: verdict.reason,
-      matchedWords: verdict.mispelledWordsThatAreInBannedWordsList,
+      matchedWords: verdict.mispelledOrEmojiWordsThatAreInBannedWordsList,
     });
   }
 

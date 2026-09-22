@@ -1,0 +1,6 @@
+[
+  { "phrase": "Don't judge a book by its cover", "bannedWords": ["judge", "book", "cover"] },
+  { "phrase": "The grass is always greener", "bannedWords": ["grass", "greener", "always"] },
+  { "phrase": "When it rains it pours", "bannedWords": ["rains", "pours", "when"] },
+  { "phrase": "Rome wasn't built in a day", "bannedWords": ["rome", "built", "day"] }
+]

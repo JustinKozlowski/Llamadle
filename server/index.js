@@ -81,12 +81,14 @@ function shareGrid(transcript, won) {
   return rows.join('\n');
 }
 
-function shareText({ puzzleNumber, difficulty, won, guessCount, tokenTotal, transcript }) {
-  const headline = won
-    ? `🦙 Solved in ${guessCount} guesses, ${tokenTotal} tokens`
-    : `🏳️ Gave up after ${guessCount} guesses, ${tokenTotal} tokens`;
+const PLAY_URL = 'https://www.justinkozlowski.me/llamadle';
+
+// Guess count isn't spelled out here — the grid below already shows one row per guess, so
+// restating "N guesses" in the headline would just repeat what's already visible.
+function shareText({ puzzleNumber, difficulty, won, tokenTotal, transcript }) {
+  const headline = won ? `🦙 Solved in ${tokenTotal} tokens` : `🏳️ Gave up after ${tokenTotal} tokens`;
   const grid = transcript && transcript.length ? `\n\n${shareGrid(transcript, won)}` : '';
-  return `Llamadle #${puzzleNumber} — ${difficulty}\n${headline}${grid}`;
+  return `Llamadle #${puzzleNumber} — ${difficulty}\n${headline}${grid}\n\nPlay: ${PLAY_URL}`;
 }
 
 // ---- session-scoped game state ----
@@ -394,7 +396,7 @@ app.get('/game', (req, res) => {
       guessCount: game.guessCount,
       tokenTotal: game.tokenTotal,
       transcript: game.transcript,
-      share: shareText({ puzzleNumber: puzzle.puzzleNumber, difficulty, won: game.won, guessCount: game.guessCount, tokenTotal: game.tokenTotal, transcript: game.transcript }),
+      share: shareText({ puzzleNumber: puzzle.puzzleNumber, difficulty, won: game.won, tokenTotal: game.tokenTotal, transcript: game.transcript }),
     });
   }
 
@@ -454,7 +456,7 @@ app.post('/guess', async (req, res) => {
     lockGame(game, false);
     return res.status(429).json({
       error: 'guess limit reached for today — try again tomorrow',
-      share: shareText({ puzzleNumber: game.puzzleNumber, difficulty, won: false, guessCount: game.guessCount, tokenTotal: game.tokenTotal, transcript: game.transcript }),
+      share: shareText({ puzzleNumber: game.puzzleNumber, difficulty, won: false, tokenTotal: game.tokenTotal, transcript: game.transcript }),
     });
   }
 
@@ -537,11 +539,11 @@ app.post('/guess', async (req, res) => {
       won: true,
       guessCount: game.guessCount,
       tokenTotal: game.tokenTotal,
-      share: shareText({ puzzleNumber: game.puzzleNumber, difficulty, won: true, guessCount: game.guessCount, tokenTotal: game.tokenTotal, transcript: game.transcript }),
+      share: shareText({ puzzleNumber: game.puzzleNumber, difficulty, won: true, tokenTotal: game.tokenTotal, transcript: game.transcript }),
     });
   }
 
-  res.json({ flagged: false, replyText, won: false, guessCount: game.guessCount, tokenTotal: game.tokenTotal });
+  res.json({ flagged: false, replyText, won: false, tokenTotal: game.tokenTotal });
 });
 
 app.post('/count-tokens', async (req, res) => {

@@ -61,13 +61,15 @@
         class="chat-input flex gap-2 p-4 border-t dark:border-gray-600"
       >
         <textarea
+          ref="promptArea"
           v-model="prompt"
           placeholder="Type your message..."
           rows="1"
           id="prompt-area"
           :disabled="initialLoading"
           @keydown.enter.prevent="askPrompt"
-          class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100 dark:bg-gray-700 dark:text-white dark:disabled:bg-gray-600 dark:border-gray-500"
+          @input="autoGrowPrompt"
+          class="flex-1 p-2 border rounded-lg resize-none overflow-hidden max-h-40 focus:outline-none focus:ring focus:ring-green-300 disabled:bg-gray-100 dark:bg-gray-700 dark:text-white dark:disabled:bg-gray-600 dark:border-gray-500"
         ></textarea>
         <button
           @click="askPrompt"
@@ -149,7 +151,24 @@ export default {
       return this.winner || this.alreadyCompleted;
     },
   },
+  watch: {
+    // Reset the textarea back to one row once a guess is sent/cleared — autoGrowPrompt only
+    // ever grows the element (setting height:auto then re-measuring scrollHeight), so an
+    // empty prompt needs its own explicit shrink-back.
+    prompt(newValue) {
+      if (newValue) return;
+      this.$nextTick(() => {
+        const el = this.$refs.promptArea;
+        if (el) el.style.height = 'auto';
+      });
+    },
+  },
   methods: {
+    autoGrowPrompt(event) {
+      const el = event.target;
+      el.style.height = 'auto';
+      el.style.height = `${el.scrollHeight}px`;
+    },
     containsBannedWords(input) {
       return this.bannedWords.find((word) => input.toLowerCase().includes(word.toLowerCase()));
     },

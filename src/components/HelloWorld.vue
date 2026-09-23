@@ -26,6 +26,12 @@
         >
           <p class="message-content m-0">{{ message.parts[0].text }}</p>
         </div>
+        <div
+          v-if="loading"
+          class="chat-message p-3 rounded-lg max-w-[70%] self-start bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 italic"
+        >
+          <p class="message-content m-0">...</p>
+        </div>
       </div>
 
       <div
@@ -166,6 +172,9 @@ export default {
         const el = this.$refs.promptArea;
         if (el) el.style.height = 'auto';
       });
+    },
+    loading(newValue) {
+      if (newValue) this.scrollToBottom();
     },
   },
   methods: {

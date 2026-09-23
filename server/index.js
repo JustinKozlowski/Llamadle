@@ -297,7 +297,10 @@ async function countAnthropicTokens(text) {
   }
   const data = await res.json();
   console.log(`${tag} done in ${Date.now() - t0}ms`);
-  return data.input_tokens || 0;
+  // count_tokens includes a fixed ~4-token overhead for the single-user-message wrapper
+  // (role/formatting tokens) that isn't part of the guess text itself — strip it so scoring
+  // reflects the words actually typed, not how many messages they were split across.
+  return Math.max(0, (data.input_tokens || 0) - 4);
 }
 
 function callLLM(args) {

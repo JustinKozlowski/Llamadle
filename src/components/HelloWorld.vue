@@ -39,7 +39,7 @@
         v-if="gameOver"
         class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black"
       >
-        <p v-if="winner" class="m-0 inline-flex items-center gap-1.5 justify-center">
+        <p v-if="winner" class="m-0 flex items-center gap-1.5 justify-center">
           You found today's phrase in {{ tokenCount }} tokens!
         </p>
         <p v-else class="m-0">You didn't find the phrase</p>
@@ -184,18 +184,6 @@ export default {
       return this.bannedWords.find((word) => input.toLowerCase().includes(word.toLowerCase()));
     },
     async shareResult() {
-      // Prefer the native share sheet (mobile browsers) — falls through to a clipboard copy
-      // if unsupported, unavailable, or the share itself fails for a reason other than the
-      // user just cancelling it.
-      if (navigator.share) {
-        try {
-          await navigator.share({ text: this.shareText });
-          return;
-        } catch (error) {
-          if (error && error.name === 'AbortError') return;
-          console.error(error);
-        }
-      }
       try {
         await navigator.clipboard.writeText(this.shareText);
         this.copied = true;

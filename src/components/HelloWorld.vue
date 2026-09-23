@@ -165,7 +165,13 @@ export default {
   },
   methods: {
     autoGrowPrompt(event) {
-      const el = event.target;
+      this.growPromptArea(event.target);
+    },
+    // autoGrowPrompt only runs on the textarea's `input` event, so restoring a rejected
+    // prompt via v-model (banned word, flagged guess, or request error) leaves the box
+    // sized for whatever was in it before — grow it manually in those cases.
+    growPromptArea(el) {
+      if (!el) return;
       el.style.height = 'auto';
       el.style.height = `${el.scrollHeight}px`;
     },
@@ -246,6 +252,7 @@ export default {
       if (!originalPrompt.trim()) {
         this.warningMessage = "Please enter a prompt.";
         this.prompt = originalPrompt;
+        this.$nextTick(() => this.growPromptArea(this.$refs.promptArea));
         return;
       }
 
@@ -253,6 +260,7 @@ export default {
       if (bannedWord) {
         this.warningMessage = `Your prompt contains a banned word: "${bannedWord}". Please revise it.`;
         this.prompt = originalPrompt;
+        this.$nextTick(() => this.growPromptArea(this.$refs.promptArea));
         return;
       }
 
@@ -273,6 +281,7 @@ export default {
           this.warningMessage = `Your prompt seems to be similar to the banned word${mispelledWords.length > 1 ? "s" : "" }: ${mispelledWords.join(", ")}. Please revise it.`;
           this.messages.pop();
           this.prompt = originalPrompt;
+          this.$nextTick(() => this.growPromptArea(this.$refs.promptArea));
           return;
         }
 
@@ -301,6 +310,7 @@ export default {
           // did not receive a response from model. Should pop the user message to track tokens and ui correctly
           this.messages.pop();
           this.prompt = originalPrompt;
+          this.$nextTick(() => this.growPromptArea(this.$refs.promptArea));
         }
       } finally {
         this.loading = false;

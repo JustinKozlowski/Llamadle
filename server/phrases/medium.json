@@ -14,10 +14,12 @@
     ]
   },
   {
-    "phrase": "Out of left field",
+    "phrase": "Hackathon",
     "bannedWords": [
-      "out",
-      "field"
+      "hackathon",
+      "hack",
+      "code",
+      "athon"
     ]
   },
   {

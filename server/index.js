@@ -128,7 +128,7 @@ const OPPONENT_SYSTEM_PROMPT = 'Respond in 1 sentence';
 // standing in for a banned word (e.g. 🍕 for "pizza").
 const JUDGE_SYSTEM_PROMPT =
   "We are playing charades so we can't say certain words. \n" +
-  'We are allowed to describe words and use synonyms though. \n' +
+  'We are allowed and encouraged to describe words and use synonyms though. \n' +
   'Is the given phrase attemping to spell the banned words? \n' +
   'Do not allow leet speek of the banned words. \n' +
   'Do not allow mispelling of the banned words. \n' +

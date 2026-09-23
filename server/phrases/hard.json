@@ -17,12 +17,12 @@
     ]
   },
   {
-    "phrase": "An apple a day keeps the doctor away",
+    "phrase": "ACV Auctions",
     "bannedWords": [
-      "apple",
-      "day",
-      "doctor",
-      "away"
+      "ACV",
+      "Auctions",
+      "Sale",
+      "Online"
     ]
   },
   {

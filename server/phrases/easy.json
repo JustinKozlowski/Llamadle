@@ -12,9 +12,10 @@
     ]
   },
   {
-    "phrase": "Pizza",
+    "phrase": "Viper",
     "bannedWords": [
-      "pizza"
+      "viper",
+      "snake"
     ]
   },
   {

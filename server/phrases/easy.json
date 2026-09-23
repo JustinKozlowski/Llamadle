@@ -6,9 +6,9 @@
     ]
   },
   {
-    "phrase": "An apple a day",
+    "phrase": "Pizza",
     "bannedWords": [
-      "apple"
+      "pizza"
     ]
   },
   {

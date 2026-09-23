@@ -7,10 +7,12 @@
     ]
   },
   {
-    "phrase": "Second mouse gets the cheese",
+    "phrase": "Buffalo Bills",
     "bannedWords": [
-      "mouse",
-      "cheese"
+      "Buffalo",
+      "Bills",
+      "Josh",
+      "Allen"
     ]
   },
   {

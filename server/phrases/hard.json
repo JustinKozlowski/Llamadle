@@ -11,6 +11,9 @@
   {
     "phrase": "Second mouse gets the cheese",
     "bannedWords": [
+      "early",
+      "bird",
+      "worm",
       "second",
       "mouse",
       "cheese"

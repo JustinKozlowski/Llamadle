@@ -42,18 +42,26 @@ export default {
   data() {
     return {
       showModal: false,
-      firstLoad: true,
     };
   },
   methods: {
     closeModal() {
       this.showModal = false;
+      try {
+        localStorage.setItem("llamadle-help-seen", "true");
+      } catch (e) {
+        // ignore storage errors (e.g. disabled/private mode)
+      }
     },
   },
   mounted() {
-    if (this.firstLoad) {
-      console.log('first load of modal');
-      this.firstLoad = false;
+    let seen = false;
+    try {
+      seen = localStorage.getItem("llamadle-help-seen") === "true";
+    } catch (e) {
+      // ignore storage errors (e.g. disabled/private mode)
+    }
+    if (!seen) {
       this.showModal = true;
     }
   }

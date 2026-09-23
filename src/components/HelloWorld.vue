@@ -41,7 +41,6 @@
       >
         <p v-if="winner" class="m-0 inline-flex items-center gap-1.5 justify-center">
           You found today's phrase in {{ tokenCount }} tokens!
-          <TokenInfo />
         </p>
         <p v-else class="m-0">You didn't find the phrase</p>
         <button

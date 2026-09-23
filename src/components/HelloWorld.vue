@@ -39,7 +39,10 @@
         v-if="gameOver"
         class="winner-banner bg-yellow-300 text-gray-800 text-center py-2 font-semibold dark:bg-yellow-400 dark:text-black"
       >
-        <p v-if="winner" class="m-0">You found today's phrase in {{ tokenCount }} tokens!</p>
+        <p v-if="winner" class="m-0 inline-flex items-center gap-1.5 justify-center">
+          You found today's phrase in {{ tokenCount }} tokens!
+          <TokenInfo />
+        </p>
         <p v-else class="m-0">You didn't find the phrase</p>
         <button
           @click="shareResult"
@@ -103,10 +106,11 @@
             v-if="!isKeyboardOpen"
           />
         </keep-alive>
-        <div class="token-count text-sm font-semibold text-gray-900 dark:text-white"
+        <div class="token-count flex items-center gap-1.5 text-sm font-semibold text-gray-900 dark:text-white"
           v-if="!isKeyboardOpen"
         >
           <p>Total Tokens: {{ tokenCount > 0 ? tokenCount : 0 }}</p>
+          <TokenInfo />
         </div>
       </div>
     </div>
@@ -117,11 +121,13 @@
 import { toRaw, } from 'vue';
 import axios from 'axios';
 import GameHelp from './Help.vue';
+import TokenInfo from './TokenInfo.vue';
 
 export default {
   name: "WebLLMComponent",
   components: {
     GameHelp,
+    TokenInfo,
   },
   data() {
     return {
